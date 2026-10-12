@@ -2,7 +2,7 @@ import StatCounter from "./StatCounter";
 
 export type ProofItem = { value: string; label: string; countUp?: boolean };
 
-// Row of headline numbers ("500+ placements" etc.). Numbers count up when scrolled into view.
+// Row of headline numbers ("1000+ placements" etc.). Numbers count up when scrolled into view.
 export default function ProofStrip({ items }: { items: ProofItem[] }) {
   return (
     <div className="stats-bar">

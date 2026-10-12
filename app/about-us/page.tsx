@@ -11,7 +11,7 @@ import { JULIE_ROLES, URLS } from "@/lib/content";
 // Copy: "3. About Us" in the client's Website Content document.
 
 export const metadata: Metadata = {
-  title: { absolute: "About Bell Recruitment | FMCG Recruitment Specialists Northern Ireland" },
+  title: { absolute: "About Bell Recruitment | FMCG Recruitment Specialists Northern Ireland, Ireland and United Kingdom" },
   description:
     "Bell Recruitment is an FMCG executive search firm founded in 1999 by Julie Bell, who spent ten years at Pepsi, 7UP, Ballygowan and Budweiser before starting the business.",
 };
@@ -24,8 +24,8 @@ const APPROACH = [
   },
   {
     icon: "fa-layer-group",
-    lead: "We assess against five Cs.",
-    text: "Compensation, Commute, Culture, Career and Competence. These decide whether a hire accepts the job and stays.",
+    lead: "We assess every candidate.",
+    text: "Rigorous screening, structured interviews and behavioural assessment to evaluate capability, cultural alignment and suitability for the role.",
   },
   { icon: "fa-bolt", lead: "We move quickly.", text: "The search starts within 24 hours of receiving your job description." },
 ];
@@ -35,7 +35,7 @@ export default function AboutPage() {
     <>
       <PageHero
         eyebrow="About us"
-        title="About Bell Recruitment: FMCG Recruitment Specialists in Northern Ireland"
+        title="About Bell Recruitment: FMCG Recruitment Specialists in Northern Ireland, Ireland and United Kingdom"
         image="/images/hero-bg.png"
         imagePosition="70% 30%"
         buttons={[
@@ -129,9 +129,8 @@ export default function AboutPage() {
         items={[
           { value: "1999", label: "Founded by Julie Bell", countUp: false },
           { value: "25+", label: "Years placing FMCG talent" },
-          { value: "500+", label: "Placements" },
-          { value: "13", label: "Brand partners" },
-          { value: "20+", label: "Years with some clients" },
+          { value: "1000+", label: "Placements" },
+          { value: "20", label: "Brand partners" },
         ]}
       />
 
@@ -167,7 +166,7 @@ export default function AboutPage() {
       <section className="section section-alt">
         <div className="container text-center">
           <div className="section-label">Our clients</div>
-          <h2 className="center">Trusted by FMCG businesses across Northern Ireland</h2>
+          <h2 className="center">Trusted by FMCG businesses across Northern Ireland, Ireland and United Kingdom</h2>
           <p className="section-intro center">
             We work with FMCG employers who come back to us year after year. Some of our client relationships go back
             more than 20 years, and we measure our work by whether they call us for the next hire.

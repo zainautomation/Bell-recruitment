@@ -11,7 +11,7 @@ import { URLS } from "@/lib/content";
 export const metadata: Metadata = {
   title: { absolute: "FMCG Recruitment Process for Employers | Bell Recruitment" },
   description:
-    "How Bell Recruitment hires for FMCG employers in Northern Ireland: search begins in 24 hours, with 5C candidate assessment.",
+    "How Bell Recruitment hires for FMCG employers in Northern Ireland: search begins in 24 hours, with rigorous candidate assessment.",
 };
 
 const FASTER = [
@@ -74,29 +74,13 @@ export default function HowWeHirePage() {
                   ),
                 },
                 {
-                  title: "Assessment against the 5C framework",
+                  title: "Candidate assessment",
                   text: (
-                    <>
-                      <p>Every candidate is assessed on five things:</p>
-                      <ul className="tick-list">
-                        <li>
-                          <strong>Compensation.</strong> Does the package work for them?
-                        </li>
-                        <li>
-                          <strong>Commute.</strong> Is the territory or location realistic?
-                        </li>
-                        <li>
-                          <strong>Culture.</strong> Will they fit your team and way of working?
-                        </li>
-                        <li>
-                          <strong>Career.</strong> Does the role move them forward?
-                        </li>
-                        <li>
-                          <strong>Competence.</strong> Can they do the job, based on results, customers and targets?
-                        </li>
-                      </ul>
-                      <p>We also take references.</p>
-                    </>
+                    <p>
+                      Every candidate goes through rigorous screening, structured interviews and behavioural
+                      assessment to evaluate capability, cultural alignment and suitability for the role. We also take
+                      references.
+                    </p>
                   ),
                 },
                 {
@@ -133,10 +117,6 @@ export default function HowWeHirePage() {
             <div className="aside-item">
               <strong>24 hours</strong>
               <span>The search begins within 24 hours of receiving your job description.</span>
-            </div>
-            <div className="aside-item">
-              <strong>5C</strong>
-              <span>Compensation, Commute, Culture, Career and Competence, plus references.</span>
             </div>
             <ButtonRow buttons={[{ label: "Send us a vacancy", href: URLS.contact, variant: "light" }]} />
           </aside>
@@ -194,7 +174,7 @@ export default function HowWeHirePage() {
               },
               {
                 q: "How do you check candidates?",
-                a: "Through our 5C framework: Compensation, Commute, Culture, Career and Competence, plus references.",
+                a: "Through rigorous screening, structured interviews and behavioural assessment, plus references.",
               },
               { q: "Can the search be confidential?", a: "Yes. Our process is confidential from first approach to offer." },
             ]}

@@ -8,9 +8,9 @@ import { CONTACT, URLS } from "@/lib/content";
 // FAQ schema (client instruction); it is generated from the same questions shown below.
 
 export const metadata: Metadata = {
-  title: { absolute: "FMCG Recruitment FAQs | Bell Recruitment Northern Ireland" },
+  title: { absolute: "FMCG Recruitment FAQs | Bell Recruitment Northern Ireland, Ireland and United Kingdom" },
   description:
-    "Answers for FMCG candidates and employers in Northern Ireland: how Bell Recruitment works and the 5C framework.",
+    "Answers for FMCG candidates and employers in Northern Ireland: how Bell Recruitment works.",
 };
 
 const ROLES_ANSWER =
@@ -35,10 +35,6 @@ const CANDIDATE_FAQS: Faq[] = [
     a: "Yes. Many roles are filled before they reach a job board, because employers ask us to approach suitable people directly.",
   },
   {
-    q: "What is the 5C framework?",
-    a: "The five things we check before putting you forward: Compensation, Commute, Culture, Career and Competence. It helps make sure a role suits you as well as the employer.",
-  },
-  {
     q: "What should I include on my FMCG CV?",
     a: "The territory or accounts you managed, the customers you sold to (retail, wholesale, foodservice, on-trade, off-trade), the products or categories you handled, your sales targets and what you achieved against them, and any growth you delivered, with numbers where you can.",
   },
@@ -60,7 +56,7 @@ const EMPLOYER_FAQS: Faq[] = [
     steps: [
       "Brief. We agree what you sell, to whom, the territory, how performance is measured and which experience is essential.",
       "Search. We look through our network and approach people who aren’t applying for jobs.",
-      "Assess. Every candidate goes through our 5C framework: Compensation, Commute, Culture, Career and Competence.",
+      "Assess. Every candidate goes through rigorous screening, structured interviews and behavioural assessment.",
       "Shortlist. You get the strongest matches, with notes on why each one fits.",
       "Offer. We support interviews, negotiation and the move to a start date.",
     ],
@@ -68,7 +64,7 @@ const EMPLOYER_FAQS: Faq[] = [
   { q: "How quickly will you start the search?", a: "Within 24 hours of receiving your job description." },
   {
     q: "How do you check candidates?",
-    a: "Through our 5C framework: Compensation, Commute, Culture, Career and Competence, plus references. The full process is on our Client Process page.",
+    a: "Through rigorous screening, structured interviews and behavioural assessment, plus references. The full process is on our Client Process page.",
     link: { label: "See the Client Process page", href: URLS.hire },
   },
   { q: "Can you recruit confidentially for a senior role?", a: "Yes. Our process is confidential from first approach to offer." },

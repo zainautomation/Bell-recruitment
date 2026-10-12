@@ -4,7 +4,7 @@ import { useEffect, useRef, useState } from "react";
 
 const DURATION_MS = 1600;
 
-// Counts up from 0 to the number in `value` (e.g. "500+" or "90-day") once scrolled into
+// Counts up from 0 to the number in `value` (e.g. "1000+" or "90-day") once scrolled into
 // view. The server renders the final value, so it still reads correctly without JS.
 // Pass countUp={false} for values that shouldn't count, such as a year ("1999").
 export default function StatCounter({ value, countUp = true }: { value: string; countUp?: boolean }) {

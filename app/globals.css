@@ -529,13 +529,36 @@ h1, h2, h3, h4 {
 .role-chips { display: flex; flex-wrap: wrap; gap: 8px; }
 .role-chips li { padding: 6px 13px; border-radius: 999px; background: var(--surface); font-size: 13.5px; color: var(--text-dark); }
 
-/* 5C framework. */
-.five-cs { display: grid; grid-template-columns: repeat(5, 1fr); gap: 18px; margin-top: 8px; }
-.five-c { padding: 28px 22px; border-radius: var(--radius); background: rgba(255,255,255,.06); border: 1px solid rgba(255,255,255,.14); transition: background .3s, border-color .3s, transform .3s; }
-.five-c:hover { background: rgba(255,255,255,.1); border-color: #fff; transform: translateY(-4px); }
-.five-c-icon { width: 44px; height: 44px; border-radius: 50%; background: #fff; color: var(--burgundy-deep); display: flex; align-items: center; justify-content: center; font-size: 17px; margin-bottom: 18px; }
-.five-c h3 { font-size: 1.4rem; margin-bottom: 8px; }
-.five-c p { font-size: 14.5px; color: rgba(255,255,255,.78); line-height: 1.6; }
+/* Roles we recruit (Home): tiles with an arrow; a lone last tile spans the full row. */
+.expertise-grid { list-style: none; display: grid; grid-template-columns: repeat(3, 1fr); gap: 20px; margin-top: 12px; }
+.expertise-grid a { display: flex; align-items: center; justify-content: space-between; gap: 16px; padding: 28px 30px; background: var(--warm-white); border: 1px solid var(--border-light); border-radius: var(--radius); font-size: 18px; font-weight: 600; color: var(--text-dark); transition: border-color .25s, box-shadow .25s, transform .25s; }
+.expertise-grid a i { color: var(--burgundy); transition: transform .25s; }
+.expertise-grid a:hover { border-color: var(--burgundy); box-shadow: 0 10px 26px rgba(123,20,23,.1); transform: translateY(-2px); }
+.expertise-grid a:hover i { transform: translateX(4px); }
+.expertise-grid li:last-child:nth-child(3n+1) { grid-column: 1 / -1; }
+
+/* Our Services (Home): twelve-column grid, four cards on the first row and three on the second. */
+.svc-grid { display: grid; grid-template-columns: repeat(12, 1fr); gap: 18px; margin-top: 8px; }
+.svc-card { grid-column: span 3; padding: 28px 24px; border-radius: var(--radius); background: rgba(255,255,255,.06); border: 1px solid rgba(255,255,255,.14); transition: background .3s, border-color .3s, transform .3s; }
+.svc-card:nth-child(n+5) { grid-column: span 4; }
+.svc-card:hover { background: rgba(255,255,255,.1); border-color: #fff; transform: translateY(-4px); }
+.svc-icon { width: 44px; height: 44px; border-radius: 50%; background: #fff; color: var(--burgundy); display: flex; align-items: center; justify-content: center; font-size: 17px; margin-bottom: 18px; }
+.svc-card h3 { font-size: 1.35rem; margin-bottom: 10px; }
+.svc-card p { font-size: 14.5px; color: rgba(255,255,255,.78); line-height: 1.6; }
+@media (max-width: 1080px) {
+  .svc-grid { grid-template-columns: repeat(2, 1fr); }
+  .svc-card, .svc-card:nth-child(n+5) { grid-column: auto; }
+  .svc-card:last-child:nth-child(odd) { grid-column: 1 / -1; }
+}
+@media (max-width: 900px) {
+  .expertise-grid { grid-template-columns: repeat(2, 1fr); }
+  .expertise-grid li:last-child:nth-child(odd) { grid-column: 1 / -1; }
+}
+@media (max-width: 560px) {
+  .svc-grid, .expertise-grid { grid-template-columns: 1fr; }
+  .svc-card:last-child:nth-child(odd) { grid-column: auto; }
+  .expertise-grid a { padding: 22px 22px; font-size: 17px; }
+}
 .callout { display: flex; gap: 16px; align-items: flex-start; margin-top: 36px; padding: 22px 26px; border-radius: var(--radius); border-left: 3px solid #fff; background: rgba(0,0,0,.18); font-size: 16px; color: #fff; max-width: 860px; }
 .callout i { color: #fff; font-size: 20px; margin-top: 3px; }
 
@@ -612,7 +635,7 @@ h1, h2, h3, h4 {
     .hero-inner > *, .page-hero .container > *, .stats-grid > *, .section-label, .section h2, .section-intro,
     .value-card, .service-card, .sector-card, .why-card, .testimonial-card, .julie-photo,
     .julie-text > *, .services-block > *, .blog-card, .split-photo, .photo-banner-box > *, .form-panel,
-    .contact-card, .partners-label, .footer-cta > *, .five-c, .role-group, .qa-card, .aside-card, .faq-item, .answer-card
+    .contact-card, .partners-label, .footer-cta > *, .svc-card, .role-group, .qa-card, .aside-card, .faq-item, .answer-card
   ):not(.in) { opacity: 0; }
   /* fill-mode backwards: once the entrance ends, hover transforms apply normally. */
   .in { animation: reveal-up .8s cubic-bezier(.2,.7,.2,1) backwards; animation-delay: calc(var(--reveal-i, 0) * 110ms); }
@@ -625,13 +648,13 @@ h1, h2, h3, h4 {
 @media (prefers-reduced-motion: reduce) {
   .page-hero-img, .process-grid.in .process-step, .process-grid.in .step-num, .process-grid.in .process-dot, .photo-caption, .hero-chip, .hero-badge-dot, .hero-copy.in h1 em::after { animation: none; }
   .tilt { transform: none; }
-  .value-card:hover, .testimonial-card:hover, .why-card:hover, .five-c:hover, .loc-pill:hover, .btn:not(:disabled):hover { transform: none; }
+  .value-card:hover, .testimonial-card:hover, .why-card:hover, .loc-pill:hover, .btn:not(:disabled):hover { transform: none; }
   .process-grid.in .process-link::before { transition: none; }
 }
 
 /* Touch screens: no lift-on-hover, which would otherwise stick after a tap. */
 @media (hover: none) {
-  .value-card:hover, .testimonial-card:hover, .why-card:hover, .service-card:hover, .five-c:hover, .loc-pill:hover, .btn:not(:disabled):hover { transform: none; }
+  .value-card:hover, .testimonial-card:hover, .why-card:hover, .service-card:hover, .loc-pill:hover, .btn:not(:disabled):hover { transform: none; }
 }
 
 /* ─── Responsive ─── */
@@ -660,7 +683,6 @@ h1, h2, h3, h4 {
   .split, .with-aside, .answer-grid { grid-template-columns: 1fr; gap: 40px; }
   .split-reverse > .split-photo { order: 2; }
   .aside-card { position: static; }
-  .five-cs { grid-template-columns: repeat(2, 1fr); }
   .role-groups { grid-template-columns: 1fr; }
   .split-head { grid-template-columns: 1fr; gap: 32px; }
   .page-hero.has-photo { padding: calc(80px + var(--header-h)) 0 80px; }
@@ -686,7 +708,6 @@ h1, h2, h3, h4 {
   .julie-photo::before { inset: -10px 10px 10px -10px; }
   .form-row { grid-template-columns: 1fr; }
   .sector-grid { grid-template-columns: 1fr; }
-  .five-cs { grid-template-columns: 1fr; }
   .faq-item summary { padding: 18px; font-size: 15px; }
   .faq-a { padding: 0 18px 18px; }
   .callout { padding: 18px; }

@@ -10,7 +10,7 @@ import { URLS } from "@/lib/content";
 // Copy: "2. Services (Executive Search)" in the client's Website Content document.
 
 export const metadata: Metadata = {
-  title: { absolute: "FMCG Executive Search Northern Ireland | Bell Recruitment" },
+  title: { absolute: "FMCG Executive Search Northern Ireland, Ireland and United Kingdom | Bell Recruitment" },
   description: "Confidential FMCG executive search in Northern Ireland since 1999. Search begins within 24 hours.",
 };
 
@@ -18,7 +18,7 @@ const INCLUDES = [
   { icon: "fa-crosshairs", lead: "Targeted headhunting.", text: "We approach people directly, backed by our knowledge of the NI FMCG market." },
   { icon: "fa-clipboard-list", lead: "A brief built around your business.", text: "We agree the role, territory, customers and targets with you." },
   { icon: "fa-user-lock", lead: "A confidential process.", text: "From the first approach to the offer." },
-  { icon: "fa-layer-group", lead: "The 5C framework.", text: "Every candidate is assessed on Compensation, Commute, Culture, Career and Competence." },
+  { icon: "fa-clipboard-check", lead: "Rigorous assessment.", text: "Screening, structured interviews and behavioural assessment for every candidate." },
   { icon: "fa-list-check", lead: "A focused shortlist.", text: "Only the strongest matches, with notes on why each one fits." },
   { icon: "fa-handshake", lead: "Support to the start date.", text: "Interviews, negotiation and onboarding." },
 ];
@@ -33,7 +33,7 @@ export default function ServicesPage() {
     <>
       <PageHero
         eyebrow="Our service"
-        title="FMCG Executive Search in Northern Ireland"
+        title="FMCG Executive Search in Northern Ireland, Ireland and United Kingdom"
         image="/images/handshake-bg.webp"
       >
         For the hires that decide how your FMCG business performs with customers, the best candidates are usually
@@ -76,7 +76,7 @@ export default function ServicesPage() {
                 ),
               },
               { title: "Search", text: "We look through our network and approach people who aren’t applying for jobs." },
-              { title: "Assess", text: "Every candidate goes through the 5C framework." },
+              { title: "Assess", text: "Every candidate is screened, interviewed and assessed." },
               { title: "Shortlist", text: "You see the strongest matches, with the context you need to decide." },
               {
                 title: "Offer and start",

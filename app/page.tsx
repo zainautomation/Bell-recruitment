@@ -2,27 +2,27 @@ import type { Metadata } from "next";
 import Image from "next/image";
 import { ButtonRow } from "@/components/ButtonLink";
 import FaqList from "@/components/FaqList";
-import FiveCs from "@/components/FiveCs";
+import ExpertiseGrid from "@/components/ExpertiseGrid";
 import Founder from "@/components/Founder";
 import LetterReveal from "@/components/LetterReveal";
 import PartnerCarousel from "@/components/PartnerCarousel";
 import ProofStrip from "@/components/ProofStrip";
-import RoleGroups from "@/components/RoleGroups";
+import ServiceCards from "@/components/ServiceCards";
 import TestimonialGrid from "@/components/TestimonialGrid";
 import Tilt from "@/components/Tilt";
-import { BLOG_POSTS, JULIE_ROLES, PARTNERS, ROLE_GROUPS, URLS } from "@/lib/content";
+import { BLOG_POSTS, EXPERTISE, JULIE_ROLES, OUR_SERVICES, PARTNERS, URLS } from "@/lib/content";
 
 // Copy: "1. Home" in the client's Website Content document.
 
 export const metadata: Metadata = {
-  title: { absolute: "FMCG Recruitment Northern Ireland | Bell Recruitment" },
+  title: { absolute: "FMCG Recruitment Northern Ireland, Ireland and United Kingdom | Bell Recruitment" },
   description:
     "FMCG executive search in Northern Ireland since 1999. Sales, key account and commercial hires. Search begins within 24 hours.",
 };
 
 // The document names these logos for the hero ("and others" are in the carousel below).
 const HERO_CLIENTS = PARTNERS.filter((p) =>
-  ["Tennent's NI", "Irwin's Bakery", "Henderson Group", "Richmond Marketing"].includes(p.alt),
+  ["Irwin's Bakery", "Henderson Group", "Richmond Marketing"].includes(p.alt),
 );
 
 const LOCATIONS = ["Belfast", "Bangor", "Lisburn", "Newry", "Portadown", "Ballymena", "Derry/Londonderry"];
@@ -87,30 +87,29 @@ export default function HomePage() {
       <ProofStrip
         items={[
           { value: "1999", label: "Recruiting since", countUp: false },
-          { value: "500+", label: "Placements" },
-          { value: "13", label: "Brand partners" },
-          { value: "20+", label: "Year client relationships" },
+          { value: "1000+", label: "Placements" },
+          { value: "20", label: "Brand partners" },
         ]}
       />
 
       <PartnerCarousel />
 
-      <section className="section">
+      <section className="section section-alt">
         <div className="container">
           <div className="section-label">Roles we recruit</div>
-          <h2>FMCG sales and commercial recruitment in Northern Ireland</h2>
+          <h2>FMCG sales and commercial recruitment in Northern Ireland, Ireland and United Kingdom</h2>
           <p className="section-intro">
             Whether a hire works depends on the customers, the territory and the targets.
             These are the roles we recruit:
           </p>
-          <RoleGroups groups={ROLE_GROUPS} />
+          <ExpertiseGrid items={EXPERTISE} href={URLS.jobs} />
           <ButtonRow
             buttons={[{ label: "Browse FMCG jobs in Northern Ireland", href: URLS.jobs }]}
           />
         </div>
       </section>
 
-      <section className="section section-alt">
+      <section className="section">
         <div className="container split">
           <div>
             <div className="section-label">For employers</div>
@@ -149,23 +148,12 @@ export default function HomePage() {
 
       <section className="section section-dark">
         <div className="container">
-          <div className="section-label">The 5C framework</div>
+          <div className="section-label">What we do</div>
           <h2>
-            <LetterReveal text="How we make sure a hire lasts: the 5C framework" />
+            <LetterReveal text="Our Services" />
           </h2>
-          <p className="section-intro">
-            A good CV doesn&rsquo;t make a good hire. Every candidate we put forward is assessed against five Cs:
-          </p>
-          <FiveCs
-            items={[
-              { name: "Compensation", text: "Does the package work for them: basic, commission, car and benefits?" },
-              { name: "Commute", text: "Is the territory or location realistic, including daily travel?" },
-              { name: "Culture", text: "Will they fit your team, management style and way of working?" },
-              { name: "Career", text: "Does the role move them forward, so they’ll want to stay?" },
-              { name: "Competence", text: "Can they do the job, based on results, customers, category and targets?" },
-            ]}
-          />
-          <ButtonRow buttons={[{ label: "See the full process", href: URLS.hire, variant: "light" }]} />
+          <ServiceCards items={OUR_SERVICES} />
+          <ButtonRow buttons={[{ label: "Learn more about our services", href: URLS.services, variant: "light" }]} />
         </div>
       </section>
 
@@ -182,11 +170,10 @@ export default function HomePage() {
           </div>
           <div>
             <div className="section-label">For candidates</div>
-            <h2>Looking for an FMCG job in Northern Ireland?</h2>
+            <h2>Looking for an FMCG job in Northern Ireland, Ireland and United Kingdom?</h2>
             <p className="lead">
               Many FMCG roles are filled before they&rsquo;re advertised. Register with Bell Recruitment and we&rsquo;ll talk
-              through each opportunity against five things that decide whether a job is right: compensation, commute,
-              culture, career and competence.{" "}
+              through each opportunity with you.{" "}
               <mark className="hl">We don&rsquo;t send your CV to an employer without speaking to you first.</mark>
             </p>
             <ButtonRow
@@ -206,7 +193,7 @@ export default function HomePage() {
           </h2>
           <p>
             Executive search is the one thing we do, and we do it for FMCG only. We approach people directly,
-            including those who aren&rsquo;t looking, assess them against our 5C framework, and send you a short list.
+            including those who aren&rsquo;t looking, assess each one, and send you a short list.
             The whole process is confidential, from first approach to offer.
           </p>
           <ButtonRow buttons={[{ label: "Learn more about FMCG executive search", href: URLS.services, variant: "light" }]} />
@@ -216,7 +203,7 @@ export default function HomePage() {
       <section className="section section-alt">
         <div className="container text-center">
           <div className="section-label">Where we work</div>
-          <h2 className="center">Recruiting for FMCG employers across Northern Ireland</h2>
+          <h2 className="center">Recruiting for FMCG employers across Northern Ireland, Ireland and United Kingdom</h2>
           <p className="section-intro center">
             We work with FMCG businesses throughout Northern Ireland.
           </p>

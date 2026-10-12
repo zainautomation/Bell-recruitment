@@ -30,7 +30,7 @@ const REVEAL = [
   ".contact-card",
   ".partners-label",
   ".footer-cta > *",
-  ".five-c",
+  ".svc-card",
   ".role-group",
   ".qa-card",
   ".aside-card",

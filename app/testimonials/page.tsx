@@ -8,7 +8,7 @@ import { URLS } from "@/lib/content";
 // Copy: "4. Testimonials" in the client's Website Content document. Quotes stay word for word.
 
 export const metadata: Metadata = {
-  title: { absolute: "FMCG Recruitment Client Reviews | Bell Recruitment Northern Ireland" },
+  title: { absolute: "FMCG Recruitment Client Reviews | Bell Recruitment Northern Ireland, Ireland and United Kingdom" },
   description:
     "What FMCG employers say about Bell Recruitment: long-standing clients including Irwin’s Bakery, Richmond Marketing and Courtney and Nelson.",
 };
@@ -35,9 +35,8 @@ export default function TestimonialsPage() {
       <ProofStrip
         items={[
           { value: "25+", label: "Years" },
-          { value: "500+", label: "Placements" },
-          { value: "13", label: "Brand partners" },
-          { value: "20+", label: "Year client relationships" },
+          { value: "1000+", label: "Placements" },
+          { value: "20", label: "Brand partners" },
         ]}
       />
 

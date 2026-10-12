@@ -3,8 +3,6 @@ import Image from "next/image";
 import { ButtonRow } from "@/components/ButtonLink";
 import CtaBand from "@/components/CtaBand";
 import FaqList from "@/components/FaqList";
-import FiveCs from "@/components/FiveCs";
-import LetterReveal from "@/components/LetterReveal";
 import PageHero from "@/components/PageHero";
 import ProcessSteps from "@/components/ProcessSteps";
 import RoleGroups from "@/components/RoleGroups";
@@ -13,7 +11,7 @@ import { ROLE_GROUPS, URLS } from "@/lib/content";
 // Copy: "6. Candidate Process" in the client's Website Content document.
 
 export const metadata: Metadata = {
-  title: { absolute: "FMCG Jobs Northern Ireland: How Bell Recruitment Works for Candidates" },
+  title: { absolute: "FMCG Jobs Northern Ireland, Ireland and United Kingdom: How Bell Recruitment Works for Candidates" },
   description:
     "How to get an FMCG job in Northern Ireland through Bell Recruitment: what happens after you send your CV, how we match you to roles, and what to expect.",
 };
@@ -23,7 +21,7 @@ export default function CandidateProcessPage() {
     <>
       <PageHero
         eyebrow="For candidates"
-        title="FMCG Jobs in Northern Ireland: How Bell Recruitment Works for Candidates"
+        title="FMCG Jobs in Northern Ireland, Ireland and United Kingdom: How Bell Recruitment Works for Candidates"
         image="/images/cta-bg.jpg"
         buttons={[
           { label: "Upload your CV", href: URLS.cvUpload },
@@ -58,8 +56,8 @@ export default function CandidateProcessPage() {
                   "When an employer brief fits your experience, we call you first and talk it through before anything goes further.",
               },
               {
-                title: "We assess the fit using the 5C framework",
-                text: "We go through the same five Cs we use with employers, so you know whether the role works for you before you spend time on interviews.",
+                title: "We assess the fit",
+                text: "We talk through whether the role works for you, so you know before you spend time on interviews.",
               },
               {
                 title: "Interviews and offer",
@@ -70,34 +68,7 @@ export default function CandidateProcessPage() {
         </div>
       </section>
 
-      <section className="section section-dark">
-        <div className="container">
-          <div className="section-label">The 5C framework</div>
-          <h2>
-            <LetterReveal text="The five things we check before you take an FMCG role" />
-          </h2>
-          <p className="section-intro">
-            A role can look right on paper and still be wrong for you. Before we put anyone forward, we talk through:
-          </p>
-          <FiveCs
-            items={[
-              { name: "Compensation", text: "Is the full package right for you: basic, commission, car or van, benefits?" },
-              { name: "Commute", text: "Is the territory or location realistic, including daily driving?" },
-              { name: "Culture", text: "Will the team and management style suit you?" },
-              { name: "Career", text: "Does the role lead somewhere you want to go?" },
-              { name: "Competence", text: "Does your experience match what the job demands?" },
-            ]}
-          />
-          <p className="callout">
-            <i className="fas fa-shield-halved" aria-hidden="true" />
-            <span>
-              That&rsquo;s why people we place tend to stay, so we take care to get the match right.
-            </span>
-          </p>
-        </div>
-      </section>
-
-      <section className="section">
+      <section className="section section-alt">
         <div className="container answer-grid">
           <div className="answer-card">
             <div className="answer-head">
@@ -116,15 +87,15 @@ export default function CandidateProcessPage() {
         </div>
       </section>
 
-      <section className="section section-alt">
+      <section className="section">
         <div className="container">
           <div className="section-label">Roles we recruit</div>
-          <h2>What FMCG jobs does Bell Recruitment recruit in Northern Ireland?</h2>
+          <h2>What FMCG jobs does Bell Recruitment recruit in Northern Ireland, Ireland and United Kingdom?</h2>
           <RoleGroups groups={ROLE_GROUPS} />
         </div>
       </section>
 
-      <section className="section">
+      <section className="section section-alt">
         <div className="container split">
           <div>
             <div className="section-label">CV tips</div>
@@ -150,7 +121,7 @@ export default function CandidateProcessPage() {
         </div>
       </section>
 
-      <section className="section section-alt">
+      <section className="section">
         <div className="container container-faq">
           <div className="section-label">FAQs</div>
           <h2>Frequently asked questions</h2>
@@ -171,7 +142,7 @@ export default function CandidateProcessPage() {
       </section>
 
       <CtaBand
-        title="Looking for your next FMCG role in Northern Ireland?"
+        title="Looking for your next FMCG role in Northern Ireland, Ireland and United Kingdom?"
         image="/images/grocery-aisle.jpg"
         buttons={[
           { label: "Upload your CV", href: URLS.cvUpload },
