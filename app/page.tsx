@@ -187,13 +187,13 @@ export default function HomePage() {
         </div>
       </section>
 
-      <section className="section section-dark">
-        <div className="container">
-          {SERVICE_DETAILS.map((d) => (
-            <ServiceDetail item={d} key={d.title} />
-          ))}
-        </div>
-      </section>
+      {SERVICE_DETAILS.map((d, i) => (
+        <section className={`section${i === 0 ? " section-dark" : ""}`} key={d.title}>
+          <div className="container">
+            <ServiceDetail item={d} />
+          </div>
+        </section>
+      ))}
 
       <section className="section section-alt">
         <div className="container text-center">

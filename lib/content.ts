@@ -45,14 +45,18 @@ export const PARTNERS = [
   { src: "/images/partner-prep.png", alt: "Prep House", w: 92, h: 100 },
   { src: "/images/partner-henderson.png", alt: "Henderson Group", w: 249, h: 100 },
   { src: "/images/partner-gm.png", alt: "GM Marketing", w: 121, h: 100 },
-  { src: "/images/partner-dan.png", alt: "Dan", w: 91, h: 100 },
   { src: "/images/partner-richmond.png", alt: "Richmond Marketing", w: 287, h: 100 },
-  { src: "/images/partner-wnr.webp", alt: "WNR", w: 100, h: 100 },
   { src: "/images/partner-thompsons.jpg", alt: "Thompson's Family Tea", w: 135, h: 100 },
   { src: "/images/partner-whites.png", alt: "Whites", w: 100, h: 100 },
-  { src: "/images/partner-kestrel.jpeg", alt: "Kestrel Foods", w: 100, h: 100 },
   { src: "/images/partner-cn.jpeg", alt: "Courtney and Nelson", w: 100, h: 100 },
   { src: "/images/partner-mulrines.jpeg", alt: "Mulrines", w: 337, h: 100 },
+  { src: "/images/partner-crust.png", alt: "Crust & Crumb", w: 93, h: 100 },
+  { src: "/images/partner-blenders.png", alt: "Blenders", w: 318, h: 100 },
+  { src: "/images/partner-excellence.png", alt: "Excellence", w: 322, h: 100 },
+  { src: "/images/partner-tsfoods.png", alt: "TS Foods", w: 191, h: 100 },
+  { src: "/images/partner-clandeboye.png", alt: "Clandeboye Estate", w: 241, h: 100 },
+  { src: "/images/partner-forestfeast.png", alt: "Forest Feast", w: 228, h: 100 },
+  { src: "/images/partner-bako.png", alt: "BAKO", w: 343, h: 100 },
 ];
 
 // Testimonial quotes must stay word for word (client instruction). Pages pick

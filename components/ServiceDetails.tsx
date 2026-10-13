@@ -2,13 +2,13 @@ import type { SERVICE_DETAILS } from "@/lib/content";
 
 type ServiceDetailItem = (typeof SERVICE_DETAILS)[number];
 
-// One service as a two-column block on the red band. Left: title, tagline, intro and the
-// "Choose ... when" box. Right: the numbered "How it works" steps. The two columns end at
-// about the same height, so there is no empty space.
+// One service: centred title and explanation, then one card per "How it works" step.
+// Each card is a <details>, so clicking it opens the explanation (works without JavaScript).
+// The "Choose ... when" list sits under the cards.
 export default function ServiceDetail({ item }: { item: ServiceDetailItem }) {
   return (
     <article className="service-detail">
-      <div className="service-detail-intro">
+      <header className="service-detail-head">
         <h2>{item.title}</h2>
         <p className="service-detail-tagline">{item.tagline}</p>
         {item.intro.map((t) => (
@@ -16,24 +16,26 @@ export default function ServiceDetail({ item }: { item: ServiceDetailItem }) {
             {t}
           </p>
         ))}
-        <div className="service-choose">
-          <h3>Choose {item.title} when</h3>
-          <ul className="tick-list">
-            {item.chooseWhen.map((t) => (
-              <li key={t}>{t}</li>
-            ))}
-          </ul>
-        </div>
+      </header>
+      <div className="service-acc-grid">
+        {item.steps.map((st, i) => (
+          <details className="service-acc" key={st.lead}>
+            <summary>
+              <span className="service-acc-num">{i + 1}</span>
+              <span className="service-acc-title">{st.lead.replace(/\.$/, "")}</span>
+              <i className="fas fa-plus" aria-hidden="true" />
+            </summary>
+            <p>{st.text}</p>
+          </details>
+        ))}
       </div>
-      <div className="service-detail-points">
-        <h3>How it works</h3>
-        <ol className="num-list">
-          {item.steps.map((st) => (
-            <li key={st.lead}>
-              <strong>{st.lead}</strong> {st.text}
-            </li>
+      <div className="service-choose">
+        <h3>Choose {item.title} when</h3>
+        <ul className="tick-list">
+          {item.chooseWhen.map((t) => (
+            <li key={t}>{t}</li>
           ))}
-        </ol>
+        </ul>
       </div>
     </article>
   );
