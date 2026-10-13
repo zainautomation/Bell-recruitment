@@ -97,6 +97,35 @@ export default function HomePage() {
 
       <section className="section section-alt">
         <div className="container">
+          <Founder title="Julie Bell">
+            <p>
+              Bell Recruitment was launched in 1999 by Founder and CEO Julie Bell, with a clear vision: to be the best
+              FMCG Recruiter by combining her FMCG industry knowledge with a personal, people-first approach.
+            </p>
+            <p>
+              Now with over 25 years&rsquo; experience, the business has grown steadily, built on long-standing
+              relationships with both clients and candidates, and a reputation for quality, integrity, and results.
+            </p>
+            <p>
+              Before founding the business, Julie spent a decade working within FMCG for brands including Pepsi, 7UP,
+              Ballygowan water and Budweiser, across promotional activity, merchandising, and sales roles &ndash;
+              experience that continues to shape the way Bell Recruitment works with clients today.
+            </p>
+            <p>Julie is also active beyond the business, holding several notable roles:</p>
+            <ul className="roles-list">
+              {JULIE_ROLES.map((r) => (
+                <li key={r}>{r}</li>
+              ))}
+            </ul>
+            <p>
+              <strong>At Bell Recruitment, people are at the heart of everything we do.</strong>
+            </p>
+          </Founder>
+        </div>
+      </section>
+
+      <section className="section">
+        <div className="container">
           <div className="section-label">Roles we recruit</div>
           <h2>FMCG sales and commercial recruitment in Northern Ireland, Ireland and United Kingdom</h2>
           <p className="section-intro">
@@ -110,7 +139,7 @@ export default function HomePage() {
         </div>
       </section>
 
-      <section className="section">
+      <section className="section section-alt">
         <div className="container split">
           <div>
             <div className="section-label">For employers</div>
@@ -147,43 +176,14 @@ export default function HomePage() {
         </div>
       </section>
 
-      <section className="section section-dark">
+      <section className="section">
         <div className="container">
           <div className="section-label">What we do</div>
           <h2>
             <LetterReveal text="Our Services" />
           </h2>
           <ServiceCards items={OUR_SERVICES} />
-          <ButtonRow buttons={[{ label: "Learn more about our services", href: URLS.services, variant: "light" }]} />
-        </div>
-      </section>
-
-      <section className="section">
-        <div className="container split split-reverse">
-          <div className="split-photo">
-            <Image
-              src="/images/cta-bg.jpg"
-              alt="FMCG professional looking for a new role on a laptop"
-              width={1200}
-              height={802}
-              sizes="(max-width: 900px) 100vw, 540px"
-            />
-          </div>
-          <div>
-            <div className="section-label">For candidates</div>
-            <h2>Looking for an FMCG job in Northern Ireland, Ireland and United Kingdom?</h2>
-            <p className="lead">
-              Many FMCG roles are filled before they&rsquo;re advertised. Register with Bell Recruitment and we&rsquo;ll talk
-              through each opportunity with you.{" "}
-              <mark className="hl">We don&rsquo;t send your CV to an employer without speaking to you first.</mark>
-            </p>
-            <ButtonRow
-              buttons={[
-                { label: "Learn more about the candidate process", href: URLS.candidates },
-                { label: "Upload your CV", href: URLS.cvUpload, variant: "ghost" },
-              ]}
-            />
-          </div>
+          <ButtonRow buttons={[{ label: "Learn more about our services", href: URLS.services }]} />
         </div>
       </section>
 
@@ -214,35 +214,6 @@ export default function HomePage() {
 
       <section className="section">
         <div className="container">
-          <Founder title="Julie Bell">
-            <p>
-              Bell Recruitment was launched in 1999 by Founder and CEO Julie Bell, with a clear vision: to be the best
-              FMCG Recruiter by combining her FMCG industry knowledge with a personal, people-first approach.
-            </p>
-            <p>
-              Now with over 25 years&rsquo; experience, the business has grown steadily, built on long-standing
-              relationships with both clients and candidates, and a reputation for quality, integrity, and results.
-            </p>
-            <p>
-              Before founding the business, Julie spent a decade working within FMCG for brands including Pepsi, 7UP,
-              Ballygowan water and Budweiser, across promotional activity, merchandising, and sales roles &ndash;
-              experience that continues to shape the way Bell Recruitment works with clients today.
-            </p>
-            <p>Julie is also active beyond the business, holding several notable roles:</p>
-            <ul className="roles-list">
-              {JULIE_ROLES.map((r) => (
-                <li key={r}>{r}</li>
-              ))}
-            </ul>
-            <p>
-              <strong>At Bell Recruitment, people are at the heart of everything we do.</strong>
-            </p>
-          </Founder>
-        </div>
-      </section>
-
-      <section className="section section-alt">
-        <div className="container">
           <div className="section-head-center">
             <div className="section-label">Client testimonials</div>
             <h2>What FMCG employers say about Bell Recruitment</h2>
@@ -252,7 +223,7 @@ export default function HomePage() {
         </div>
       </section>
 
-      <section className="section">
+      <section className="section section-alt">
         <div className="container container-faq">
           <div className="section-label">FAQs</div>
           <h2>Frequently asked questions</h2>
@@ -273,7 +244,7 @@ export default function HomePage() {
         </div>
       </section>
 
-      <section className="section section-alt">
+      <section className="section">
         <div className="container">
           <div className="section-head-center">
             <div className="section-label">Blogs</div>
