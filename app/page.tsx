@@ -164,12 +164,12 @@ export default function HomePage() {
             </ul>
             <ButtonRow buttons={[{ label: "How we hire for you", href: URLS.hire }]} />
           </div>
-          <div className="split-photo split-photo-tall">
+          <div className="split-photo split-photo-square">
             <Image
-              src="/images/interview.jpg"
-              alt="Briefing meeting about an FMCG vacancy"
-              width={1920}
-              height={1280}
+              src="/images/employer-meeting.jpg"
+              alt="Two people talking through a hiring brief"
+              width={1200}
+              height={1200}
               sizes="(max-width: 900px) 100vw, 540px"
             />
           </div>

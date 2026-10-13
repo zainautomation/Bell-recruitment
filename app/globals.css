@@ -475,6 +475,7 @@ h1, h2, h3, h4 {
 .split-top { align-items: start; }
 .split > div > h2 { max-width: none; }
 .split-photo-tall img { aspect-ratio: 4 / 5; }
+.split-photo-square img { aspect-ratio: 1 / 1; }
 
 /* Lists. */
 .q-list { margin: 6px 0 22px; }
