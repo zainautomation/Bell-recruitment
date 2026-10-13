@@ -540,15 +540,18 @@ h1, h2, h3, h4 {
    pointers (steps, then "Choose ... when") on the right. */
 .service-detail { display: grid; grid-template-columns: 5fr 7fr; gap: 64px; align-items: start; }
 .service-detail-intro { position: sticky; top: calc(var(--header-h) + 32px); }
-.service-detail-intro h2 { margin-bottom: 10px; }
-.service-detail-tagline { font-size: 1.1rem; font-weight: 600; color: var(--burgundy); margin-bottom: 20px; }
-.service-detail-points h3 { font-family: var(--font-sans), sans-serif; font-size: 12.5px; font-weight: 600; letter-spacing: 2px; text-transform: uppercase; color: var(--burgundy); margin-bottom: 6px; }
+.service-detail-intro h2 { margin-bottom: 12px; color: var(--burgundy); font-size: clamp(2.3rem, 4.2vw, 3.3rem); max-width: none; }
+.service-detail-tagline { font-size: 1.3rem; font-weight: 600; line-height: 1.4; color: var(--burgundy); margin-bottom: 22px; padding-left: 16px; border-left: 4px solid var(--burgundy); }
+.service-detail-intro .lead { font-size: 19px; line-height: 1.75; }
+.service-detail-points h3 { font-family: var(--font-sans), sans-serif; font-size: 14px; font-weight: 700; letter-spacing: 2px; text-transform: uppercase; color: var(--burgundy); margin-bottom: 8px; }
 .service-detail .num-list { margin: 0; }
-.service-detail .num-list li { font-size: 16px; padding: 14px 0 14px 50px; border-bottom: 1px solid var(--border-light); }
+.service-detail .num-list li { font-size: 17.5px; line-height: 1.65; padding: 16px 0 16px 54px; border-bottom: 1px solid var(--border-light); }
 .service-detail .num-list li:last-child { border-bottom: 0; }
-.service-detail .num-list li::before { top: 14px; }
-.service-choose { margin-top: 28px; padding: 24px 28px; background: var(--warm-white); border: 1px solid var(--border-light); border-left: 3px solid var(--burgundy); border-radius: var(--radius); }
-.service-choose .tick-list li { font-size: 15.5px; }
+.service-detail .num-list li::before { top: 16px; width: 34px; height: 34px; font-size: 15px; line-height: 34px; }
+.service-detail .num-list li strong { color: var(--burgundy); }
+.service-choose { margin-top: 28px; padding: 28px 30px; background: var(--warm-white); border: 1px solid var(--border-light); border-left: 5px solid var(--burgundy); border-radius: var(--radius); }
+.service-choose .tick-list li { font-size: 17px; line-height: 1.55; padding: 12px 0; }
+.service-choose .tick-list li::before { font-size: 14px; margin-top: 5px; }
 @media (max-width: 900px) {
   .service-detail { grid-template-columns: 1fr; gap: 28px; }
   .service-detail-intro { position: static; }
