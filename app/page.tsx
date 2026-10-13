@@ -26,7 +26,31 @@ const HERO_CLIENTS = PARTNERS.filter((p) =>
   ["Irwin's Bakery", "Henderson Group", "Richmond Marketing"].includes(p.alt),
 );
 
-const LOCATIONS = ["Belfast", "Bangor", "Lisburn", "Newry", "Portadown", "Ballymena", "Derry/Londonderry"];
+const LOCATIONS = [
+  "Belfast",
+  "Bangor",
+  "Lisburn",
+  "Newry",
+  "Portadown",
+  "Craigavon",
+  "Armagh",
+  "Ballymena",
+  "Derry/Londonderry",
+  "Dublin",
+  "Cork",
+  "Limerick",
+  "Galway",
+  "Waterford",
+  "Donegal",
+  "Cardiff",
+  "Edinburgh",
+  "York",
+  "Brighton",
+  "London",
+  "Cambridge",
+  "Oxford",
+  "Manchester",
+];
 
 export default function HomePage() {
   return (
