@@ -31,7 +31,7 @@ const REVEAL = [
   ".partners-label",
   ".footer-cta > *",
   ".svc-card",
-  ".service-detail",
+  ".service-detail > *",
   ".role-group",
   ".qa-card",
   ".aside-card",

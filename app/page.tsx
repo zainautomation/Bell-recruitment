@@ -8,7 +8,7 @@ import LetterReveal from "@/components/LetterReveal";
 import PartnerCarousel from "@/components/PartnerCarousel";
 import ProofStrip from "@/components/ProofStrip";
 import ServiceCards from "@/components/ServiceCards";
-import ServiceDetails from "@/components/ServiceDetails";
+import ServiceDetail from "@/components/ServiceDetails";
 import TestimonialGrid from "@/components/TestimonialGrid";
 import Tilt from "@/components/Tilt";
 import { BLOG_POSTS, EXPERTISE, JULIE_ROLES, OUR_SERVICES, PARTNERS, SERVICE_DETAILS, URLS } from "@/lib/content";
@@ -187,11 +187,13 @@ export default function HomePage() {
         </div>
       </section>
 
-      <section className="section section-dark">
-        <div className="container">
-          <ServiceDetails items={SERVICE_DETAILS} />
-        </div>
-      </section>
+      {SERVICE_DETAILS.map((d, i) => (
+        <section className={`section${i % 2 === 0 ? " section-alt" : ""}`} key={d.title}>
+          <div className="container">
+            <ServiceDetail item={d} />
+          </div>
+        </section>
+      ))}
 
       <section className="section section-alt">
         <div className="container text-center">
