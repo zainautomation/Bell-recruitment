@@ -8,9 +8,10 @@ import LetterReveal from "@/components/LetterReveal";
 import PartnerCarousel from "@/components/PartnerCarousel";
 import ProofStrip from "@/components/ProofStrip";
 import ServiceCards from "@/components/ServiceCards";
+import ServiceDetails from "@/components/ServiceDetails";
 import TestimonialGrid from "@/components/TestimonialGrid";
 import Tilt from "@/components/Tilt";
-import { BLOG_POSTS, EXPERTISE, JULIE_ROLES, OUR_SERVICES, PARTNERS, URLS } from "@/lib/content";
+import { BLOG_POSTS, EXPERTISE, JULIE_ROLES, OUR_SERVICES, PARTNERS, SERVICE_DETAILS, URLS } from "@/lib/content";
 
 // Copy: "1. Home" in the client's Website Content document.
 
@@ -186,17 +187,9 @@ export default function HomePage() {
         </div>
       </section>
 
-      <section className="photo-banner handshake-banner">
-        <div className="photo-banner-box">
-          <h2>
-            <LetterReveal text="FMCG Executive Search" />
-          </h2>
-          <p>
-            Executive search is the one thing we do, and we do it for FMCG only. We approach people directly,
-            including those who aren&rsquo;t looking, assess each one, and send you a short list.
-            The whole process is confidential, from first approach to offer.
-          </p>
-          <ButtonRow buttons={[{ label: "Learn more about FMCG executive search", href: URLS.services, variant: "light" }]} />
+      <section className="section section-dark">
+        <div className="container">
+          <ServiceDetails items={SERVICE_DETAILS} />
         </div>
       </section>
 

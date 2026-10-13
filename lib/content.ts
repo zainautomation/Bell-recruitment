@@ -235,3 +235,82 @@ export const OUR_SERVICES = [
     text: "Targeted talent sourcing and comprehensive market mapping to uncover exceptional candidates, including high-performing individuals who may not be actively seeking new opportunities.",
   },
 ];
+
+// "Executive Search" and "Recruitment" detail cards on the Home page. Wording is from the client; keep it word for word.
+export const SERVICE_DETAILS = [
+  {
+    title: "Executive Search",
+    tagline: "For senior, business-critical and confidential appointments",
+    intro: [
+      "When you’re appointing a Managing Director, Head of Sales, Operations Director or another leader whose decisions will define your next chapter, the best person is rarely browsing job boards. They’re usually doing well where they are and not actively looking.",
+      "Executive Search is a retained, research-led service built to find and engage those people.",
+    ],
+    steps: [
+      {
+        lead: "The brief.",
+        text: "We spend time with you and your leadership team to understand the role, the business strategy behind it, and the culture the right person must fit.",
+      },
+      {
+        lead: "Mapping the market.",
+        text: "We identify the organisations, competitors and adjacent sectors where suitable leaders are working now, across Northern Ireland, the Republic of Ireland and beyond.",
+      },
+      {
+        lead: "Direct, discreet approach.",
+        text: "We contact potential candidates personally and in confidence, and present your opportunity in a way that gets serious consideration.",
+      },
+      {
+        lead: "Rigorous assessment.",
+        text: "Candidates are interviewed in depth against the brief, with their track record, motivations and fit tested well before they meet you.",
+      },
+      {
+        lead: "A considered shortlist.",
+        text: "You receive a small number of well-qualified candidates with detailed written reports.",
+      },
+      {
+        lead: "Through to appointment.",
+        text: "We manage interviews, references, offer negotiation and resignation, and stay in touch through onboarding.",
+      },
+    ],
+    chooseWhen: [
+      "The role is senior, specialist or hard to fill",
+      "Confidentiality matters, for example when replacing an incumbent or entering a new market",
+      "The cost of getting the hire wrong is high",
+      "You need access to people who aren’t actively looking",
+    ],
+  },
+  {
+    title: "Recruitment",
+    tagline: "For professional, management and operational roles you need filled well and quickly",
+    intro: [
+      "Our Recruitment service gives you fast access to good candidates, with the screening and judgement that save your team time.",
+    ],
+    steps: [
+      {
+        lead: "The brief.",
+        text: "We take the time to understand the role, the team and what good looks like, and can help write the job description if you need one.",
+      },
+      {
+        lead: "Targeted sourcing.",
+        text: "We draw on our established network, our candidate database and targeted advertising to reach the right people.",
+      },
+      {
+        lead: "Careful screening.",
+        text: "Every candidate is interviewed and assessed before you see them, so you only meet people worth your time.",
+      },
+      {
+        lead: "Interview support.",
+        text: "We can provide structured interview questions and coordinate the process from start to finish.",
+      },
+      {
+        lead: "Offer and beyond.",
+        text: "We handle feedback, offers and start dates, and keep in touch once your new hire is in place.",
+      },
+    ],
+    chooseWhen: [
+      "You need a strong shortlist within a short timeframe",
+      "The role suits active jobseekers as well as passive candidates",
+      "You’re hiring for sales, commercial, operations, production, technical or support roles",
+      "You want a trusted partner across several vacancies",
+    ],
+  },
+];
