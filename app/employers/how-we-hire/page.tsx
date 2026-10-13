@@ -38,7 +38,7 @@ export default function HowWeHirePage() {
       <PageHero
         eyebrow="For employers"
         title="How Bell Recruitment Hires for FMCG Employers"
-        image="/images/interview.jpg"
+        image="/images/employer-meeting.jpg"
         imagePosition="50% 35%"
       >
         Send us the job description and we start the search within 24 hours. This page explains what happens from

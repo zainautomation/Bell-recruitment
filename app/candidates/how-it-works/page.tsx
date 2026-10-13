@@ -111,10 +111,10 @@ export default function CandidateProcessPage() {
           </div>
           <div className="split-photo">
             <Image
-              src="/images/interview.jpg"
-              alt="Recruiter talking through a candidate’s experience and taking notes"
-              width={1920}
-              height={1280}
+              src="/images/employer-meeting.jpg"
+              alt="Two people talking through a candidate’s experience"
+              width={1200}
+              height={1200}
               sizes="(max-width: 900px) 100vw, 540px"
             />
           </div>

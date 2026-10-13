@@ -146,7 +146,7 @@ export const BLOG_POSTS = [
   {
     title: "Preparing your CV for a commercial role",
     excerpt: "Simple tips to help your CV get noticed by hiring managers in commercial and operational roles.",
-    image: "/images/interview.jpg",
+    image: "/images/employer-meeting.jpg",
   },
   {
     title: "Why executive search is different to standard recruitment",

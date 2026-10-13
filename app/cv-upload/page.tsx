@@ -11,7 +11,7 @@ export default function CvUploadPage() {
       <PageHero
         eyebrow="For candidates"
         title="Let's find your next opportunity. Send us your CV"
-        image="/images/interview.jpg"
+        image="/images/employer-meeting.jpg"
         imagePosition="50% 35%"
       >
         Many of our FMCG roles are filled before they&rsquo;re ever advertised. Register with us and be first in line.
