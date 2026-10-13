@@ -21,10 +21,6 @@ export default function Footer() {
       <div className="footer-inner">
         <div className="footer-brand">
           <Image src="/images/logo-small.png" alt="Bell Recruitment" width={300} height={140} />
-          <p>
-            FMCG executive search in Northern Ireland since 1999. Commercial and sales leaders for FMCG
-            businesses, found by someone from the trade.
-          </p>
         </div>
         <div className="footer-col">
           <h4>Hiring &amp; jobs</h4>

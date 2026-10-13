@@ -5,7 +5,7 @@
 export const CONTACT = {
   phone: "+44 28 9031 1211",
   phoneHref: "tel:+442890311211",
-  email: "julie@bell-recruitment.net",
+  email: "julie@bellrecruitment.net",
   address: "24 Mount Charles, Belfast BT7 1NZ, United Kingdom",
   linkedin: "https://www.linkedin.com/company/bell-recruitment-ni/",
   facebook: "https://www.facebook.com/bellrecruits",
