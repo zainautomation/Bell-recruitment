@@ -36,6 +36,7 @@ export default function Footer() {
           <Link href={URLS.testimonials}>Testimonials</Link>
           <Link href={URLS.faqs}>FAQs</Link>
           <Link href="/blogs/">Blogs</Link>
+          <Link href={URLS.locations}>Where we work</Link>
           <Link href="/privacy-policy/">Privacy Policy</Link>
         </div>
         <div className="footer-col">

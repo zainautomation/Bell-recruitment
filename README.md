@@ -125,4 +125,4 @@ These files live on the server's disk. On hosts without a persistent filesystem,
 
 ## Image credits
 
-Photos of Julie Bell, the logo and client/partner logos belong to Bell Recruitment and the respective companies. Stock photography (`grocery-aisle`, `fresh-produce`, `warehouse-*`, `supermarket-shelves`, `interview`, `team-*`) is from [Unsplash](https://unsplash.com) under the Unsplash License.
+Photos of Julie Bell, the logo and client/partner logos belong to Bell Recruitment and the respective companies. Stock photography (`grocery-aisle`, `fresh-produce`, `warehouse-*`, `team-*`) is from [Unsplash](https://unsplash.com) under the Unsplash License.

@@ -21,32 +21,6 @@ export const metadata: Metadata = {
     "FMCG executive search in Northern Ireland since 1999. Sales, key account and commercial hires. Search begins within 24 hours.",
 };
 
-const LOCATIONS = [
-  "Belfast",
-  "Bangor",
-  "Lisburn",
-  "Newry",
-  "Portadown",
-  "Craigavon",
-  "Armagh",
-  "Ballymena",
-  "Derry/Londonderry",
-  "Dublin",
-  "Cork",
-  "Limerick",
-  "Galway",
-  "Waterford",
-  "Donegal",
-  "Cardiff",
-  "Edinburgh",
-  "York",
-  "Brighton",
-  "London",
-  "Cambridge",
-  "Oxford",
-  "Manchester",
-];
-
 export default function HomePage() {
   return (
     <>
@@ -189,23 +163,6 @@ export default function HomePage() {
       ))}
 
       <section className="section section-alt">
-        <div className="container text-center">
-          <div className="section-label">Where we work</div>
-          <h2 className="center">Recruiting for FMCG employers across Northern Ireland, Ireland and United Kingdom</h2>
-          <p className="section-intro center">
-            We work with FMCG businesses throughout Northern Ireland.
-          </p>
-          <ul className="loc-pills" aria-label="Locations">
-            {LOCATIONS.map((l) => (
-              <li className="loc-pill" key={l}>
-                <i className="fas fa-location-dot" aria-hidden="true" /> {l}
-              </li>
-            ))}
-          </ul>
-        </div>
-      </section>
-
-      <section className="section">
         <div className="container">
           <div className="section-head-center">
             <div className="section-label">Client testimonials</div>
@@ -216,7 +173,7 @@ export default function HomePage() {
         </div>
       </section>
 
-      <section className="section section-alt">
+      <section className="section">
         <div className="container container-faq">
           <div className="section-label">FAQs</div>
           <h2>Frequently asked questions</h2>
@@ -237,7 +194,7 @@ export default function HomePage() {
         </div>
       </section>
 
-      <section className="section">
+      <section className="section section-alt">
         <div className="container">
           <div className="section-head-center">
             <div className="section-label">Blogs</div>

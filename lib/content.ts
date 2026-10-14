@@ -23,6 +23,7 @@ export const URLS = {
   candidates: "/candidates/how-it-works/",
   faqs: "/faqs/",
   blogs: "/blogs/",
+  locations: "/locations/",
   jobs: "/jobs/",
   salesRoles: "/jobs/sales-roles-northern-ireland/",
   contact: "/contact-us/",
@@ -318,3 +319,30 @@ export const SERVICE_DETAILS = [
     ],
   },
 ];
+
+// Cities, areas and regions page. `area` picks the wording of the short description.
+export const LOCATIONS = [
+  { name: "Belfast", area: "ni" },
+  { name: "Bangor", area: "ni" },
+  { name: "Lisburn", area: "ni" },
+  { name: "Newry", area: "ni" },
+  { name: "Portadown", area: "ni" },
+  { name: "Craigavon", area: "ni" },
+  { name: "Armagh", area: "ni" },
+  { name: "Ballymena", area: "ni" },
+  { name: "Derry / Londonderry", area: "ni" },
+  { name: "Dublin", area: "ie" },
+  { name: "Cork", area: "ie" },
+  { name: "Limerick", area: "ie" },
+  { name: "Galway", area: "ie" },
+  { name: "Waterford", area: "ie" },
+  { name: "Donegal", area: "ie" },
+  { name: "Cardiff", area: "uk" },
+  { name: "Edinburgh", area: "uk" },
+  { name: "York", area: "uk" },
+  { name: "Brighton", area: "uk" },
+  { name: "London", area: "uk" },
+  { name: "Cambridge", area: "uk" },
+  { name: "Oxford", area: "uk" },
+  { name: "Manchester", area: "uk" },
+] as const;
