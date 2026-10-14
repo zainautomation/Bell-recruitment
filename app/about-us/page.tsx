@@ -6,7 +6,8 @@ import Founder from "@/components/Founder";
 import PageHero from "@/components/PageHero";
 import PartnerCarousel from "@/components/PartnerCarousel";
 import ProofStrip from "@/components/ProofStrip";
-import { JULIE_ROLES, URLS } from "@/lib/content";
+import ServiceDetail from "@/components/ServiceDetails";
+import { JULIE_ROLES, SERVICE_DETAILS, URLS } from "@/lib/content";
 
 // Copy: "3. About Us" in the client's Website Content document.
 
@@ -120,6 +121,14 @@ export default function AboutPage() {
           <ButtonRow buttons={[{ label: "See the full client process", href: URLS.hire }]} />
         </div>
       </section>
+
+      {SERVICE_DETAILS.map((d, i) => (
+        <section className={`section${i === 0 ? " section-dark" : ""}`} key={d.title}>
+          <div className="container">
+            <ServiceDetail item={d} />
+          </div>
+        </section>
+      ))}
 
       <section className="section section-alt section-tight">
         <div className="container">
