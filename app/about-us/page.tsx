@@ -17,20 +17,6 @@ export const metadata: Metadata = {
     "Bell Recruitment is an FMCG executive search firm founded in 1999 by Julie Bell, who spent ten years at Pepsi, 7UP, Ballygowan and Budweiser before starting the business.",
 };
 
-const APPROACH = [
-  {
-    icon: "fa-clipboard-list",
-    lead: "We start with the work.",
-    text: "Before searching, we agree what you sell, who to, the territory, and how success is measured.",
-  },
-  {
-    icon: "fa-layer-group",
-    lead: "We assess every candidate.",
-    text: "Rigorous screening, structured interviews and behavioural assessment to evaluate capability, cultural alignment and suitability for the role.",
-  },
-  { icon: "fa-bolt", lead: "We move quickly.", text: "The search starts within 24 hours of receiving your job description." },
-];
-
 export default function AboutPage() {
   return (
     <>
@@ -87,7 +73,7 @@ export default function AboutPage() {
         </div>
       </section>
 
-      <section className="section section-dark">
+      <section className="section section-alt">
         <div className="container">
           <div className="section-label">What we do</div>
           <h2>FMCG executive search</h2>
@@ -99,26 +85,7 @@ export default function AboutPage() {
             We know the market: who&rsquo;s moving, who&rsquo;s performing, and what a role
             really involves.
           </p>
-          <ButtonRow buttons={[{ label: "See our executive search service", href: URLS.services, variant: "light" }]} />
-        </div>
-      </section>
-
-      <section className="section">
-        <div className="container">
-          <div className="section-label">How we work</div>
-          <h2>The Bell Recruitment approach</h2>
-          <div className="feature-grid">
-            {APPROACH.map((a) => (
-              <div className="value-card" key={a.lead}>
-                <div className="value-icon">
-                  <i className={`fas ${a.icon}`} aria-hidden="true" />
-                </div>
-                <h3>{a.lead.replace(/\.$/, "")}</h3>
-                <p>{a.text}</p>
-              </div>
-            ))}
-          </div>
-          <ButtonRow buttons={[{ label: "See the full client process", href: URLS.hire }]} />
+          <ButtonRow buttons={[{ label: "See our executive search service", href: URLS.services }]} />
         </div>
       </section>
 
