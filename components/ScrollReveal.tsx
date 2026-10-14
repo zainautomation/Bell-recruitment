@@ -18,7 +18,6 @@ const REVEAL = [
   ".value-card",
   ".service-card",
   ".sector-card",
-  ".why-card",
   ".testimonial-card",
   ".julie-photo",
   ".julie-text > *",

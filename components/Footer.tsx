@@ -46,9 +46,6 @@ export default function Footer() {
             <a href={CONTACT.linkedin} target="_blank" rel="noopener" aria-label="LinkedIn">
               <i className="fab fa-linkedin-in" />
             </a>
-            <a href={CONTACT.facebook} target="_blank" rel="noopener" aria-label="Facebook">
-              <i className="fab fa-facebook-f" />
-            </a>
           </div>
         </div>
       </div>

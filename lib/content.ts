@@ -8,7 +8,6 @@ export const CONTACT = {
   email: "julie@bellrecruitment.net",
   address: "24 Mount Charles, Belfast BT7 1NZ, United Kingdom",
   linkedin: "https://www.linkedin.com/company/bell-recruitment-ni/",
-  facebook: "https://www.facebook.com/bellrecruits",
 };
 
 // URLs from the content document. /jobs/ and /jobs/sales-roles-northern-ireland/ are
@@ -115,25 +114,6 @@ export const JULIE_ROLES = [
 ];
 
 // Used on the CV upload page (not yet rewritten in the content document).
-export const CANDIDATE_REASONS = [
-  {
-    title: "The Strongest FMCG Network",
-    text: "Our reach across food, beverage, bakery, grocery, wholesale, and distribution is unmatched. When a role opens, we often know before it's advertised.",
-  },
-  {
-    title: "A Name Known in the Industry",
-    text: "We are the FMCG recruitment specialist, and employers know us in the industry.",
-  },
-  {
-    title: "Confidential Career Guidance",
-    text: "Every conversation is confidential. We give candid, market-informed career advice.",
-  },
-  {
-    title: "Access to Hidden Roles",
-    text: "Many positions are filled before they reach a job board. By registering with us, you see opportunities the open market never does.",
-  },
-];
-
 export const BLOG_POSTS = [
   {
     title: "How to attract top FMCG talent in a competitive market",

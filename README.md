@@ -32,7 +32,6 @@ app/
   contact-us/           Contact form
   cv-upload/            CV upload form
   privacy-policy/       Privacy policy
-  api/contact/          POST handler for the contact form
   api/cv-upload/        POST handler for the CV upload form
 components/             Shared UI, one component per file (see below)
 lib/
@@ -107,11 +106,11 @@ All animation is plain CSS and small React components.
 
 ## Forms
 
-The contact form (`/api/contact/`) and CV upload (`/api/cv-upload/`) are handled by route handlers in `app/api/`, using helpers in `lib/submissions.ts`:
+The CV upload form (`/api/cv-upload/`) is handled by a route handler in `app/api/`, using helpers in `lib/submissions.ts`:
 
 - The email address is required and validated on both the client and the server.
 - CVs must be PDF, DOC or DOCX and no larger than 5MB. They are saved to `uploads/` with a timestamped, sanitised filename.
-- Every submission is appended as one JSON line to `data/contact_submissions.jsonl` or `data/cv_submissions.jsonl`.
+- Every submission is appended as one JSON line to `data/cv_submissions.jsonl`.
 
 These files live on the server's disk. On hosts without a persistent filesystem, such as Vercel, replace `logSubmission` and `saveCv` in `lib/submissions.ts` with email or cloud storage (for example S3 or Vercel Blob). The API routes don't need to change.
 

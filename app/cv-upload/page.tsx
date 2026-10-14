@@ -1,7 +1,6 @@
 import type { Metadata } from "next";
 import PageHero from "@/components/PageHero";
 import SubmitForm from "@/components/SubmitForm";
-import { CANDIDATE_REASONS } from "@/lib/content";
 
 export const metadata: Metadata = { title: "CV Upload" };
 
@@ -18,21 +17,8 @@ export default function CvUploadPage() {
       </PageHero>
 
       <section className="section">
-        <div className="container contact-grid">
-          <div>
-            <div className="section-label">Why register</div>
-            <h2 style={{ fontSize: "2rem", marginBottom: 24 }}>Why FMCG professionals choose us</h2>
-            <div className="why-grid" style={{ gridTemplateColumns: "1fr" }}>
-              {CANDIDATE_REASONS.map((r) => (
-                <div className="why-card" key={r.title}>
-                  <h3>{r.title}</h3>
-                  <p>{r.text}</p>
-                </div>
-              ))}
-            </div>
-          </div>
-
-          <div className="form-panel">
+        <div className="container">
+          <div className="form-panel form-panel-solo">
             <h2>Upload your CV</h2>
             <p>Every CV is personally reviewed by our team.</p>
             <SubmitForm

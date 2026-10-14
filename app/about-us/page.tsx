@@ -1,6 +1,5 @@
 import type { Metadata } from "next";
 import Image from "next/image";
-import { ButtonRow } from "@/components/ButtonLink";
 import CtaBand from "@/components/CtaBand";
 import Founder from "@/components/Founder";
 import PageHero from "@/components/PageHero";
@@ -73,22 +72,6 @@ export default function AboutPage() {
         </div>
       </section>
 
-      <section className="section section-alt">
-        <div className="container">
-          <div className="section-label">What we do</div>
-          <h2>FMCG executive search</h2>
-          <p className="lead">
-            We find commercial and sales leaders for FMCG businesses across Northern Ireland, approach them directly (including people who
-            aren&rsquo;t looking), assess each one and present a short list.
-          </p>
-          <p className="lead">
-            We know the market: who&rsquo;s moving, who&rsquo;s performing, and what a role
-            really involves.
-          </p>
-          <ButtonRow buttons={[{ label: "See our executive search service", href: URLS.services }]} />
-        </div>
-      </section>
-
       {SERVICE_DETAILS.map((d, i) => (
         <section className={`section${i === 0 ? " section-dark" : ""}`} key={d.title}>
           <div className="container">
@@ -140,16 +123,6 @@ export default function AboutPage() {
         </div>
       </section>
 
-      <section className="section section-alt">
-        <div className="container text-center">
-          <div className="section-label">Our clients</div>
-          <h2 className="center">Trusted by FMCG businesses across Northern Ireland, Ireland and United Kingdom</h2>
-          <p className="section-intro center">
-            We work with FMCG employers who come back to us year after year. Some of our client relationships go back
-            more than 20 years, and we measure our work by whether they call us for the next hire.
-          </p>
-        </div>
-      </section>
       <PartnerCarousel />
 
       <CtaBand
