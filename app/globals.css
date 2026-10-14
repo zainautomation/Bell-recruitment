@@ -578,6 +578,12 @@ h1, h2, h3, h4 {
   .service-detail-tagline { font-size: 1.25rem; }
 }
 
+/* Explanation under the "Our Services" heading, above the cards. */
+.services-intro { max-width: 900px; margin-bottom: 44px; }
+.services-intro h3 { font-size: 1.6rem; color: var(--burgundy); margin-bottom: 12px; }
+.services-intro .services-tagline { font-size: 1.3rem; font-weight: 600; line-height: 1.5; color: var(--text-dark); margin-bottom: 18px; }
+.services-intro p { font-size: 17.5px; line-height: 1.75; margin-bottom: 14px; }
+
 /* Our Services (Home): light cards in a twelve-column grid, four on the first row and three on the second. */
 .svc-grid { display: grid; grid-template-columns: repeat(12, 1fr); gap: 18px; margin-top: 8px; }
 .svc-card { grid-column: span 3; padding: 28px 24px; border-radius: var(--radius); background: var(--warm-white); border: 1px solid var(--border-light); border-top: 3px solid var(--burgundy); transition: box-shadow .3s, border-color .3s, transform .3s; }

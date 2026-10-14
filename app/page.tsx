@@ -156,6 +156,25 @@ export default function HomePage() {
           <h2>
             <LetterReveal text="Our Services" />
           </h2>
+          <div className="services-intro">
+            <h3>FMCG Executive Search &amp; Recruitment</h3>
+            <p className="services-tagline">
+              We help FMCG businesses identify, attract and appoint the talent who will shape their future.
+            </p>
+            <p>
+              Specialising in executive search and recruitment across the Fast-Moving Consumer Goods (FMCG) sector, we
+              partner with organisations throughout Northern Ireland, Ireland and the UK to secure exceptional talent.
+            </p>
+            <p>
+              Combining unparalleled sector knowledge, extensive executive networks, strategic market mapping and
+              advanced talent assessment, we identify outstanding individuals who can drive business performance, lead
+              transformation and deliver lasting impact.
+            </p>
+            <p>
+              From critical leadership appointments to long-term talent strategy, we connect businesses with the people
+              who make the difference.
+            </p>
+          </div>
           <ServiceCards items={OUR_SERVICES} />
           <ButtonRow buttons={[{ label: "Learn more about our services", href: URLS.services }]} />
         </div>
