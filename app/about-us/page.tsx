@@ -130,7 +130,7 @@ export default function AboutPage() {
           { value: "1999", label: "Founded by Julie Bell", countUp: false },
           { value: "25+", label: "Years placing FMCG talent" },
           { value: "1000+", label: "Placements" },
-          { value: "20", label: "Brand partners" },
+          { value: "105", label: "Brand partners" },
         ]}
       />
 

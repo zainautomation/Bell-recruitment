@@ -11,7 +11,7 @@ import ServiceCards from "@/components/ServiceCards";
 import ServiceDetail from "@/components/ServiceDetails";
 import TestimonialGrid from "@/components/TestimonialGrid";
 import Tilt from "@/components/Tilt";
-import { BLOG_POSTS, EXPERTISE, JULIE_ROLES, OUR_SERVICES, PARTNERS, SERVICE_DETAILS, URLS } from "@/lib/content";
+import { BLOG_POSTS, EXPERTISE, JULIE_ROLES, OUR_SERVICES, SERVICE_DETAILS, URLS } from "@/lib/content";
 
 // Copy: "1. Home" in the client's Website Content document.
 
@@ -20,11 +20,6 @@ export const metadata: Metadata = {
   description:
     "FMCG executive search in Northern Ireland since 1999. Sales, key account and commercial hires. Search begins within 24 hours.",
 };
-
-// The document names these logos for the hero ("and others" are in the carousel below).
-const HERO_CLIENTS = PARTNERS.filter((p) =>
-  ["Irwin's Bakery", "Henderson Group", "Richmond Marketing"].includes(p.alt),
-);
 
 const LOCATIONS = [
   "Belfast",
@@ -75,14 +70,6 @@ export default function HomePage() {
                 { label: "Find FMCG jobs", href: URLS.jobs, variant: "outline" },
               ]}
             />
-            <div className="hero-trust">
-              <span>Trusted by</span>
-              <div className="hero-trust-logos">
-                {HERO_CLIENTS.map((p) => (
-                  <Image key={p.src} src={p.src} alt={p.alt} width={p.w} height={p.h} />
-                ))}
-              </div>
-            </div>
           </div>
           <Tilt className="hero-photo">
             <Image
@@ -113,7 +100,7 @@ export default function HomePage() {
         items={[
           { value: "1999", label: "Recruiting since", countUp: false },
           { value: "1000+", label: "Placements" },
-          { value: "20", label: "Brand partners" },
+          { value: "105", label: "Brand partners" },
         ]}
       />
 
@@ -164,43 +151,6 @@ export default function HomePage() {
       </section>
 
       <section className="section section-alt">
-        <div className="container split">
-          <div>
-            <div className="section-label">For employers</div>
-            <h2>Hiring in FMCG? We start with the work behind the vacancy</h2>
-            <p className="lead">
-              Send us the job description and we start the search <mark className="hl">within 24 hours</mark>.
-              First, we want to know:
-            </p>
-            <ul className="q-list">
-              <li>What do you sell, and who are your customers?</li>
-              <li>Is the role new business, account management, or both?</li>
-              <li>Which territory does it cover, and how much travel is involved?</li>
-              <li>How is performance measured?</li>
-              <li>Which experience is essential, and which is only preferred?</li>
-            </ul>
-            <p className="list-heading">Employers usually call us when they:</p>
-            <ul className="tick-list">
-              <li>Need a Key Account Manager who already knows the NI retail and wholesale trade</li>
-              <li>Are replacing a sales rep and can&rsquo;t afford a long gap in the territory</li>
-              <li>Are opening a new channel, such as on-trade, off-trade or foodservice</li>
-              <li>Need a confidential senior hire that can&rsquo;t be advertised</li>
-            </ul>
-            <ButtonRow buttons={[{ label: "How we hire for you", href: URLS.hire }]} />
-          </div>
-          <div className="split-photo split-photo-square">
-            <Image
-              src="/images/employer-meeting.jpg"
-              alt="Two people talking through a hiring brief"
-              width={1200}
-              height={1200}
-              sizes="(max-width: 900px) 100vw, 540px"
-            />
-          </div>
-        </div>
-      </section>
-
-      <section className="section">
         <div className="container">
           <div className="section-label">What we do</div>
           <h2>

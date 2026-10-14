@@ -36,7 +36,7 @@ export default function TestimonialsPage() {
         items={[
           { value: "25+", label: "Years" },
           { value: "1000+", label: "Placements" },
-          { value: "20", label: "Brand partners" },
+          { value: "105", label: "Brand partners" },
         ]}
       />
 
