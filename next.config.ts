@@ -10,6 +10,9 @@ const nextConfig: NextConfig = {
     return [
       // The Services page moved from /employer/ to /services/ (content document URL).
       { source: "/employer/", destination: "/services/", permanent: true },
+      // The Candidates and Testimonials pages were removed; send old links to the home page.
+      { source: "/candidates/how-it-works/", destination: "/", permanent: true },
+      { source: "/testimonials/", destination: "/", permanent: true },
       // Planned pages from the content document that are not written yet. Temporary
       // redirects, so they can be replaced by real pages without browsers caching them.
       // Remove each entry when its page is added under app/jobs/.

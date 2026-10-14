@@ -4,6 +4,7 @@ import CtaBand from "@/components/CtaBand";
 import FaqList from "@/components/FaqList";
 import PageHero from "@/components/PageHero";
 import ProcessSteps from "@/components/ProcessSteps";
+import TestimonialGrid from "@/components/TestimonialGrid";
 import { URLS } from "@/lib/content";
 
 // Copy: "5. Client Process" in the client's Website Content document.
@@ -13,24 +14,6 @@ export const metadata: Metadata = {
   description:
     "How Bell Recruitment hires for FMCG employers in Northern Ireland: search begins in 24 hours, with rigorous candidate assessment.",
 };
-
-const FASTER = [
-  {
-    icon: "fa-list-check",
-    lead: "Agree the essentials early.",
-    text: "A shortlist is quickest when “must have” and “nice to have” are separated at the start.",
-  },
-  {
-    icon: "fa-bolt",
-    lead: "Move quickly on strong candidates.",
-    text: "Good FMCG people are often in demand, and delays lose them.",
-  },
-  {
-    icon: "fa-comments",
-    lead: "Give feedback within a few days.",
-    text: "It keeps candidates engaged and helps us refine the search.",
-  },
-];
 
 export default function HowWeHirePage() {
   return (
@@ -46,118 +29,48 @@ export default function HowWeHirePage() {
       </PageHero>
 
       <section className="section">
-        <div className="container with-aside">
-          <div>
-            <div className="section-label">Step by step</div>
-            <h2>Our FMCG executive search process, step by step</h2>
-            <ProcessSteps
-              vertical
-              steps={[
-                {
-                  title: "The brief",
-                  text: (
-                    <p>
-                      We talk to you about the role before we search. What do you sell, and to whom? Is the job new
-                      business, account management or both? Which territory does it cover and how much travel is
-                      involved? How is performance measured, and which experience is essential versus preferred?
-                    </p>
-                  ),
-                },
-                {
-                  title: "The search begins within 24 hours",
-                  text: (
-                    <p>
-                      Once we have the job description, we start. We search our network and approach people directly,
-                      including those who aren&rsquo;t looking for a job. Many of the strongest FMCG candidates never
-                      apply to adverts.
-                    </p>
-                  ),
-                },
-                {
-                  title: "Candidate assessment",
-                  text: (
-                    <p>
-                      Every candidate goes through rigorous screening, structured interviews and behavioural
-                      assessment to evaluate capability, cultural alignment and suitability for the role. We also take
-                      references.
-                    </p>
-                  ),
-                },
-                {
-                  title: "The shortlist",
-                  text: (
-                    <p>
-                      You get the strongest matches only, with notes on each person: what they&rsquo;ve achieved, what
-                      they&rsquo;re looking for and why we think they fit.
-                    </p>
-                  ),
-                },
-                {
-                  title: "Interviews and offer",
-                  text: (
-                    <p>
-                      We coordinate interviews, collect feedback, support salary and package negotiation, and keep both
-                      sides informed until an offer is accepted.
-                    </p>
-                  ),
-                },
-                {
-                  title: "Start date and 90-day guarantee",
-                  text: (
-                    <p>
-                      We stay in touch up to the start date. If a candidate we place leaves within 90 days, we
-                      provide a replacement.
-                    </p>
-                  ),
-                },
-              ]}
-            />
-          </div>
-          <aside className="aside-card" aria-label="At a glance">
-            <div className="aside-item">
-              <strong>24 hours</strong>
-              <span>The search begins within 24 hours of receiving your job description.</span>
-            </div>
-            <ButtonRow buttons={[{ label: "Send us a vacancy", href: URLS.contact, variant: "light" }]} />
-          </aside>
+        <div className="container text-center">
+          <div className="section-label">Our FMCG recruitment process</div>
+          <h2 className="center">How we recruit, step by step</h2>
+          <ProcessSteps
+            vertical
+            steps={[
+              {
+                title: "The brief",
+                text: "Before we search, we sit down with you to understand the role and the business behind it. We ask what the job really involves, who it reports to, and what the first year should deliver. We also ask what experience is essential and what’s a bonus, and what kind of person will fit your team.",
+              },
+              {
+                title: "The search begins within 24 hours",
+                text: "Once we have the job description, we go straight to our network across food, drink and FMCG in Northern Ireland and Ireland. That includes people who aren’t actively looking. Many of the best candidates never apply to adverts, so we approach them directly and in confidence.",
+              },
+              {
+                title: "Candidate assessment",
+                text: "We interview every candidate ourselves before you see them. We test their experience against your brief, look at what they’ve actually achieved, and consider how they’ll fit your culture and your team. We check that the move makes sense for them as well as for you.",
+              },
+              {
+                title: "The shortlist",
+                text: "You see only the strongest matches. Each one comes with our notes: what they’ve achieved, what they’re looking for, and why we think they’re right for the role.",
+              },
+              {
+                title: "Interviews and offer",
+                text: "We arrange interviews and gather feedback from both sides. We also help with salary and package discussions, and keep everyone informed until an offer is accepted. Candidates hear from us at every stage, which protects your reputation as an employer.",
+              },
+              {
+                title: "Start date and 90-day guarantee",
+                text: "We stay in touch with your new hire right up to their start date and through their first weeks. If someone we place leaves within 90 days, we’ll find a replacement.",
+              },
+            ]}
+          />
         </div>
       </section>
 
       <section className="section section-alt">
-        <div className="container split split-top">
-          <div>
-            <div className="section-label">Your brief</div>
-            <h2>What to have ready when you brief us</h2>
-            <ul className="tick-list">
-              <li>The job description</li>
-              <li>Salary and package, including commission, car or van and benefits</li>
-              <li>Territory, travel and working pattern</li>
-              <li>Reporting line</li>
-              <li>What&rsquo;s essential and what&rsquo;s only preferred</li>
-              <li>How performance is measured</li>
-              <li>Your interview stages and who takes part</li>
-            </ul>
-            <p className="note">
-              Missing one of these? Send what you have and we&rsquo;ll work through the rest on the call.
-            </p>
+        <div className="container">
+          <div className="section-head-center">
+            <div className="section-label">Client testimonials</div>
+            <h2>What FMCG employers say about Bell Recruitment</h2>
           </div>
-          <div>
-            <div className="section-label">Speed</div>
-            <h2>What makes a search go faster</h2>
-            <div className="stack-cards">
-              {FASTER.map((f) => (
-                <div className="value-card value-card-row" key={f.lead}>
-                  <div className="value-icon">
-                    <i className={`fas ${f.icon}`} aria-hidden="true" />
-                  </div>
-                  <div>
-                    <h3>{f.lead.replace(/\.$/, "")}</h3>
-                    <p>{f.text}</p>
-                  </div>
-                </div>
-              ))}
-            </div>
-          </div>
+          <TestimonialGrid ids={["irwins", "richmond", "courtneyNelson", "gmMarketing", "prepHouse", "henderson"]} />
         </div>
       </section>
 

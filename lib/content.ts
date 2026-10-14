@@ -18,9 +18,7 @@ export const URLS = {
   home: "/",
   services: "/services/",
   aboutUs: "/about-us/",
-  testimonials: "/testimonials/",
   hire: "/employers/how-we-hire/",
-  candidates: "/candidates/how-it-works/",
   faqs: "/faqs/",
   blogs: "/blogs/",
   locations: "/locations/",
@@ -34,8 +32,6 @@ export const NAV_LINKS = [
   { href: URLS.aboutUs, label: "About Us" },
   { href: URLS.services, label: "Services" },
   { href: URLS.hire, label: "Employers" },
-  { href: URLS.candidates, label: "Candidates" },
-  { href: URLS.testimonials, label: "Testimonials" },
   { href: URLS.jobs, label: "Jobs" },
   { href: URLS.blogs, label: "Blogs" },
   { href: URLS.contact, label: "Contact" },
@@ -153,35 +149,6 @@ export const BLOG_POSTS = [
     title: "Why executive search is different to standard recruitment",
     excerpt: "What sets an executive search apart, and when it's the right approach for your business.",
     image: "/images/team-success.jpg",
-  },
-];
-
-// "Roles we recruit" cards, shared by the Home and Candidates pages.
-export const ROLE_GROUPS = [
-  { label: "Leadership", roles: ["Commercial Director", "Head of Sales", "Commercial Manager"] },
-  {
-    label: "Sales and business development",
-    roles: ["Sales Executive", "Sales Representative", "Business Development Manager", "Business Development Executive"],
-  },
-  {
-    label: "Key accounts",
-    roles: ["National Account Manager", "Key Account Manager", "On-Trade Account Manager", "Off-Trade Account Manager"],
-  },
-  {
-    label: "Brand and marketing",
-    roles: ["Marketing Director", "Marketing Manager", "Brand Manager", "Assistant Brand Manager"],
-  },
-  {
-    label: "Commercial, operations and finance roles inside FMCG businesses",
-    roles: [
-      "Commercial Executive",
-      "Commercial Admin",
-      "Production Manager",
-      "Product Development Manager",
-      "Management Accountant",
-      "Assistant Accountant",
-      "Accounts Assistant",
-    ],
   },
 ];
 

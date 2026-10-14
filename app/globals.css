@@ -238,7 +238,7 @@ h1, h2, h3, h4 {
    To change the pace, edit --seq and --loop-start below; keep --loop-start after the
    sequence ends (5 x --seq plus a short pause). */
 .process-wrap { container: process / inline-size; }
-.process-wrap-vertical { max-width: 720px; }
+.process-wrap-vertical { max-width: 740px; margin: 0 auto; }
 .process-wrap-vertical .process-grid { max-width: none; }
 .process-grid { list-style: none; --seq: .7s; --loop-start: 4s; display: grid; grid-template-columns: repeat(5, 1fr); gap: 22px; position: relative; }
 .process-step { text-align: center; position: relative; }
@@ -442,7 +442,6 @@ h1, h2, h3, h4 {
 .footer-cta .btn-row { margin-top: 0; }
 .center { text-align: center; margin-left: auto; margin-right: auto; }
 .lead { font-size: 17px; margin-bottom: 18px; }
-.note { font-size: 14px; font-style: italic; color: var(--text-muted); margin-top: 16px; }
 .text-link { color: var(--burgundy); font-weight: 600; text-decoration: underline; text-underline-offset: 3px; }
 .text-link .fa-arrow-right { font-size: 12px; }
 .hl { background: none; color: inherit; font-weight: 700; }
@@ -500,31 +499,7 @@ h1, h2, h3, h4 {
 /* Exactly three columns, so six cards sit as two even rows. */
 .feature-grid-3 { grid-template-columns: repeat(3, 1fr); }
 @media (max-width: 900px) { .feature-grid-3 { grid-template-columns: repeat(auto-fit, minmax(260px, 1fr)); } }
-.stack-cards { display: grid; gap: 16px; }
-.value-card-row { display: flex; gap: 18px; align-items: flex-start; padding: 24px; }
-.value-card-row .value-icon { flex-shrink: 0; margin-bottom: 0; }
-.value-card-row h3 { font-size: 1.25rem; margin-bottom: 4px; }
 
-/* Roles we recruit. */
-/* Six-column grid: three cards per row, and a short last row is stretched to fill the width
-   (five cards sit 3 + 2, four sit 3 + 1 full width) so there is no empty space on the right. */
-.role-groups { display: grid; grid-template-columns: repeat(6, 1fr); gap: 22px; margin-top: 12px; }
-.role-group { grid-column: span 2; }
-.role-group:nth-last-child(2):nth-child(3n+1), .role-group:last-child:nth-child(3n+2) { grid-column: span 3; }
-.role-group:last-child:nth-child(3n+1) { grid-column: span 6; }
-@media (max-width: 900px) {
-  .role-groups { grid-template-columns: repeat(2, 1fr); }
-  .role-group, .role-group:nth-last-child(2):nth-child(3n+1), .role-group:last-child:nth-child(3n+2) { grid-column: auto; }
-  .role-group:last-child:nth-child(odd) { grid-column: 1 / -1; }
-}
-@media (max-width: 560px) {
-  .role-groups { grid-template-columns: 1fr; }
-}
-.role-group { padding: 26px 26px 22px; background: var(--warm-white); border: 1px solid var(--border-light); border-top: 3px solid var(--burgundy); border-radius: var(--radius); transition: border-color .3s, box-shadow .3s; }
-.role-group:hover { border-top-color: var(--accent); box-shadow: 0 12px 30px rgba(123,20,23,.08); }
-.role-group h3 { font-size: 1.3rem; margin-bottom: 14px; }
-.role-chips { display: flex; flex-wrap: wrap; gap: 8px; }
-.role-chips li { padding: 6px 13px; border-radius: 999px; background: var(--surface); font-size: 13.5px; color: var(--text-dark); }
 
 /* Roles we recruit (Home): tiles with an arrow; a lone last tile spans the full row. */
 .expertise-grid { list-style: none; display: grid; grid-template-columns: repeat(3, 1fr); gap: 20px; margin-top: 12px; }
@@ -637,12 +612,6 @@ h1, h2, h3, h4 {
 .qa-card h3 { font-size: 1.25rem; margin-bottom: 6px; }
 
 /* Process page: steps beside a sticky summary card. */
-.with-aside { display: grid; grid-template-columns: 1fr 340px; gap: 56px; align-items: start; }
-.aside-card { position: sticky; top: calc(var(--header-h) + 24px); padding: 30px 28px; border-radius: var(--radius); background: var(--burgundy); color: rgba(255,255,255,.82); box-shadow: 0 18px 44px rgba(61,10,11,.2); }
-.aside-item { padding: 14px 0; border-bottom: 1px solid rgba(255,255,255,.14); }
-.aside-item strong { display: block; font-family: var(--font-serif), serif; font-size: 2rem; line-height: 1.1; color: #fff; }
-.aside-item span { font-size: 14px; }
-.aside-card .btn-row .btn { width: 100%; }
 
 /* FAQ accordion (<details>). */
 .container-faq { max-width: 880px; }
@@ -690,7 +659,7 @@ h1, h2, h3, h4 {
     .hero-inner > *, .page-hero .container > *, .stats-grid > *, .section-label, .section h2, .section-intro,
     .value-card, .service-card, .sector-card, .why-card, .testimonial-card, .julie-photo,
     .julie-text > *, .services-block > *, .blog-card, .split-photo, .photo-banner-box > *, .form-panel,
-    .contact-card, .partners-label, .footer-cta > *, .svc-card, .service-detail > *, .role-group, .qa-card, .aside-card, .faq-item, .answer-card
+    .contact-card, .partners-label, .footer-cta > *, .svc-card, .service-detail > *, .qa-card, .faq-item, .answer-card
   ):not(.in) { opacity: 0; }
   /* fill-mode backwards: once the entrance ends, hover transforms apply normally. */
   .in { animation: reveal-up .8s cubic-bezier(.2,.7,.2,1) backwards; animation-delay: calc(var(--reveal-i, 0) * 110ms); }
@@ -735,10 +704,8 @@ h1, h2, h3, h4 {
   .card-grid-3, .testimonial-grid, .why-grid { grid-template-columns: 1fr; }
   .stats-grid { grid-template-columns: repeat(2, 1fr); }
   .sector-grid { grid-template-columns: 1fr 1fr; }
-  .split, .with-aside, .answer-grid { grid-template-columns: 1fr; gap: 40px; }
+  .split, .answer-grid { grid-template-columns: 1fr; gap: 40px; }
   .split-reverse > .split-photo { order: 2; }
-  .aside-card { position: static; }
-  .role-groups { grid-template-columns: 1fr; }
   .split-head { grid-template-columns: 1fr; gap: 32px; }
   .page-hero.has-photo { padding: calc(80px + var(--header-h)) 0 80px; }
   .page-hero.has-photo::before { background: rgba(123,20,23,.85); }

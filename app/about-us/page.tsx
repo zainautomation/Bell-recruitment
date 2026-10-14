@@ -181,7 +181,6 @@ export default function AboutPage() {
             We work with FMCG employers who come back to us year after year. Some of our client relationships go back
             more than 20 years, and we measure our work by whether they call us for the next hire.
           </p>
-          <ButtonRow center buttons={[{ label: "Read what they say", href: URLS.testimonials }]} />
         </div>
       </section>
       <PartnerCarousel />

@@ -32,9 +32,7 @@ const REVEAL = [
   ".footer-cta > *",
   ".svc-card",
   ".service-detail > *",
-  ".role-group",
   ".qa-card",
-  ".aside-card",
   ".faq-item",
   ".answer-card",
 ].join(", ");

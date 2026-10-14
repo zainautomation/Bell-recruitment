@@ -29,7 +29,6 @@ app/
   about-us/             About Julie Bell and the company
   employer/             Services (executive search, permanent recruitment, field marketing)
   blogs/                Blog cards
-  testimonials/         Client testimonials
   contact-us/           Contact form
   cv-upload/            CV upload form
   privacy-policy/       Privacy policy

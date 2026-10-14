@@ -169,7 +169,6 @@ export default function HomePage() {
             <h2>What FMCG employers say about Bell Recruitment</h2>
           </div>
           <TestimonialGrid ids={["irwins", "richmond", "courtneyNelson"]} swipeOnMobile />
-          <ButtonRow center buttons={[{ label: "Read more client reviews", href: URLS.testimonials }]} />
         </div>
       </section>
 
