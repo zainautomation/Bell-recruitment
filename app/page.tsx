@@ -113,7 +113,7 @@ export default function HomePage() {
       <section className="section">
         <div className="container">
           <div className="section-label">Roles we recruit</div>
-          <h2>FMCG sales and commercial recruitment across Northern Ireland, Ireland and the UK</h2>
+          <h2>FMCG Executive Search and FMCG Recruitment in Northern Ireland, Ireland and the UK</h2>
           <p className="section-intro">
             Whether a hire works depends on the customers they&rsquo;ll sell to, the territory they&rsquo;ll cover and
             the targets they&rsquo;ll be measured on. We take the time to understand all three. These are the roles we
