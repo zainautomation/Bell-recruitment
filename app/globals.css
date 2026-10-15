@@ -559,6 +559,12 @@ h1, h2, h3, h4 {
 .cs-head { text-align: center; margin-bottom: 36px; }
 .case-study .cs-head h2 { font-size: clamp(2.4rem, 5vw, 3.6rem); max-width: none; margin: 0 auto 10px; color: var(--burgundy); }
 .cs-subtitle { font-size: 1.3rem; color: var(--text-body); }
+.cs-more > summary { list-style: none; cursor: pointer; display: flex; width: fit-content; margin: 0 auto; gap: 10px; align-items: center; }
+.cs-more > summary::-webkit-details-marker { display: none; }
+.cs-more > summary i { font-size: 13px; transition: transform .25s; }
+.cs-more[open] > summary i { transform: rotate(180deg); }
+.cs-more[open] .cs-open-label, .cs-more:not([open]) .cs-close-label { display: none; }
+.cs-more > .cs-stats { margin-top: 36px; }
 .cs-stats { display: grid; grid-template-columns: repeat(4, 1fr); gap: 16px; }
 .cs-stat { background: var(--warm-white); border: 1px solid var(--border-light); border-radius: var(--radius); padding: 24px 16px; text-align: center; }
 .cs-stat strong { display: block; font-size: 3rem; line-height: 1.1; color: var(--burgundy); font-variant-numeric: lining-nums; }
