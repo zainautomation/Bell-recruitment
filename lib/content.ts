@@ -132,23 +132,37 @@ export const BLOG_POSTS = [
   },
 ];
 
-// "Roles we recruit" tiles on the Home page.
-export const EXPERTISE = [
-  "Recruitment",
-  "FMCG + Executive",
-  "Commercial",
-  "Sales",
-  "Market / Marketing",
-  "Procurement",
-  "Production",
-  "HR",
-  "Ops",
-  "Supply Chain",
-  "Admin",
-  "Finance in NI, Ireland & UK",
-  "Engineering",
+// "Roles we recruit" cards on the Home page. Wording is from the client; keep it word for word.
+export const ROLE_AREAS = [
+  {
+    title: "Sales leadership",
+    text: "Heads of Sales, Sales Directors and Commercial Directors who can set strategy, lead a team and grow revenue across retail, wholesale and foodservice.",
+  },
+  {
+    title: "National and key account management",
+    text: "Account managers and controllers who manage the major multiples, symbol groups and wholesalers, and who can negotiate range, promotions and margin with buyers.",
+  },
+  {
+    title: "Field sales and business development",
+    text: "Sales executives, territory managers and business development managers who are out on the road, opening new accounts and growing existing accounts in independent retail and convenience channels.",
+  },
+  {
+    title: "Foodservice and trade sales",
+    text: "Specialists who sell into hotels, restaurants, contract caterers, distributors and trade channels, and who understand how those customers buy.",
+  },
+  {
+    title: "Marketing, brand and category",
+    text: "Marketing Directors, Brand managers, marketing managers and category specialists who turn customer and shopper insight into products, campaigns and plans that sell.",
+  },
+  {
+    title: "Procurement, supply chain and commercial operations",
+    text: "Heads of procurement, supply chain managers, planners and commercial analysts who keep costs under control, stock moving and customers supplied.",
+  },
+  {
+    title: "Sales support and customer service",
+    text: "Sales support executives, sales administrators and customer service teams who keep orders, pricing and promotions accurate, so the sales team can sell.",
+  },
 ];
-
 // "Our Services" cards on the Home page. Wording is from the client; keep it word for word.
 export const OUR_SERVICES = [
   {

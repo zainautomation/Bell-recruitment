@@ -1,8 +1,9 @@
 import type { Metadata } from "next";
 import Image from "next/image";
+import Link from "next/link";
 import { ButtonRow } from "@/components/ButtonLink";
 import FaqList from "@/components/FaqList";
-import ExpertiseGrid from "@/components/ExpertiseGrid";
+import RoleAreas from "@/components/RoleAreas";
 import Founder from "@/components/Founder";
 import LetterReveal from "@/components/LetterReveal";
 import PartnerCarousel from "@/components/PartnerCarousel";
@@ -11,7 +12,7 @@ import ServiceCards from "@/components/ServiceCards";
 import ServiceDetail from "@/components/ServiceDetails";
 import TestimonialGrid from "@/components/TestimonialGrid";
 import Tilt from "@/components/Tilt";
-import { BLOG_POSTS, EXPERTISE, JULIE_ROLES, OUR_SERVICES, SERVICE_DETAILS, URLS } from "@/lib/content";
+import { BLOG_POSTS, JULIE_ROLES, OUR_SERVICES, ROLE_AREAS, SERVICE_DETAILS, URLS } from "@/lib/content";
 
 // Copy: "1. Home" in the client's Website Content document.
 
@@ -112,15 +113,20 @@ export default function HomePage() {
       <section className="section">
         <div className="container">
           <div className="section-label">Roles we recruit</div>
-          <h2>FMCG sales and commercial recruitment in Northern Ireland, Ireland and United Kingdom</h2>
+          <h2>FMCG sales and commercial recruitment across Northern Ireland, Ireland and the UK</h2>
           <p className="section-intro">
-            Whether a hire works depends on the customers, the territory and the targets.
-            These are the roles we recruit:
+            Whether a hire works depends on the customers they&rsquo;ll sell to, the territory they&rsquo;ll cover and
+            the targets they&rsquo;ll be measured on. We take the time to understand all three. These are the roles we
+            recruit:
           </p>
-          <ExpertiseGrid items={EXPERTISE} href={URLS.jobs} />
-          <ButtonRow
-            buttons={[{ label: "Browse FMCG jobs in Northern Ireland", href: URLS.jobs }]}
-          />
+          <RoleAreas items={ROLE_AREAS} />
+          <p className="roles-cta">
+            <strong>Don&rsquo;t see your role here?</strong> If it sits within food, drink or FMCG, we can almost
+            certainly help.{" "}
+            <Link className="text-link" href={URLS.contact}>
+              Talk to us about your vacancy &rarr;
+            </Link>
+          </p>
         </div>
       </section>
 
