@@ -554,6 +554,54 @@ h1, h2, h3, h4 {
   .service-detail-tagline { font-size: 1.25rem; }
 }
 
+/* Case study (Employers page). */
+.case-study { max-width: 1000px; margin: 0 auto; }
+.cs-head { text-align: center; margin-bottom: 36px; }
+.case-study .cs-head h2 { font-size: clamp(2.4rem, 5vw, 3.6rem); max-width: none; margin: 0 auto 10px; color: var(--burgundy); }
+.cs-subtitle { font-size: 1.3rem; color: var(--text-body); }
+.cs-stats { display: grid; grid-template-columns: repeat(4, 1fr); gap: 16px; }
+.cs-stat { background: var(--warm-white); border: 1px solid var(--border-light); border-radius: var(--radius); padding: 24px 16px; text-align: center; }
+.cs-stat strong { display: block; font-size: 3rem; line-height: 1.1; color: var(--burgundy); font-variant-numeric: lining-nums; }
+.cs-stat span { font-size: 15px; color: var(--text-muted); }
+.case-study .cs-h { font-size: 2rem; color: var(--burgundy); margin: 52px 0 14px; }
+.cs-text { font-size: 17.5px; line-height: 1.75; margin-bottom: 14px; }
+.cs-sites { list-style: none; display: grid; grid-template-columns: repeat(3, 1fr); gap: 16px; padding: 16px 0; margin-top: 18px; border-top: 1px solid var(--border-light); border-bottom: 1px solid var(--border-light); text-align: center; }
+.cs-sites strong { display: block; font-size: 1.1rem; color: var(--text-dark); }
+.cs-sites strong::before { content: "\2022"; color: var(--burgundy); margin-right: 8px; }
+.cs-sites span { font-size: 15px; color: var(--text-muted); }
+.cs-challenges { display: grid; grid-template-columns: repeat(2, 1fr); gap: 20px; margin-top: 18px; }
+.cs-challenge { background: var(--warm-white); border: 1px solid var(--border-light); border-left: 5px solid var(--burgundy); border-radius: var(--radius); padding: 24px 26px; }
+.cs-num { display: block; font-size: 1.7rem; font-weight: 700; color: var(--burgundy); font-variant-numeric: lining-nums; }
+.cs-challenge h4 { font-size: 1.15rem; margin: 4px 0 8px; font-family: var(--font-sans), sans-serif; font-weight: 700; color: var(--text-dark); }
+.cs-challenge p { font-size: 16px; line-height: 1.65; }
+.cs-steps li { font-size: 17px; line-height: 1.65; padding: 14px 0 14px 50px; border-bottom: 1px solid var(--border-light); }
+.cs-steps li:last-child { border-bottom: 0; }
+.cs-steps li::before { top: 14px; }
+.cs-steps li strong { color: var(--burgundy); }
+.cs-roles { display: grid; grid-template-columns: repeat(2, 1fr); gap: 20px; align-items: start; }
+.cs-role { background: var(--warm-white); border: 1px solid var(--border-light); border-radius: var(--radius); overflow: hidden; }
+.case-study .cs-role h4 { background: var(--burgundy); color: #fff; font-size: 1.3rem; padding: 18px 24px; margin: 0; }
+.cs-role-body { padding: 22px 24px 24px; }
+.cs-role-body > p { font-size: 16px; line-height: 1.65; margin-bottom: 14px; }
+.cs-points { list-style: none; }
+.cs-points li { position: relative; padding: 6px 0 6px 22px; font-size: 15.5px; line-height: 1.55; }
+.cs-points li::before { content: ""; position: absolute; left: 2px; top: 14px; width: 7px; height: 7px; background: var(--burgundy); }
+.cs-placed { display: grid; grid-template-columns: repeat(2, 1fr); gap: 16px; margin: 18px 0; }
+.cs-placed-item { background: var(--warm-white); border: 1px solid var(--border-light); border-radius: var(--radius); padding: 20px 24px; }
+.cs-placed-item strong { display: block; font-size: 1.15rem; color: var(--text-dark); margin-bottom: 4px; }
+.cs-placed-item i { color: var(--burgundy); margin-right: 6px; }
+.cs-placed-item span { font-size: 16px; color: var(--text-body); }
+.cs-cta { margin-top: 48px; background: var(--burgundy); color: #fff; border-radius: var(--radius); padding: 36px 40px; }
+.case-study .cs-cta h3 { font-family: var(--font-sans), sans-serif; font-size: 1.5rem; font-weight: 700; color: #fff; margin: 0 0 10px; }
+.cs-cta p { font-size: 17.5px; line-height: 1.65; color: rgba(255,255,255,.92); margin-bottom: 10px; }
+.cs-cta p:last-child { margin-bottom: 0; }
+.cs-cta a { color: #fff; font-weight: 700; text-decoration: underline; text-underline-offset: 3px; }
+@media (max-width: 900px) {
+  .cs-stats { grid-template-columns: repeat(2, 1fr); }
+  .cs-sites, .cs-challenges, .cs-roles, .cs-placed { grid-template-columns: 1fr; }
+  .cs-cta { padding: 28px 24px; }
+}
+
 /* Explanation under the "Our Services" heading, above the cards. */
 .services-intro { max-width: 900px; margin-bottom: 44px; }
 .services-intro h3 { font-size: 1.6rem; color: var(--burgundy); margin-bottom: 12px; }

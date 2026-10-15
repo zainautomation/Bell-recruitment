@@ -24,7 +24,7 @@ export default function CvUploadPage() {
             <SubmitForm
               endpoint="/api/cv-upload/"
               submitLabel="Upload CV"
-              successMessage="your CV has been received. We'll be in touch soon."
+              successMessage="your CV has been submitted"
             >
               <div className="form-row">
                 <div className="form-group">

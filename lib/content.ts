@@ -307,3 +307,141 @@ export const LOCATIONS = [
   { name: "Oxford", area: "uk" },
   { name: "Manchester", area: "uk" },
 ] as const;
+
+// Crust & Crumb case study (Employers page). Wording is from the client's case study PDF; keep it word for word.
+// The PDF's customer quote is left out until the person's name and job title are confirmed.
+export const CASE_STUDY = {
+  label: "Case study",
+  title: "Crust & Crumb",
+  subtitle: "Two senior leadership hires for a cross-border food manufacturer",
+  stats: [
+    { value: "2", label: "senior leaders placed" },
+    { value: "3", label: "production sites" },
+    { value: "2", label: "jurisdictions, NI and ROI" },
+    { value: "AA", label: "BRCGS grade, plus Sedex" },
+  ],
+  about: {
+    title: "About Crust & Crumb",
+    text: "Crust & Crumb is a leading manufacturer of freshly prepared flatbreads, pizza bases, tortillas, wraps and garlic breads. It supplies major retail and foodservice customers globally from three sites: Derrylin, Craigavon and Ballyconnell.",
+    sites: [
+      { name: "Derrylin", region: "Co Fermanagh, NI" },
+      { name: "Craigavon", region: "Co Armagh, NI" },
+      { name: "Ballyconnell", region: "Co Cavan, ROI" },
+    ],
+  },
+  challenge: {
+    title: "The challenge",
+    text: "Crust & Crumb needed two senior leaders who could support its growth across multiple sites, two jurisdictions and a demanding customer base. Both roles sit close to the top of the business and carry direct influence over group strategy.",
+    intro: "The brief raised four specific hiring challenges:",
+    items: [
+      {
+        title: "A small, specialist talent pool",
+        text: "Each role called for senior experience in food manufacturing, FMCG or a similarly regulated industry, ideally with bakery or chilled and ambient food exposure.",
+      },
+      {
+        title: "Cross-border, multi-site operations",
+        text: "The procurement lead would run supply across sites in Fermanagh and Cavan. Candidates needed to manage multi-site supply chains, cross-border sourcing, and commodity and currency risk.",
+      },
+      {
+        title: "High-profile customer accounts",
+        text: "The foodservice lead would own relationships with major QSR chains and national foodservice distributors. Candidates needed proven credibility with senior buyers at that scale.",
+      },
+      {
+        title: "Strict compliance standards",
+        text: "Both roles operate within BRCGS AA and Sedex frameworks, so candidates had to understand food safety and ethical sourcing.",
+      },
+    ],
+  },
+  approach: {
+    title: "Our approach",
+    text: "Bell Recruitment ran both searches end to end, from defining the roles to managing offers.",
+    steps: [
+      {
+        lead: "Defining the roles.",
+        text: "We worked with Crust & Crumb's leadership to write a full job description for each position. Each set out the role's purpose, reporting lines, key responsibilities and an essential versus desirable candidate profile.",
+      },
+      {
+        lead: "Mapping the market.",
+        text: "We targeted senior procurement and commercial leaders across food manufacturing, bakery, FMCG and foodservice distribution in Northern Ireland, the Republic of Ireland and Great Britain.",
+      },
+      {
+        lead: "Screening against the brief.",
+        text: "Candidates were assessed on sector experience, scale of accounts or spend managed, multi-site leadership and knowledge of BRCGS and Sedex standards.",
+      },
+      {
+        lead: "Shortlisting and interviews.",
+        text: "We presented a focused shortlist for each role and supported the interview process.",
+      },
+      {
+        lead: "Offer and onboarding.",
+        text: "We managed offer negotiations and kept candidates engaged through to their start date.",
+      },
+    ],
+  },
+  roles: {
+    title: "The roles we filled",
+    items: [
+      {
+        title: "Head of Procurement",
+        text: "The Head of Procurement leads strategic sourcing, purchasing and supply chain across all Crust & Crumb sites. The role sits on the senior leadership team and is based across Derrylin, Co Fermanagh and Ballyconnell, Co Cavan.",
+        points: [
+          "Group-wide procurement strategy covering flour, oils, dairy, packaging, indirect spend and capital equipment",
+          "End-to-end supply chain planning and continuity across multi-site production",
+          "Supply resilience against commodity volatility, currency fluctuation and geopolitical disruption",
+          "Supplier negotiation, cost savings, and BRCGS AA and Sedex compliance",
+          "Procurement input into capital investment and grant-funded growth projects",
+          "Leading buyers, supply chain planners and logistics coordinators",
+        ],
+      },
+      {
+        title: "Head of Foodservice / Commercial Manager",
+        text: "The Head of Foodservice / Commercial Manager owns and grows Crust & Crumb's foodservice and quick service restaurant (QSR) portfolio. The role is based at Portadown, with travel to customer sites across the UK and Ireland.",
+        points: [
+          "Key account management of major QSR chains and foodservice distributors",
+          "Ownership of the foodservice sales budget and P&L",
+          "Annual customer negotiations, pricing reviews and contract renewals",
+          "New business development, including tenders and RFPs",
+          "Working with NPD on customer-specific product innovation",
+          "Leading account managers and foodservice sales executives",
+        ],
+      },
+    ],
+  },
+  outcome: {
+    title: "The outcome",
+    text: "Bell Recruitment successfully placed both senior leaders, giving Crust & Crumb dedicated leadership for procurement and for its foodservice channel.",
+    placed: [
+      { title: "Head of Procurement", text: "Placed: dedicated group procurement and supply chain leadership" },
+      { title: "Head of Foodservice", text: "Placed: dedicated leadership for the foodservice and QSR channel" },
+    ],
+    closing: "Both appointments strengthen Crust & Crumb’s senior team as it continues to invest in capacity across its sites in Northern Ireland and Ireland.",
+  },
+  faqs: [
+    {
+      q: "Which recruitment agency recruited Crust & Crumb's Head of Procurement and Head of Foodservice?",
+      a: "Bell Recruitment Services recruited both roles for Crust & Crumb, a bakery manufacturer with sites in Derrylin, Craigavon and Ballyconnell.",
+    },
+    {
+      q: "Does Bell Recruitment recruit senior roles in food manufacturing in Northern Ireland?",
+      a: "Yes. Bell Recruitment Services recruits senior and leadership roles for food manufacturers in Northern Ireland and the Republic of Ireland, including procurement, supply chain, sales and commercial positions.",
+    },
+    {
+      q: "What experience does a Head of Procurement in food manufacturing need?",
+      a: "A Head of Procurement in food manufacturing typically needs senior procurement and supply chain leadership experience, a record of cost savings at scale, multi-site experience and knowledge of food safety standards such as BRCGS and Sedex. A CIPS qualification is often desirable.",
+    },
+    {
+      q: "What does a Head of Foodservice do at a food manufacturer?",
+      a: "A Head of Foodservice manages a food manufacturer's relationships with quick service restaurants, wholesalers and foodservice distributors. The role owns the channel's sales budget and P&L, leads customer negotiations and wins new business.",
+    },
+    {
+      q: "Can Bell Recruitment recruit for roles that span Northern Ireland and the Republic of Ireland?",
+      a: "Yes. The Crust & Crumb roles covered sites in Co Fermanagh, Co Armagh and Co Cavan, and Bell Recruitment sourced candidates with cross-border experience.",
+    },
+  ],
+  cta: {
+    title: "Hiring a senior leader in food manufacturing or FMCG?",
+    text: "Bell Recruitment Services finds procurement, supply chain, commercial and operations leaders for manufacturers across Northern Ireland and Ireland.",
+    linkLabel: "Contact Bell Recruitment",
+    after: " to discuss your next senior hire.",
+  },
+};

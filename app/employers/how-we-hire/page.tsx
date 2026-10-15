@@ -3,6 +3,7 @@ import { ButtonRow } from "@/components/ButtonLink";
 import CtaBand from "@/components/CtaBand";
 import FaqList from "@/components/FaqList";
 import PageHero from "@/components/PageHero";
+import CaseStudy from "@/components/CaseStudy";
 import ProcessSteps from "@/components/ProcessSteps";
 import TestimonialGrid from "@/components/TestimonialGrid";
 import { URLS } from "@/lib/content";
@@ -66,6 +67,12 @@ export default function HowWeHirePage() {
 
       <section className="section section-alt">
         <div className="container">
+          <CaseStudy />
+        </div>
+      </section>
+
+      <section className="section">
+        <div className="container">
           <div className="section-head-center">
             <div className="section-label">Client testimonials</div>
             <h2>What FMCG employers say about Bell Recruitment</h2>
@@ -74,7 +81,7 @@ export default function HowWeHirePage() {
         </div>
       </section>
 
-      <section className="section">
+      <section className="section section-alt">
         <div className="container container-faq">
           <div className="section-label">FAQs</div>
           <h2>Frequently asked questions</h2>
