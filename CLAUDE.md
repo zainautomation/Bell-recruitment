@@ -23,7 +23,7 @@ Marketing site for Bell Recruitment (FMCG recruitment, Belfast): Next.js 16 App 
 - **Routes** are in `app/`: `employers/how-we-hire`, `services`, `faqs`, `about-us`, `blogs`, `contact-us`, `cv-upload`, `locations`, `privacy-policy`.
 - **URLs use trailing slashes** (`trailingSlash: true` in [next.config.ts](next.config.ts)) to match the original site. `/employer/` permanently redirects to `/services/`; `/jobs/` and `/jobs/sales-roles-northern-ireland/` are temporary redirects to an external jobs board, to be removed as real pages are added under `app/jobs/`.
 - **Every page starts with a burgundy banner** (home hero or `PageHero`) because the header is transparent at the top and overlaps it. New pages should start with `PageHero`.
-- **Forms**: The `app/api/cv-upload` route handler uses [lib/submissions.ts](lib/submissions.ts) to validate, save CVs to `uploads/` and append JSON lines to `data/*.jsonl` (both git-ignored). This relies on a persistent disk; on hosts like Vercel, replace `logSubmission`/`saveCv` only.
+- **Forms**: The `app/api/cv-upload` route handler uses [lib/submissions.ts](lib/submissions.ts) to validate, save CVs to `uploads/` and append JSON lines to `data/*.jsonl` (both git-ignored). This relies on a persistent disk; on hosts like Vercel, replace `logSubmission`/`saveCv` only. When `RESEND_API_KEY` and `RESEND_TO_EMAIL` are set (see `.env.example`), the CV is also emailed via Resend ([lib/email.ts](lib/email.ts)); with Resend's shared sender it can only be delivered to the Resend account's own email until a domain is verified.
 
 ## Gotchas
 

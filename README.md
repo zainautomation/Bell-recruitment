@@ -112,6 +112,12 @@ The CV upload form (`/api/cv-upload/`) is handled by a route handler in `app/api
 - CVs must be PDF, DOC or DOCX and no larger than 5MB. They are saved to `uploads/` with a timestamped, sanitised filename.
 - Every submission is appended as one JSON line to `data/cv_submissions.jsonl`.
 
+### Emailing CVs (Resend)
+
+When `RESEND_API_KEY` and `RESEND_TO_EMAIL` are set, each CV upload is also emailed to that address through [Resend](https://resend.com), with the CV attached and the candidate's email as the reply-to. Copy `.env.example` to `.env.local` and fill it in; on the live host add the same variables in its settings.
+
+Until a domain is verified in Resend, only its shared sender (`onboarding@resend.dev`) can be used, and it can only deliver to the email address of the Resend account itself. So set `RESEND_TO_EMAIL` to that account's email. After verifying a domain, set `RESEND_FROM` to an address on it and `RESEND_TO_EMAIL` to any inbox. If the variables are not set, uploads are only saved to disk as described below. The code is in `lib/email.ts`.
+
 These files live on the server's disk. On hosts without a persistent filesystem, such as Vercel, replace `logSubmission` and `saveCv` in `lib/submissions.ts` with email or cloud storage (for example S3 or Vercel Blob). The API routes don't need to change.
 
 ## Styling
