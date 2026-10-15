@@ -7,8 +7,19 @@ out/
 next-env.d.ts
 *.tsbuildinfo
 
-# env
-.env*.local
+# env: real keys live in .env.local (or the host's settings), never in Git. Only .env.example is committed.
+.env
+.env.*
+!.env.example
+
+# vercel
+.vercel
+
+# operating system and editor files
+.DS_Store
+Thumbs.db
+.idea/
+.vscode/
 
 # logs
 *.log
