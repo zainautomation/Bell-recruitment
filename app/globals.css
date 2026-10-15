@@ -502,6 +502,58 @@ h1, h2, h3, h4 {
 .roles-cta { margin-top: 32px; padding: 22px 28px; background: var(--surface); border-left: 4px solid var(--burgundy); border-radius: var(--radius); font-size: 18px; line-height: 1.6; }
 .roles-cta strong { color: var(--text-dark); }
 
+/* Executive Search / Recruitment (Home): centred title and explanation, then one click-to-open
+   card per step (3 per row; a short last row is stretched), then the "Choose ... when" box.
+   Light by default; the .section-dark overrides below make it work on the red band. */
+.service-detail-head { text-align: center; max-width: 880px; margin: 0 auto 44px; }
+.service-detail-head h2 { color: var(--burgundy); font-size: clamp(2.6rem, 5vw, 3.9rem); line-height: 1.08; margin: 0 auto 16px; max-width: none; }
+.service-detail-tagline { font-size: 1.45rem; font-weight: 600; line-height: 1.4; color: var(--burgundy); margin-bottom: 20px; }
+.service-detail-head .lead { font-size: 19.5px; line-height: 1.75; color: var(--text-body); max-width: none; margin: 0 auto 14px; }
+.service-acc-grid { display: grid; grid-template-columns: repeat(6, 1fr); gap: 20px; align-items: start; }
+.service-acc { grid-column: span 2; background: var(--warm-white); border: 1px solid var(--border-light); border-top: 3px solid var(--burgundy); border-radius: var(--radius); transition: box-shadow .3s, border-color .3s, background .3s; }
+.service-acc:nth-last-child(2):nth-child(3n+1), .service-acc:last-child:nth-child(3n+2) { grid-column: span 3; }
+.service-acc:last-child:nth-child(3n+1) { grid-column: span 6; }
+.service-acc summary { display: flex; align-items: center; gap: 16px; min-height: 92px; padding: 18px 24px; cursor: pointer; list-style: none; }
+.service-acc summary::-webkit-details-marker { display: none; }
+.service-acc-num { flex-shrink: 0; width: 38px; height: 38px; border-radius: 50%; background: var(--burgundy); color: #fff; font: 700 16px/38px var(--font-sans), sans-serif; text-align: center; }
+.service-acc-title { flex: 1; font-size: 20px; font-weight: 700; line-height: 1.3; color: var(--text-dark); }
+.service-acc summary i { color: var(--burgundy); font-size: 16px; transition: transform .25s; }
+.service-acc[open] summary i { transform: rotate(45deg); }
+.service-acc[open] { border-color: var(--burgundy); box-shadow: 0 12px 30px rgba(123,20,23,.12); }
+.service-acc p { padding: 0 24px 24px; font-size: 17.5px; line-height: 1.65; }
+.service-choose { margin-top: 40px; padding: 28px 32px; background: var(--surface); border-left: 5px solid var(--burgundy); border-radius: var(--radius); }
+.service-choose h3 { font-family: var(--font-sans), sans-serif; font-size: 15px; font-weight: 700; letter-spacing: 2px; text-transform: uppercase; color: var(--burgundy); margin-bottom: 8px; }
+.service-choose .tick-list { display: grid; grid-template-columns: 1fr 1fr; column-gap: 48px; }
+.service-choose .tick-list li { font-size: 18px; line-height: 1.55; padding: 12px 0; }
+.service-choose .tick-list li:last-child, .service-choose .tick-list li:nth-last-child(2):nth-child(odd) { border-bottom: 0; }
+/* On the red band. */
+.section-dark .service-detail-head h2, .section-dark .service-detail-tagline { color: #fff; }
+.section-dark .service-detail-head .lead { color: rgba(255,255,255,.9); }
+.section-dark .service-acc { background: rgba(255,255,255,.08); border-color: rgba(255,255,255,.25); border-top-color: #fff; }
+.section-dark .service-acc[open] { background: rgba(255,255,255,.14); border-color: #fff; box-shadow: none; }
+.section-dark .service-acc-num { background: #fff; color: var(--burgundy); }
+.section-dark .service-acc-title, .section-dark .service-acc summary i { color: #fff; }
+.section-dark .service-acc p { color: rgba(255,255,255,.9); }
+.section-dark .service-choose { background: rgba(255,255,255,.08); border: 1px solid rgba(255,255,255,.25); border-left: 5px solid #fff; }
+.section-dark .service-choose h3, .section-dark .service-choose .tick-list li { color: #fff; }
+.section-dark .service-choose .tick-list li { border-bottom-color: rgba(255,255,255,.2); }
+.section-dark .service-choose .tick-list li:last-child, .section-dark .service-choose .tick-list li:nth-last-child(2):nth-child(odd) { border-bottom: 0; }
+.section-dark .service-choose .tick-list li::before { color: #fff; }
+@media (max-width: 900px) {
+  .service-acc-grid { grid-template-columns: repeat(2, 1fr); }
+  .service-acc, .service-acc:nth-last-child(2):nth-child(3n+1), .service-acc:last-child:nth-child(3n+2) { grid-column: auto; }
+  .service-acc:last-child:nth-child(odd) { grid-column: 1 / -1; }
+  .service-choose .tick-list { grid-template-columns: 1fr; }
+}
+@media (max-width: 560px) {
+  .service-acc-grid { grid-template-columns: 1fr; }
+  .service-acc:last-child:nth-child(odd) { grid-column: auto; }
+  .service-acc summary { min-height: 80px; padding: 16px 18px; }
+  .service-acc p { padding: 0 18px 20px; font-size: 16.5px; }
+  .service-choose { padding: 22px 20px; }
+  .service-detail-tagline { font-size: 1.25rem; }
+}
+
 /* Explanation under the "Our Services" heading, above the cards. */
 .services-intro { max-width: 900px; margin-bottom: 44px; }
 .services-intro h3 { font-size: 1.6rem; color: var(--burgundy); margin-bottom: 12px; }
