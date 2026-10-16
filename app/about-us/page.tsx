@@ -47,16 +47,15 @@ export default function AboutPage() {
             <p>More than 25 years later, that philosophy remains at the heart of the business.</p>
             <p>
               Bell Recruitment has grown through long standing relationships with clients and candidates, many of whom
-              have worked with us for years. We believe that successful recruitment is not about making the quickest
-              placement. It is about making the right connection between the right person and the right organisation.
+              have worked with us for years. We believe that successful recruitment is about making the right
+              connection between the right person and the right organisation.
             </p>
             <p>
-              Today, Bell Recruitment continues to bring together industry expertise, personal relationships and a
-              genuine understanding of people.
+              Bell Recruitment brings together industry expertise, personal relationships and a genuine understanding
+              of people.
             </p>
             <div className="story-close">
-              <p>Because businesses are built by people.</p>
-              <p>And at Bell Recruitment, people will always come first.</p>
+              <p>At Bell Recruitment, people will always come first.</p>
             </div>
           </div>
           <div className="split-photo split-photo-tall">
