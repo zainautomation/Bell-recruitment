@@ -30,7 +30,7 @@ export default function ServiceDetail({ item }: { item: ServiceDetailItem }) {
         ))}
       </div>
       <div className="service-choose">
-        <h3>Choose {item.title} when</h3>
+        <h3>{item.chooseLabel}</h3>
         <ul className="tick-list">
           {item.chooseWhen.map((t) => (
             <li key={t}>{t}</li>

@@ -206,7 +206,8 @@ export const OUR_SERVICES = [
 export const SERVICE_DETAILS = [
   {
     title: "Executive Search",
-    tagline: "For senior, business-critical and confidential appointments",
+    tagline: "For C-suite, senior, business-critical and confidential appointments",
+    chooseLabel: "Choose Executive Search when",
     intro: [
       "When you’re appointing a Managing Director, Head of Sales, Operations Director or another leader whose decisions will define your next chapter, the best person is rarely browsing job boards. They’re usually doing well where they are and not actively looking.",
       "Executive Search is a retained, research-led service built to find and engage those people.",
@@ -246,10 +247,9 @@ export const SERVICE_DETAILS = [
   },
   {
     title: "Recruitment",
-    tagline: "For professional, management and operational roles you need filled well and quickly",
-    intro: [
-      "Our Recruitment service gives you fast access to good candidates, with the screening and judgement that save your team time.",
-    ],
+    tagline: "Our Recruitment service gives you fast access to good candidates, with the screening and judgement that save your team time.",
+    chooseLabel: "Choose Bell Recruitment when",
+    intro: [],
     steps: [
       {
         lead: "The brief.",
@@ -276,7 +276,7 @@ export const SERVICE_DETAILS = [
       "You need a strong shortlist within a short timeframe",
       "The role suits active jobseekers as well as passive candidates",
       "You’re hiring for sales, commercial, operations, production, technical or support roles",
-      "You want a trusted partner across several vacancies",
+      "You want a trusted partner",
     ],
   },
 ];
