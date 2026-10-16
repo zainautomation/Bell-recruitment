@@ -41,7 +41,7 @@ export default function AboutPage() {
             <p className="lead">
               From the beginning, the aim was never simply to fill vacancies. It was to understand people, understand
               businesses and build relationships that last. By combining genuine industry knowledge with a personal
-              approach, Bell Recruitment set out to create a recruitment experience built on trust, integrity, quality
+              approach, Bell Recruitment creates a recruitment experience built on trust, integrity, quality
               and results.
             </p>
             <p>More than 25 years later, that philosophy remains at the heart of the business.</p>
