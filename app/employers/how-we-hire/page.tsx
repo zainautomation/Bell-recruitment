@@ -38,11 +38,11 @@ export default function HowWeHirePage() {
             steps={[
               {
                 title: "The brief",
-                text: "Before we search, we sit down with you to understand the role and the business behind it. We ask what the job really involves, who it reports to, and what the first year should deliver. We also ask what experience is essential and what’s a bonus, and what kind of person will fit your team.",
+                text: "Before we search, we sit down with you to understand the role and the business behind it. We ask what the job really involves, who it reports to, and what the first year should deliver. We also ask what experience is essential, and what kind of person will fit your team.",
               },
               {
                 title: "The search begins within 24 hours",
-                text: "Once we have the job description, we go straight to our network across food, drink and FMCG in Northern Ireland and Ireland. That includes people who aren’t actively looking. Many of the best candidates never apply to adverts, so we approach them directly and in confidence.",
+                text: "Once we have agreed the job description, we go straight to our network across food, drink and FMCG in Northern Ireland and Ireland. That includes people who aren’t actively looking. Many of the best candidates never apply to adverts, so we approach them directly and in confidence.",
               },
               {
                 title: "Candidate assessment",
@@ -54,11 +54,11 @@ export default function HowWeHirePage() {
               },
               {
                 title: "Interviews and offer",
-                text: "We arrange interviews and gather feedback from both sides. We also help with salary and package discussions, and keep everyone informed until an offer is accepted. Candidates hear from us at every stage, which protects your reputation as an employer.",
+                text: "We arrange interviews and gather feedback from both sides. We also help with salary and package discussions, and keep everyone informed until an offer is accepted. Candidates hear from us at every stage.",
               },
               {
                 title: "Start date and 90-day guarantee",
-                text: "We stay in touch with your new hire right up to their start date and through their first weeks. If someone we place leaves within 90 days, we’ll find a replacement.",
+                text: "We stay in touch with your new hire right up to their start date. If someone we place leaves within 90 days, we’ll find a replacement.",
               },
             ]}
           />

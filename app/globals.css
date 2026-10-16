@@ -300,6 +300,14 @@ h1, h2, h3, h4 {
   .process-grid.in .process-dot { animation-name: dot-lead-y, dot-travel-y; }
 }
 
+/* Larger text for the step-by-step process on the Employers page. */
+.process-wrap-vertical .process-step h3 { font-size: 1.7rem; }
+.process-wrap-vertical .step-text { font-size: 19px; line-height: 1.7; }
+@media (max-width: 560px) {
+  .process-wrap-vertical .process-step h3 { font-size: 1.35rem; }
+  .process-wrap-vertical .step-text { font-size: 16.5px; }
+}
+
 /* ─── Photo banners (handshake, closing CTA) ─── */
 .photo-banner { position: relative; padding: 110px 24px; background-size: cover; background-position: center; }
 .photo-banner::before { content: ""; position: absolute; inset: 0; background: rgba(123,20,23,.85); }
@@ -505,10 +513,10 @@ h1, h2, h3, h4 {
 /* Executive Search / Recruitment (Home): centred title and explanation, then one click-to-open
    card per step (3 per row; a short last row is stretched), then the "Choose ... when" box.
    Light by default; the .section-dark overrides below make it work on the red band. */
-.service-detail-head { text-align: center; max-width: 880px; margin: 0 auto 44px; }
+.service-detail-head { text-align: center; max-width: 960px; margin: 0 auto 44px; }
 .service-detail-head h2 { color: var(--burgundy); font-size: clamp(2.6rem, 5vw, 3.9rem); line-height: 1.08; margin: 0 auto 16px; max-width: none; }
 .service-detail-tagline { font-size: 1.45rem; font-weight: 600; line-height: 1.4; color: var(--burgundy); margin-bottom: 20px; }
-.service-detail-head .lead { font-size: 19.5px; line-height: 1.75; color: var(--text-body); max-width: none; margin: 0 auto 14px; }
+.service-detail-head .lead { font-size: 22px; line-height: 1.7; color: var(--text-body); max-width: none; margin: 0 auto 16px; }
 .service-acc-grid { display: grid; grid-template-columns: repeat(6, 1fr); gap: 20px; align-items: start; }
 .service-acc { grid-column: span 2; background: var(--warm-white); border: 1px solid var(--border-light); border-top: 3px solid var(--burgundy); border-radius: var(--radius); transition: box-shadow .3s, border-color .3s, background .3s; }
 .service-acc:nth-last-child(2):nth-child(3n+1), .service-acc:last-child:nth-child(3n+2) { grid-column: span 3; }
@@ -552,6 +560,7 @@ h1, h2, h3, h4 {
   .service-acc p { padding: 0 18px 20px; font-size: 16.5px; }
   .service-choose { padding: 22px 20px; }
   .service-detail-tagline { font-size: 1.25rem; }
+  .service-detail-head .lead { font-size: 18px; }
 }
 
 /* Case study (Employers page). */

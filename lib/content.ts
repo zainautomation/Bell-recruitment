@@ -362,7 +362,7 @@ export const CASE_STUDY = {
       },
       {
         lead: "Mapping the market.",
-        text: "We targeted senior procurement and commercial leaders across food manufacturing, bakery, FMCG and foodservice distribution in Northern Ireland, the Republic of Ireland and Great Britain.",
+        text: "We targeted senior procurement and commercial leaders across food manufacturing, bakery, FMCG and foodservice distribution in Northern Ireland, Ireland and the UK.",
       },
       {
         lead: "Screening against the brief.",
