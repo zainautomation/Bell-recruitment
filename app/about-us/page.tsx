@@ -61,12 +61,12 @@ export default function AboutPage() {
           </div>
           <div className="split-photo split-photo-tall">
             <Image
-              src="/images/hero-bg.png"
-              alt="Julie Bell on a call with a client"
-              width={1536}
-              height={1024}
+              src="/images/about-forest-feast.jpg"
+              alt="Julie Bell at the Forest Feast stand"
+              width={1200}
+              height={1600}
               sizes="(max-width: 900px) 100vw, 540px"
-              style={{ objectPosition: "42% 30%" }}
+              style={{ objectPosition: "50% 45%" }}
             />
           </div>
         </div>
