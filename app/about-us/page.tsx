@@ -72,6 +72,8 @@ export default function AboutPage() {
         </div>
       </section>
 
+      <EventCarousel />
+
       {SERVICE_DETAILS.map((d, i) => (
         <section className={`section${i === 0 ? " section-dark" : ""}`} key={d.title}>
           <div className="container">
@@ -122,8 +124,6 @@ export default function AboutPage() {
           </Founder>
         </div>
       </section>
-
-      <EventCarousel />
 
       <PartnerCarousel />
 
