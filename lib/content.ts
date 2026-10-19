@@ -36,6 +36,19 @@ export const NAV_LINKS = [
   { href: URLS.contact, label: "Contact" },
 ];
 
+/**
+ * Photos from industry events such as the Lynas Food Show. Shown as a moving
+ * strip on the About page, the same treatment as the partner logos below.
+ */
+export const EVENT_PHOTOS = [
+  { src: "/images/event-biscoff.jpg", alt: "Julie Bell with Peter Rodgers at the Lotus Biscoff stand", w: 1600, h: 1200 },
+  { src: "/images/event-alpro.jpg", alt: "Julie Bell at the Alpro Barista coffee cart", w: 1600, h: 1200 },
+  { src: "/images/event-loada-balls.jpg", alt: "Julie Bell with John and Curtis Sloan of Loada Balls", w: 1600, h: 1200 },
+  { src: "/images/event-paardekooper.jpg", alt: "Julie Bell at the Paardekooper packaging stand", w: 1600, h: 1200 },
+  { src: "/images/event-lynas.jpg", alt: "Julie Bell at the Lynas Food Show", w: 1200, h: 1600 },
+  { src: "/images/event-forest-feast.jpg", alt: "Julie Bell at the Forest Feast stand", w: 738, h: 1600 },
+];
+
 export const PARTNERS = [
   { src: "/images/partner-irwins.png", alt: "Irwin's Bakery", w: 153, h: 100 },
   { src: "/images/partner-prep.png", alt: "Prep House", w: 92, h: 100 },

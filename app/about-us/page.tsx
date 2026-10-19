@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import Image from "next/image";
 import CtaBand from "@/components/CtaBand";
+import EventCarousel from "@/components/EventCarousel";
 import Founder from "@/components/Founder";
 import PageHero from "@/components/PageHero";
 import PartnerCarousel from "@/components/PartnerCarousel";
@@ -121,6 +122,8 @@ export default function AboutPage() {
           </Founder>
         </div>
       </section>
+
+      <EventCarousel />
 
       <PartnerCarousel />
 
