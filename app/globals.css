@@ -204,13 +204,16 @@ h1, h2, h3, h4 {
 .events-label { text-align: center; font-size: 13px; letter-spacing: 1px; font-weight: 500; color: #6f6069; margin-bottom: 30px; padding: 0 24px; }
 .photo-carousel { overflow: hidden; mask-image: linear-gradient(90deg, transparent, #000 6%, #000 94%, transparent); }
 .photo-track { display: flex; align-items: center; gap: 24px; width: max-content; animation: photos 70s linear infinite; }
-.photo-track figure { margin: 0; flex: 0 0 auto; width: 340px; aspect-ratio: 4 / 3; border-radius: var(--radius); overflow: hidden; box-shadow: 0 10px 30px rgba(123,20,23,.10); }
-.photo-track img { width: 100%; height: 100%; object-fit: cover; display: block; transition: transform .35s; }
+/* Fixed height, natural width: the photos are a mix of landscape and portrait,
+   and a fixed aspect ratio centre-cropped the portraits. Each card now keeps
+   its own shape, so nothing is cut off. */
+.photo-track figure { margin: 0; flex: 0 0 auto; height: 260px; border-radius: var(--radius); overflow: hidden; box-shadow: 0 10px 30px rgba(123,20,23,.10); }
+.photo-track img { height: 100%; width: auto; object-fit: contain; display: block; transition: transform .35s; }
 .photo-track figure:hover img { transform: scale(1.04); }
 .photo-carousel:hover .photo-track { animation-play-state: paused; }
 @keyframes photos { to { transform: translateX(calc(-50% - 12px)); } }
 @media (max-width: 640px) {
-  .photo-track figure { width: 260px; }
+  .photo-track figure { height: 190px; }
 }
 @media (prefers-reduced-motion: reduce) {
   .photo-track { animation: none; flex-wrap: wrap; justify-content: center; width: auto; padding: 0 24px; }

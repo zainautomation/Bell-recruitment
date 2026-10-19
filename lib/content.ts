@@ -46,7 +46,7 @@ export const EVENT_PHOTOS = [
   { src: "/images/event-loada-balls.jpg", alt: "Julie Bell with John and Curtis Sloan of Loada Balls", w: 1600, h: 1200 },
   { src: "/images/event-paardekooper.jpg", alt: "Julie Bell at the Paardekooper packaging stand", w: 1600, h: 1200 },
   { src: "/images/event-lynas.jpg", alt: "Julie Bell at the Lynas Food Show", w: 1200, h: 1600 },
-  { src: "/images/event-forest-feast.jpg", alt: "Julie Bell at the Forest Feast stand", w: 738, h: 1600 },
+  { src: "/images/event-forest-feast.jpg", alt: "Julie Bell at the Forest Feast stand", w: 738, h: 950 },
 ];
 
 export const PARTNERS = [
