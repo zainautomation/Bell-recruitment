@@ -16,11 +16,12 @@ export default function ContactPage() {
         <div className="container">
           <div className="contact-card contact-card-solo">
             <Image
-              src="/images/julie-bell.jpg"
-              alt="Julie Bell, Founder and CEO"
-              width={870}
-              height={1305}
+              src="/images/employer-meeting.jpg"
+              alt="Two people talking through a hiring brief"
+              width={1200}
+              height={1200}
               sizes="(max-width: 900px) 100vw, 480px"
+              style={{ objectPosition: "50% 38%" }}
             />
             <div className="body">
               <h3>Speak to Julie directly</h3>
