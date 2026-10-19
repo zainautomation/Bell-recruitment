@@ -35,9 +35,10 @@ export default function HomePage() {
               Sourcing the best <em>FMCG talent</em>
             </h1>
             <p>
-              Julie Bell, Founder &amp; CEO of Bell Recruitment, has been delivering the best FMCG talent and
-              Executive Search solutions for over 25 years, connecting leading food, beverage, and consumer
-              goods brands with exceptional commercial talent across Northern Ireland, Ireland, and the UK.
+              Julie Bell, Founder and CEO of Bell Recruitment, has been delivering the best FMCG recruitment and
+              Executive search solutions for over 25 years connecting leading FMCG food, drink and consumer brands
+              with exceptional talent in C-Suite, commercial, operations, technical, procurement, production, supply
+              chain, finance or engineering.
             </p>
             <ButtonRow
               buttons={[
