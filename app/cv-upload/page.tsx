@@ -1,12 +1,18 @@
 import type { Metadata } from "next";
 import PageHero from "@/components/PageHero";
 import SubmitForm from "@/components/SubmitForm";
+import JsonLd from "@/components/JsonLd";
+import { breadcrumbSchema } from "@/lib/schema";
 
-export const metadata: Metadata = { title: "CV Upload" };
+export const metadata: Metadata = {
+  title: "CV Upload",
+  alternates: { canonical: "/cv-upload/" },
+};
 
 export default function CvUploadPage() {
   return (
     <>
+      <JsonLd data={breadcrumbSchema([{ name: "Upload your CV", path: "/cv-upload/" }])} />
       <PageHero
         eyebrow="For candidates"
         title="Let's find your next opportunity. Send us your CV"

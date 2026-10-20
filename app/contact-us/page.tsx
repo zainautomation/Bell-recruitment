@@ -2,12 +2,18 @@ import type { Metadata } from "next";
 import Image from "next/image";
 import PageHero from "@/components/PageHero";
 import { CONTACT } from "@/lib/content";
+import JsonLd from "@/components/JsonLd";
+import { breadcrumbSchema } from "@/lib/schema";
 
-export const metadata: Metadata = { title: "Contact Us" };
+export const metadata: Metadata = {
+  title: "Contact Us",
+  alternates: { canonical: "/contact-us/" },
+};
 
 export default function ContactPage() {
   return (
     <>
+      <JsonLd data={breadcrumbSchema([{ name: "Contact us", path: "/contact-us/" }])} />
       <PageHero title="Get in touch" image="/images/grocery-aisle.jpg">
         Whether you&rsquo;re hiring or looking for your next role, we&rsquo;d love to hear from you.
       </PageHero>

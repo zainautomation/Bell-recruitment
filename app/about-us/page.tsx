@@ -8,10 +8,13 @@ import PartnerCarousel from "@/components/PartnerCarousel";
 import ProofStrip from "@/components/ProofStrip";
 import ServiceDetail from "@/components/ServiceDetails";
 import { JULIE_ROLES, SERVICE_DETAILS, URLS } from "@/lib/content";
+import JsonLd from "@/components/JsonLd";
+import { breadcrumbSchema } from "@/lib/schema";
 
 // Copy: "3. About Us" in the client's Website Content document.
 
 export const metadata: Metadata = {
+  alternates: { canonical: "/about-us/" },
   title: { absolute: "About Bell Recruitment | FMCG Recruitment Specialists Northern Ireland, Ireland and United Kingdom" },
   description:
     "Bell Recruitment is an FMCG executive search firm founded in 1999 by Julie Bell, who spent ten years at Pepsi, 7UP, Ballygowan and Budweiser before starting the business.",
@@ -20,6 +23,7 @@ export const metadata: Metadata = {
 export default function AboutPage() {
   return (
     <>
+      <JsonLd data={breadcrumbSchema([{ name: "About us", path: "/about-us/" }])} />
       <PageHero
         eyebrow="About us"
         title="About Bell Recruitment: FMCG Recruitment Specialists in Northern Ireland, Ireland and United Kingdom"

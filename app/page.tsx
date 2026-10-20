@@ -13,10 +13,13 @@ import ServiceDetail from "@/components/ServiceDetails";
 import TestimonialGrid from "@/components/TestimonialGrid";
 import Tilt from "@/components/Tilt";
 import { BLOG_POSTS, JULIE_ROLES, OUR_SERVICES, ROLE_AREAS, SERVICE_DETAILS, URLS } from "@/lib/content";
+import JsonLd from "@/components/JsonLd";
+import { homeServicesSchema } from "@/lib/schema";
 
 // Copy: "1. Home" in the client's Website Content document.
 
 export const metadata: Metadata = {
+  alternates: { canonical: "/" },
   title: { absolute: "FMCG Recruitment Northern Ireland, Ireland and United Kingdom | Bell Recruitment" },
   description:
     "FMCG executive search in Northern Ireland since 1999. Sales, key account and commercial hires. Search begins within 24 hours.",
@@ -25,6 +28,7 @@ export const metadata: Metadata = {
 export default function HomePage() {
   return (
     <>
+      <JsonLd data={homeServicesSchema()} />
       <section className="hero">
         <div className="hero-inner">
           <div className="hero-copy">

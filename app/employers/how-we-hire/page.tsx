@@ -7,10 +7,13 @@ import CaseStudy from "@/components/CaseStudy";
 import ProcessSteps from "@/components/ProcessSteps";
 import TestimonialGrid from "@/components/TestimonialGrid";
 import { URLS } from "@/lib/content";
+import JsonLd from "@/components/JsonLd";
+import { breadcrumbSchema, caseStudySchema, reviewsSchema } from "@/lib/schema";
 
 // Copy: "5. Client Process" in the client's Website Content document.
 
 export const metadata: Metadata = {
+  alternates: { canonical: "/employers/how-we-hire/" },
   title: { absolute: "FMCG Recruitment Process for Employers | Bell Recruitment" },
   description:
     "How Bell Recruitment hires for FMCG employers in Northern Ireland: search begins in 24 hours, with rigorous candidate assessment.",
@@ -19,6 +22,9 @@ export const metadata: Metadata = {
 export default function HowWeHirePage() {
   return (
     <>
+      <JsonLd data={breadcrumbSchema([{ name: "How we hire", path: "/employers/how-we-hire/" }])} />
+      <JsonLd data={caseStudySchema()} />
+      <JsonLd data={reviewsSchema()} />
       <PageHero
         eyebrow="For employers"
         title="How Bell Recruitment Hires for FMCG Employers"

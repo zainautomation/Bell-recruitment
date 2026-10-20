@@ -1,12 +1,18 @@
 import type { Metadata } from "next";
 import Link from "next/link";
 import PageHero from "@/components/PageHero";
+import JsonLd from "@/components/JsonLd";
+import { breadcrumbSchema } from "@/lib/schema";
 
-export const metadata: Metadata = { title: "Privacy Policy" };
+export const metadata: Metadata = {
+  title: "Privacy Policy",
+  alternates: { canonical: "/privacy-policy/" },
+};
 
 export default function PrivacyPage() {
   return (
     <>
+      <JsonLd data={breadcrumbSchema([{ name: "Privacy policy", path: "/privacy-policy/" }])} />
       <PageHero title="Privacy Policy" />
       <section className="section">
         <div className="container-narrow prose">

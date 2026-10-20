@@ -120,6 +120,13 @@ Until a domain is verified in Resend, only its shared sender (`onboarding@resend
 
 These files live on the server's disk. On hosts without a persistent filesystem, such as Vercel, replace `logSubmission` and `saveCv` in `lib/submissions.ts` with email or cloud storage (for example S3 or Vercel Blob). The API routes don't need to change.
 
+## Search and AI answer engines (SEO / AEO)
+
+- `app/robots.ts` serves `/robots.txt` (search and AI crawlers allowed, `/api/` closed, sitemap declared). `app/sitemap.ts` serves `/sitemap.xml` from `SITE_PAGES` in `lib/site.ts`. `public/llms.txt` lists the key pages for AI systems. Add a new page to `SITE_PAGES` and `llms.txt`.
+- The site address comes from `SITE_URL` in `lib/site.ts` (`https://www.bellrecruitment.net`, or `NEXT_PUBLIC_SITE_URL`).
+- Structured data (JSON-LD) is built in `lib/schema.ts` and rendered with `components/JsonLd.tsx`: the business, website and founder on every page (root layout); breadcrumbs on each inner page; services, FAQs, reviews, the case study and the blog on the pages that show them. Each page also sets a canonical link in its `metadata`.
+- Only facts already on the site go into structured data. The testimonials have no ratings, so there is deliberately no `AggregateRating`.
+
 ## Styling
 
 - Colours are CSS variables at the top of `globals.css` (`--burgundy`, `--accent`, `--cream` and so on).

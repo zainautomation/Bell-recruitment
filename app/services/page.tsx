@@ -3,10 +3,13 @@ import CtaBand from "@/components/CtaBand";
 import PageHero from "@/components/PageHero";
 import ServiceDetail from "@/components/ServiceDetails";
 import { SERVICE_DETAILS, URLS } from "@/lib/content";
+import JsonLd from "@/components/JsonLd";
+import { breadcrumbSchema, mainServicesSchema } from "@/lib/schema";
 
 // Copy: "2. Services (Executive Search)" in the client's Website Content document.
 
 export const metadata: Metadata = {
+  alternates: { canonical: "/services/" },
   title: { absolute: "FMCG Executive Search Northern Ireland, Ireland and United Kingdom | Bell Recruitment" },
   description: "Confidential FMCG executive search in Northern Ireland since 1999. Search begins within 24 hours.",
 };
@@ -14,6 +17,8 @@ export const metadata: Metadata = {
 export default function ServicesPage() {
   return (
     <>
+      <JsonLd data={breadcrumbSchema([{ name: "Services", path: "/services/" }])} />
+      <JsonLd data={mainServicesSchema()} />
       <PageHero
         eyebrow="Our service"
         title="FMCG Executive Search in Northern Ireland, Ireland and United Kingdom"

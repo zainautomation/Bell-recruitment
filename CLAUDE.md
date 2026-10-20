@@ -25,6 +25,8 @@ Marketing site for Bell Recruitment (FMCG recruitment, Belfast): Next.js 16 App 
 - **Every page starts with a burgundy banner** (home hero or `PageHero`) because the header is transparent at the top and overlaps it. New pages should start with `PageHero`.
 - **Forms**: The `app/api/cv-upload` route handler uses [lib/submissions.ts](lib/submissions.ts) to validate, save CVs to `uploads/` and append JSON lines to `data/*.jsonl` (both git-ignored). This relies on a persistent disk; on hosts like Vercel, replace `logSubmission`/`saveCv` only. When `RESEND_API_KEY` and `RESEND_TO_EMAIL` are set (see `.env.example`), the CV is also emailed via Resend ([lib/email.ts](lib/email.ts)); with Resend's shared sender it can only be delivered to the Resend account's own email until a domain is verified.
 
+- **SEO / AEO**: `/robots.txt` and `/sitemap.xml` are generated (`app/robots.ts`, `app/sitemap.ts`, pages listed in `SITE_PAGES` in [lib/site.ts](lib/site.ts)); `public/llms.txt` is static. JSON-LD comes from [lib/schema.ts](lib/schema.ts) via `components/JsonLd.tsx`; each page sets a canonical link. Add new pages to `SITE_PAGES` and `llms.txt`.
+
 ## Gotchas
 
 - **Scroll-reveal selectors are duplicated**: `REVEAL` in [components/ScrollReveal.tsx](components/ScrollReveal.tsx) and the `html.js :is(...)` rule in `globals.css`. Add new animated element types to both.

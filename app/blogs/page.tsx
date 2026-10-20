@@ -2,12 +2,19 @@ import type { Metadata } from "next";
 import Image from "next/image";
 import PageHero from "@/components/PageHero";
 import { BLOG_POSTS } from "@/lib/content";
+import JsonLd from "@/components/JsonLd";
+import { blogSchema, breadcrumbSchema } from "@/lib/schema";
 
-export const metadata: Metadata = { title: "Blogs" };
+export const metadata: Metadata = {
+  title: "Blogs",
+  alternates: { canonical: "/blogs/" },
+};
 
 export default function BlogsPage() {
   return (
     <>
+      <JsonLd data={breadcrumbSchema([{ name: "Blogs", path: "/blogs/" }])} />
+      <JsonLd data={blogSchema()} />
       <PageHero eyebrow="Insights" title="Blogs" image="/images/team-meeting.jpg">
         FMCG hiring and career advice from the Bell Recruitment team.
       </PageHero>

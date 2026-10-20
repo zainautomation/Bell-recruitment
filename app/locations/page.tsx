@@ -2,8 +2,11 @@ import type { Metadata } from "next";
 import Link from "next/link";
 import PageHero from "@/components/PageHero";
 import { LOCATIONS, URLS } from "@/lib/content";
+import JsonLd from "@/components/JsonLd";
+import { breadcrumbSchema } from "@/lib/schema";
 
 export const metadata: Metadata = {
+  alternates: { canonical: "/locations/" },
   title: "Cities, Areas and Regions | Bell Recruitment",
   description:
     "FMCG executive search and recruitment for businesses across Northern Ireland, Ireland and the UK: the cities, areas and regions we work in.",
@@ -18,6 +21,7 @@ const AREA_TEXT = {
 export default function LocationsPage() {
   return (
     <>
+      <JsonLd data={breadcrumbSchema([{ name: "Where we work", path: "/locations/" }])} />
       <PageHero eyebrow="Where we work" title="Where We Work">
         We work with FMCG businesses throughout Northern Ireland, Ireland and the UK.
       </PageHero>

@@ -3,7 +3,10 @@ import { Cormorant_Garamond, Inter } from "next/font/google";
 import BackToTop from "@/components/BackToTop";
 import Footer from "@/components/Footer";
 import Header from "@/components/Header";
+import JsonLd from "@/components/JsonLd";
 import ScrollReveal from "@/components/ScrollReveal";
+import { siteSchema } from "@/lib/schema";
+import { SITE_URL } from "@/lib/site";
 import "./globals.css";
 
 const serif = Cormorant_Garamond({
@@ -14,6 +17,14 @@ const serif = Cormorant_Garamond({
 const sans = Inter({ subsets: ["latin"], variable: "--font-sans" });
 
 export const metadata: Metadata = {
+  metadataBase: new URL(SITE_URL),
+  openGraph: {
+    type: "website",
+    siteName: "Bell Recruitment",
+    locale: "en_GB",
+    images: [{ url: "/images/hero-bg.png", width: 1536, height: 1024, alt: "Julie Bell, Founder and CEO of Bell Recruitment" }],
+  },
+  twitter: { card: "summary_large_image" },
   title: {
     default: "Bell Recruitment | FMCG Recruitment Specialists | Belfast",
     template: "%s | Bell Recruitment",
@@ -34,6 +45,7 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
         />
       </head>
       <body>
+        <JsonLd data={siteSchema()} />
         <a className="skip-link" href="#content">
           Skip to content
         </a>
