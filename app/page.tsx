@@ -213,7 +213,7 @@ export default function HomePage() {
           <div className="card-grid-3 mobile-swipe">
             {BLOG_POSTS.map((post) => (
               <article className="blog-card" key={post.title}>
-                <Image src={post.image} alt="" width={800} height={500} sizes="(max-width: 900px) 100vw, 380px" />
+                <Image src={post.image} alt={post.alt} width={800} height={500} sizes="(max-width: 900px) 100vw, 380px" />
                 <div className="body">
                   <h3>{post.title}</h3>
                   <p>{post.excerpt}</p>

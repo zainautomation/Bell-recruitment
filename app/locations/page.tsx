@@ -7,7 +7,7 @@ import { breadcrumbSchema } from "@/lib/schema";
 
 export const metadata: Metadata = {
   alternates: { canonical: "/locations/" },
-  title: "Cities, Areas and Regions | Bell Recruitment",
+  title: "FMCG Recruitment Across Northern Ireland, Ireland and the UK",
   description:
     "FMCG executive search and recruitment for businesses across Northern Ireland, Ireland and the UK: the cities, areas and regions we work in.",
 };

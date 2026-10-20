@@ -22,7 +22,7 @@ export const metadata: Metadata = {
     type: "website",
     siteName: "Bell Recruitment",
     locale: "en_GB",
-    images: [{ url: "/images/hero-bg.png", width: 1536, height: 1024, alt: "Julie Bell, Founder and CEO of Bell Recruitment" }],
+    images: [{ url: "/images/og-share.png", width: 1200, height: 630, alt: "Bell Recruitment: FMCG recruitment and executive search" }],
   },
   twitter: { card: "summary_large_image" },
   title: {

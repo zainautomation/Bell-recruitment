@@ -131,16 +131,19 @@ export const BLOG_POSTS = [
     title: "How to attract top FMCG talent in a competitive market",
     excerpt: "A few practical steps employers can take to stand out to candidates in the FMCG sector.",
     image: "/images/grocery-aisle.jpg",
+    alt: "A supermarket grocery aisle stocked with FMCG products",
   },
   {
     title: "Preparing your CV for a commercial role",
     excerpt: "Simple tips to help your CV get noticed by hiring managers in commercial and operational roles.",
     image: "/images/employer-meeting.jpg",
+    alt: "Two people talking through a hiring brief",
   },
   {
     title: "Why executive search is different to standard recruitment",
     excerpt: "What sets an executive search apart, and when it's the right approach for your business.",
     image: "/images/team-success.jpg",
+    alt: "Two colleagues celebrating with a high five at a desk",
   },
 ];
 
