@@ -14,7 +14,7 @@ export default function ContactPage() {
   return (
     <>
       <JsonLd data={breadcrumbSchema([{ name: "Contact us", path: "/contact-us/" }])} />
-      <PageHero title="Get in touch" image="/images/grocery-aisle.jpg">
+      <PageHero title="Get in touch" image="/images/contact-banner.jpg" imagePosition="50% 30%">
         Whether you&rsquo;re hiring or looking for your next role, we&rsquo;d love to hear from you.
       </PageHero>
 
