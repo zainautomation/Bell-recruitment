@@ -1,6 +1,7 @@
 // Structured data (schema.org JSON-LD) builders. Every fact here comes from the site's own content
 // (lib/content.ts and the pages); nothing is invented. In particular there are no star ratings,
 // because the site's testimonials carry none.
+import type { Article } from "@/lib/articles";
 import { BLOG_POSTS, CONTACT, JULIE_ROLES, OUR_SERVICES, SERVICE_DETAILS, TESTIMONIALS, CASE_STUDY } from "@/lib/content";
 import { SITE_URL, absoluteUrl } from "@/lib/site";
 
@@ -162,6 +163,26 @@ export function caseStudySchema() {
   };
 }
 
+export function articleSchema(post: (typeof BLOG_POSTS)[number], article: Article) {
+  const url = absoluteUrl(`/blogs/${post.slug}/`);
+  return {
+    "@context": "https://schema.org",
+    "@type": "BlogPosting",
+    headline: post.title,
+    alternativeHeadline: article.seoTitle,
+    description: article.description,
+    image: absoluteUrl(post.image),
+    datePublished: article.published,
+    dateModified: article.published,
+    inLanguage: "en-GB",
+    author: { "@id": ORG_ID },
+    publisher: { "@id": ORG_ID },
+    mainEntityOfPage: { "@type": "WebPage", "@id": url },
+    url,
+    isPartOf: { "@type": "Blog", name: "Bell Recruitment blog", url: absoluteUrl("/blogs/") },
+  };
+}
+
 export function blogSchema() {
   return {
     "@context": "https://schema.org",
@@ -174,9 +195,9 @@ export function blogSchema() {
       headline: p.title,
       description: p.excerpt,
       image: absoluteUrl(p.image),
+      url: absoluteUrl(`/blogs/${p.slug}/`),
       author: { "@id": ORG_ID },
       publisher: { "@id": ORG_ID },
-      mainEntityOfPage: absoluteUrl("/blogs/"),
     })),
   };
 }

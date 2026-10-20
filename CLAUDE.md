@@ -27,6 +27,8 @@ Marketing site for Bell Recruitment (FMCG recruitment, Belfast): Next.js 16 App 
 
 - **SEO / AEO**: `/robots.txt` and `/sitemap.xml` are generated (`app/robots.ts`, `app/sitemap.ts`, pages listed in `SITE_PAGES` in [lib/site.ts](lib/site.ts)); `public/llms.txt` is static. JSON-LD comes from [lib/schema.ts](lib/schema.ts) via `components/JsonLd.tsx`; each page sets a canonical link. Add new pages to `SITE_PAGES` and `llms.txt`.
 
+- **Blog articles**: the cards (`BLOG_POSTS` in `lib/content.ts`) link to `/blogs/<slug>/`, built by `app/blogs/[slug]/page.tsx` from the text in [lib/articles.ts](lib/articles.ts) (SEO title, description, takeaways, sections). To add an article, add it to both, then to `SITE_PAGES` in `lib/site.ts` and `public/llms.txt`.
+
 ## Gotchas
 
 - **Scroll-reveal selectors are duplicated**: `REVEAL` in [components/ScrollReveal.tsx](components/ScrollReveal.tsx) and the `html.js :is(...)` rule in `globals.css`. Add new animated element types to both.

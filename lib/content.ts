@@ -128,18 +128,21 @@ export const JULIE_ROLES = [
 // Used on the CV upload page (not yet rewritten in the content document).
 export const BLOG_POSTS = [
   {
+    slug: "how-to-attract-top-fmcg-talent",
     title: "How to attract top FMCG talent in a competitive market",
     excerpt: "A few practical steps employers can take to stand out to candidates in the FMCG sector.",
     image: "/images/grocery-aisle.jpg",
     alt: "A supermarket grocery aisle stocked with FMCG products",
   },
   {
+    slug: "preparing-your-cv-for-a-commercial-role",
     title: "Preparing your CV for a commercial role",
     excerpt: "Simple tips to help your CV get noticed by hiring managers in commercial and operational roles.",
     image: "/images/employer-meeting.jpg",
     alt: "Two people talking through a hiring brief",
   },
   {
+    slug: "executive-search-vs-recruitment",
     title: "Why executive search is different to standard recruitment",
     excerpt: "What sets an executive search apart, and when it's the right approach for your business.",
     image: "/images/team-success.jpg",

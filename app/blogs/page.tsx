@@ -1,7 +1,6 @@
 import type { Metadata } from "next";
-import Image from "next/image";
+import BlogCards from "@/components/BlogCards";
 import PageHero from "@/components/PageHero";
-import { BLOG_POSTS } from "@/lib/content";
 import JsonLd from "@/components/JsonLd";
 import { blogSchema, breadcrumbSchema } from "@/lib/schema";
 
@@ -23,17 +22,7 @@ export default function BlogsPage() {
 
       <section className="section">
         <div className="container">
-          <div className="card-grid-3 mobile-swipe">
-            {BLOG_POSTS.map((post) => (
-              <article className="blog-card" key={post.title}>
-                <Image src={post.image} alt={post.alt} width={800} height={500} sizes="(max-width: 900px) 100vw, 380px" />
-                <div className="body">
-                  <h3>{post.title}</h3>
-                  <p>{post.excerpt}</p>
-                </div>
-              </article>
-            ))}
-          </div>
+          <BlogCards />
         </div>
       </section>
     </>

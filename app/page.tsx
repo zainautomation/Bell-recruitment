@@ -4,6 +4,7 @@ import Link from "next/link";
 import { ButtonRow } from "@/components/ButtonLink";
 import FaqList from "@/components/FaqList";
 import RoleAreas from "@/components/RoleAreas";
+import BlogCards from "@/components/BlogCards";
 import Founder from "@/components/Founder";
 import LetterReveal from "@/components/LetterReveal";
 import PartnerCarousel from "@/components/PartnerCarousel";
@@ -12,7 +13,7 @@ import ServiceCards from "@/components/ServiceCards";
 import ServiceDetail from "@/components/ServiceDetails";
 import TestimonialGrid from "@/components/TestimonialGrid";
 import Tilt from "@/components/Tilt";
-import { BLOG_POSTS, JULIE_ROLES, OUR_SERVICES, ROLE_AREAS, SERVICE_DETAILS, URLS } from "@/lib/content";
+import { JULIE_ROLES, OUR_SERVICES, ROLE_AREAS, SERVICE_DETAILS, URLS } from "@/lib/content";
 import JsonLd from "@/components/JsonLd";
 import { homeServicesSchema } from "@/lib/schema";
 
@@ -210,17 +211,7 @@ export default function HomePage() {
             <div className="section-label">Blogs</div>
             <h2>Latest from Bell Recruitment</h2>
           </div>
-          <div className="card-grid-3 mobile-swipe">
-            {BLOG_POSTS.map((post) => (
-              <article className="blog-card" key={post.title}>
-                <Image src={post.image} alt={post.alt} width={800} height={500} sizes="(max-width: 900px) 100vw, 380px" />
-                <div className="body">
-                  <h3>{post.title}</h3>
-                  <p>{post.excerpt}</p>
-                </div>
-              </article>
-            ))}
-          </div>
+          <BlogCards />
           <ButtonRow center buttons={[{ label: "View all blogs", href: URLS.blogs }]} />
         </div>
       </section>
