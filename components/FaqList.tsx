@@ -1,4 +1,5 @@
 import Link from "next/link";
+import Icon from "@/components/Icon";
 
 export type Faq = {
   q: string;
@@ -37,7 +38,7 @@ export default function FaqList({ items }: { items: Faq[] }) {
             {f.link && (
               <p>
                 <Link className="text-link" href={f.link.href}>
-                  {f.link.label} <i className="fas fa-arrow-right" aria-hidden="true" />
+                  {f.link.label} <Icon name="arrow-right" />
                 </Link>
               </p>
             )}

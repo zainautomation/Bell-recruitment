@@ -22,7 +22,7 @@ export type Article = {
 
 export const ARTICLES: Record<string, Article> = {
   "how-to-attract-top-fmcg-talent": {
-    seoTitle: "Attract Top FMCG Talent: 7 Steps for Employers",
+    seoTitle: "Attract Top FMCG Talent: 7 Steps",
     description:
       "Seven practical steps for employers who want to attract top FMCG sales and commercial talent: a clear brief, the full package, speed and a direct approach.",
     published: "2026-10-20",
@@ -129,7 +129,7 @@ export const ARTICLES: Record<string, Article> = {
   },
 
   "preparing-your-cv-for-a-commercial-role": {
-    seoTitle: "How to Prepare Your CV for a Commercial FMCG Role",
+    seoTitle: "How to Write a Commercial FMCG CV",
     description:
       "How to write a CV for a commercial FMCG role: what to include, how to show results and how to make it easy to read. Tips from an FMCG recruitment specialist.",
     published: "2026-10-20",
@@ -230,7 +230,7 @@ export const ARTICLES: Record<string, Article> = {
   },
 
   "executive-search-vs-recruitment": {
-    seoTitle: "Executive Search vs Recruitment: The Difference",
+    seoTitle: "Executive Search vs Recruitment",
     description:
       "Executive search is retained and research-led, built for senior and confidential hires. Recruitment fills professional roles quickly. Here is how to choose.",
     published: "2026-10-20",

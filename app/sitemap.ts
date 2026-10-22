@@ -5,6 +5,7 @@ import { SITE_PAGES, absoluteUrl } from "@/lib/site";
 export default function sitemap(): MetadataRoute.Sitemap {
   return SITE_PAGES.map((p) => ({
     url: absoluteUrl(p.path),
+    lastModified: p.lastModified,
     changeFrequency: p.changeFrequency,
     priority: p.priority,
   }));

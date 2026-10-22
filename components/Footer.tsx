@@ -1,6 +1,7 @@
 import Image from "next/image";
 import Link from "next/link";
 import { CONTACT, URLS } from "@/lib/content";
+import Icon from "@/components/Icon";
 
 // Site footer: "Find a Job / Find Talent" call to action, link columns and contact details.
 export default function Footer() {
@@ -44,7 +45,7 @@ export default function Footer() {
           <a href={`mailto:${CONTACT.email}`}>{CONTACT.email}</a>
           <div className="footer-social">
             <a href={CONTACT.linkedin} target="_blank" rel="noopener" aria-label="LinkedIn">
-              <i className="fab fa-linkedin-in" />
+              <Icon name="linkedin-in" />
             </a>
           </div>
         </div>

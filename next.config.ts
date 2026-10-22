@@ -6,6 +6,21 @@ const JOBS_BOARD = "https://www.careers-page.com/bellrecruitment";
 const nextConfig: NextConfig = {
   // Keep the original site's trailing-slash URLs (/about-us/, /services/ ...).
   trailingSlash: true,
+  // Basic hardening headers for every page. No Content-Security-Policy: the pages use inline
+  // JSON-LD and a small inline script, which a strict policy would block.
+  async headers() {
+    return [
+      {
+        source: "/:path*",
+        headers: [
+          { key: "X-Content-Type-Options", value: "nosniff" },
+          { key: "X-Frame-Options", value: "SAMEORIGIN" },
+          { key: "Referrer-Policy", value: "strict-origin-when-cross-origin" },
+          { key: "Permissions-Policy", value: "camera=(), microphone=(), geolocation=()" },
+        ],
+      },
+    ];
+  },
   async redirects() {
     return [
       // The Services page moved from /employer/ to /services/ (content document URL).

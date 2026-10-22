@@ -15,9 +15,9 @@ import { breadcrumbSchema } from "@/lib/schema";
 
 export const metadata: Metadata = {
   alternates: { canonical: "/about-us/" },
-  title: { absolute: "About Bell Recruitment | FMCG Recruitment Specialists Northern Ireland, Ireland and United Kingdom" },
+  title: { absolute: "About Bell Recruitment | FMCG Recruitment Specialists" },
   description:
-    "Bell Recruitment is an FMCG executive search firm founded in 1999 by Julie Bell, who spent ten years at Pepsi, 7UP, Ballygowan and Budweiser before starting the business.",
+    "Bell Recruitment is an FMCG executive search firm founded in 1999 by Julie Bell, who spent ten years at Pepsi, 7UP, Ballygowan and Budweiser.",
 };
 
 export default function AboutPage() {

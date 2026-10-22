@@ -10,7 +10,7 @@ import { breadcrumbSchema, mainServicesSchema } from "@/lib/schema";
 
 export const metadata: Metadata = {
   alternates: { canonical: "/services/" },
-  title: { absolute: "FMCG Executive Search Northern Ireland, Ireland and United Kingdom | Bell Recruitment" },
+  title: { absolute: "FMCG Executive Search Northern Ireland | Bell Recruitment" },
   description: "Confidential FMCG executive search in Northern Ireland since 1999. Search begins within 24 hours.",
 };
 

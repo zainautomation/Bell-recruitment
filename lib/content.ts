@@ -184,37 +184,37 @@ export const ROLE_AREAS = [
 // "Our Services" cards on the Home page. Wording is from the client; keep it word for word.
 export const OUR_SERVICES = [
   {
-    icon: "fa-user-tie",
+    icon: "user-tie",
     title: "Executive Search",
     text: "Strategic, research-led executive search to identify and secure exceptional senior leaders and C-suite talent within the FMCG and consumer goods sectors.",
   },
   {
-    icon: "fa-people-group",
+    icon: "people-group",
     title: "Recruitment & Selection",
     text: "End-to-end recruitment solutions designed to identify, assess and appoint high-calibre professionals who align with your business objectives, culture and long-term ambitions.",
   },
   {
-    icon: "fa-chart-line",
+    icon: "chart-line",
     title: "Market Intelligence & Insights",
     text: "Actionable intelligence on talent availability, leadership markets, competitor activity, remuneration trends and organisational structures to support informed hiring and business decisions.",
   },
   {
-    icon: "fa-clipboard-check",
+    icon: "clipboard-check",
     title: "Candidate Assessment, Preparation & Screening",
     text: "Rigorous candidate screening, structured interviews and behavioural assessment to evaluate leadership capability, cultural alignment and suitability for the role.",
   },
   {
-    icon: "fa-brain",
+    icon: "brain",
     title: "Psychometric Testing",
     text: "Online psychometric assessments that provide deeper insight into candidates’ behavioural preferences, cognitive abilities and leadership potential, supporting evidence-based selection decisions.",
   },
   {
-    icon: "fa-filter",
+    icon: "filter",
     title: "Talent Pipelining",
     text: "Proactive talent pipeline development to identify, engage and nurture high-potential candidates ahead of future recruitment needs, strengthening succession planning and reducing time to hire.",
   },
   {
-    icon: "fa-map-location-dot",
+    icon: "map-location-dot",
     title: "Talent Sourcing & Market Mapping",
     text: "Targeted talent sourcing and comprehensive market mapping to uncover exceptional candidates, including high-performing individuals who may not be actively seeking new opportunities.",
   },

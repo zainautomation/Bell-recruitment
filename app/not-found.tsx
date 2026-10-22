@@ -1,5 +1,8 @@
+import type { Metadata } from "next";
 import Link from "next/link";
 import PageHero from "@/components/PageHero";
+
+export const metadata: Metadata = { title: "Page not found" };
 
 // Shown for unknown URLs. Uses the standard banner so the transparent header sits on burgundy.
 export default function NotFound() {

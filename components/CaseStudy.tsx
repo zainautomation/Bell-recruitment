@@ -1,6 +1,7 @@
 import Link from "next/link";
 import FaqList from "@/components/FaqList";
 import { CASE_STUDY as c, URLS } from "@/lib/content";
+import Icon from "@/components/Icon";
 
 // The Crust & Crumb case study. Only the heading shows at first; a button opens the rest (a native <details>,
 // so it works without JavaScript and the text stays in the page): headline numbers, background, challenge, approach, the roles filled,
@@ -18,7 +19,7 @@ export default function CaseStudy() {
         <summary className="btn btn-burgundy cs-toggle">
           <span className="cs-open-label">Read the full case study</span>
           <span className="cs-close-label">Hide the case study</span>
-          <i className="fas fa-chevron-down" aria-hidden="true" />
+          <Icon name="chevron-down" />
         </summary>
 
         <div className="cs-stats">
@@ -87,7 +88,7 @@ export default function CaseStudy() {
           {c.outcome.placed.map((p) => (
             <div className="cs-placed-item" key={p.title}>
               <strong>
-                <i className="fas fa-check" aria-hidden="true" /> {p.title}
+                <Icon name="check" /> {p.title}
               </strong>
               <span>{p.text}</span>
             </div>

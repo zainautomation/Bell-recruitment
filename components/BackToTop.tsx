@@ -1,6 +1,7 @@
 "use client";
 
 import { useEffect, useState } from "react";
+import Icon from "@/components/Icon";
 
 // Floating button that appears after scrolling 700px and smooth-scrolls back to the top.
 export default function BackToTop() {
@@ -21,7 +22,7 @@ export default function BackToTop() {
       tabIndex={visible ? 0 : -1}
       onClick={() => window.scrollTo({ top: 0, behavior: "smooth" })}
     >
-      <i className="fas fa-arrow-up" />
+      <Icon name="arrow-up" />
     </button>
   );
 }

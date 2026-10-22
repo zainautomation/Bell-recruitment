@@ -2,6 +2,7 @@ import type { ReactNode } from "react";
 import { CONTACT } from "@/lib/content";
 import { ButtonRow, type ButtonSpec } from "./ButtonLink";
 import LetterReveal from "./LetterReveal";
+import Icon from "@/components/Icon";
 
 // Closing call to action at the bottom of each page ("Talk to Julie", "Still have a
 // question?"...): a photo banner with the heading typed in, optional text, Julie's
@@ -26,10 +27,10 @@ export default function CtaBand({
         {children && <p>{children}</p>}
         <p className="cta-contact">
           <a href={CONTACT.phoneHref}>
-            <i className="fas fa-phone" aria-hidden="true" /> {CONTACT.phone}
+            <Icon name="phone" /> {CONTACT.phone}
           </a>
           <a href={`mailto:${CONTACT.email}`}>
-            <i className="fas fa-envelope" aria-hidden="true" /> {CONTACT.email}
+            <Icon name="envelope" /> {CONTACT.email}
           </a>
         </p>
         <ButtonRow buttons={buttons.map((b, i) => ({ variant: i === 0 ? "light" : "outline", ...b }))} />

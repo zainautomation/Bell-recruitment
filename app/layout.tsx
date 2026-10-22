@@ -25,6 +25,11 @@ export const metadata: Metadata = {
     images: [{ url: "/images/og-share.png", width: 1200, height: 630, alt: "Bell Recruitment: FMCG recruitment and executive search" }],
   },
   twitter: { card: "summary_large_image" },
+  robots: {
+    index: true,
+    follow: true,
+    googleBot: { index: true, follow: true, "max-image-preview": "large", "max-snippet": -1, "max-video-preview": -1 },
+  },
   title: {
     default: "Bell Recruitment | FMCG Recruitment Specialists | Belfast",
     template: "%s | Bell Recruitment",
@@ -35,14 +40,10 @@ export const metadata: Metadata = {
 
 export default function RootLayout({ children }: { children: React.ReactNode }) {
   return (
-    <html lang="en" className={`${serif.variable} ${sans.variable}`} suppressHydrationWarning>
+    <html lang="en-GB" className={`${serif.variable} ${sans.variable}`} suppressHydrationWarning>
       <head>
         {/* Marks JS as available before first paint so scroll-reveal content starts hidden. */}
         <script dangerouslySetInnerHTML={{ __html: "document.documentElement.classList.add('js')" }} />
-        <link
-          rel="stylesheet"
-          href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"
-        />
       </head>
       <body>
         <JsonLd data={siteSchema()} />

@@ -29,6 +29,9 @@ Marketing site for Bell Recruitment (FMCG recruitment, Belfast): Next.js 16 App 
 
 - **Blog articles**: the cards (`BLOG_POSTS` in `lib/content.ts`) link to `/blogs/<slug>/`, built by `app/blogs/[slug]/page.tsx` from the text in [lib/articles.ts](lib/articles.ts) (SEO title, description, takeaways, sections). To add an article, add it to both, then to `SITE_PAGES` in `lib/site.ts` and `public/llms.txt`.
 
+- **Icons** are inline SVGs from [components/Icon.tsx](components/Icon.tsx) (paths in `components/icon-paths.ts`, Font Awesome Free, CC BY 4.0); there is no Font Awesome stylesheet. To add one, copy its SVG path into `icon-paths.ts` and use `<Icon name="..." />`. The tick and certificate list bullets in `globals.css` are CSS masks built from the same paths.
+- **Sitemap dates**: each entry in `SITE_PAGES` has a hand-set `lastModified` (YYYY-MM-DD); update it when that page's text changes. Page titles should stay under about 60 characters including " | Bell Recruitment".
+
 ## Gotchas
 
 - **Scroll-reveal selectors are duplicated**: `REVEAL` in [components/ScrollReveal.tsx](components/ScrollReveal.tsx) and the `html.js :is(...)` rule in `globals.css`. Add new animated element types to both.

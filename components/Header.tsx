@@ -44,7 +44,7 @@ export default function Header() {
     <header className={`site-header${scrolled ? " scrolled" : ""}`}>
       <div className="header-inner">
         <Link href="/" className="header-logo" onClick={close}>
-          <Image src="/images/logo-white.png" alt="Bell Recruitment" width={1699} height={765} priority />
+          <Image src="/images/logo-white.png" alt="Bell Recruitment" width={1699} height={765} sizes="120px" priority />
         </Link>
 
         <nav className={`main-nav${open ? " open" : ""}`} aria-label="Primary">

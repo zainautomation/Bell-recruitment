@@ -1,4 +1,5 @@
 import type { SERVICE_DETAILS } from "@/lib/content";
+import Icon from "@/components/Icon";
 
 type ServiceDetailItem = (typeof SERVICE_DETAILS)[number];
 
@@ -23,7 +24,7 @@ export default function ServiceDetail({ item }: { item: ServiceDetailItem }) {
             <summary>
               <span className="service-acc-num">{i + 1}</span>
               <span className="service-acc-title">{st.lead.replace(/\.$/, "")}</span>
-              <i className="fas fa-plus" aria-hidden="true" />
+              <Icon name="plus" />
             </summary>
             <p>{st.text}</p>
           </details>

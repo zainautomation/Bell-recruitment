@@ -5,13 +5,14 @@ import PageHero from "@/components/PageHero";
 import { CONTACT, URLS } from "@/lib/content";
 import JsonLd from "@/components/JsonLd";
 import { breadcrumbSchema, faqSchema } from "@/lib/schema";
+import Icon from "@/components/Icon";
 
 // Copy: "7. FAQs" in the client's Website Content document. This is the only page with
 // FAQ schema (client instruction); it is generated from the same questions shown below.
 
 export const metadata: Metadata = {
   alternates: { canonical: "/faqs/" },
-  title: { absolute: "FMCG Recruitment FAQs | Bell Recruitment Northern Ireland, Ireland and United Kingdom" },
+  title: { absolute: "FMCG Recruitment FAQs | Bell Recruitment" },
   description:
     "Answers for FMCG candidates and employers in Northern Ireland: how Bell Recruitment works.",
 };
@@ -124,10 +125,10 @@ export default function FaqsPage() {
 
       <nav className="jump-links" aria-label="FAQ sections">
         <a href="#candidates">
-          <i className="fas fa-user" aria-hidden="true" /> Candidate FAQs
+          <Icon name="user" /> Candidate FAQs
         </a>
         <a href="#employers">
-          <i className="fas fa-building" aria-hidden="true" /> Employer FAQs
+          <Icon name="building" /> Employer FAQs
         </a>
       </nav>
 

@@ -6,6 +6,8 @@ import { breadcrumbSchema } from "@/lib/schema";
 
 export const metadata: Metadata = {
   title: "CV Upload",
+  description:
+    "Upload your CV to register with Bell Recruitment, a specialist FMCG recruitment firm in Belfast. We check it against the roles we are working on.",
   alternates: { canonical: "/cv-upload/" },
 };
 

@@ -21,7 +21,7 @@ import { homeServicesSchema } from "@/lib/schema";
 
 export const metadata: Metadata = {
   alternates: { canonical: "/" },
-  title: { absolute: "FMCG Recruitment Northern Ireland, Ireland and United Kingdom | Bell Recruitment" },
+  title: { absolute: "FMCG Recruitment Northern Ireland and UK | Bell Recruitment" },
   description:
     "FMCG executive search in Northern Ireland since 1999. Sales, key account and commercial hires. Search begins within 24 hours.",
 };

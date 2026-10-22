@@ -4,10 +4,11 @@ import PageHero from "@/components/PageHero";
 import { LOCATIONS, URLS } from "@/lib/content";
 import JsonLd from "@/components/JsonLd";
 import { breadcrumbSchema } from "@/lib/schema";
+import Icon from "@/components/Icon";
 
 export const metadata: Metadata = {
   alternates: { canonical: "/locations/" },
-  title: "FMCG Recruitment Across Northern Ireland, Ireland and the UK",
+  title: "FMCG Recruitment in Ireland and the UK",
   description:
     "FMCG executive search and recruitment for businesses across Northern Ireland, Ireland and the UK: the cities, areas and regions we work in.",
 };
@@ -40,7 +41,7 @@ export default function LocationsPage() {
                     and sales appointments {AREA_TEXT[l.area]}.
                   </p>
                   <Link href={URLS.contact} className="location-arrow" aria-label={`Talk to us about hiring in ${l.name}`}>
-                    <i className="fas fa-arrow-right" aria-hidden="true" />
+                    <Icon name="arrow-right" />
                   </Link>
                 </article>
               ))}

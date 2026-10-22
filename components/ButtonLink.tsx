@@ -1,4 +1,5 @@
 import Link from "next/link";
+import Icon from "@/components/Icon";
 
 export type ButtonSpec = { label: string; href: string; variant?: "light" | "outline" | "burgundy" | "ghost" };
 
@@ -12,7 +13,7 @@ export default function ButtonLink({ label, href, variant = "burgundy" }: Button
   const className = `btn btn-${variant}`;
   const content = (
     <>
-      {label} <i className="fas fa-arrow-right" aria-hidden="true" />
+      {label} <Icon name="arrow-right" />
     </>
   );
   return isPlainHref(href) ? (

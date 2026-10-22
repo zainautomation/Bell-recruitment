@@ -1,6 +1,7 @@
 import Image from "next/image";
 import Link from "next/link";
 import { BLOG_POSTS } from "@/lib/content";
+import Icon from "@/components/Icon";
 
 // Blog cards for the Home page, the Blogs page and the "more articles" row under each article.
 // Each card links to its article at /blogs/<slug>/.
@@ -15,7 +16,7 @@ export default function BlogCards({ posts = BLOG_POSTS, swipe = true }: { posts?
               <h3>{post.title}</h3>
               <p>{post.excerpt}</p>
               <span className="blog-card-more">
-                Read the article <i className="fas fa-arrow-right" aria-hidden="true" />
+                Read the article <Icon name="arrow-right" />
               </span>
             </div>
           </Link>

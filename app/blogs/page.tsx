@@ -5,7 +5,7 @@ import JsonLd from "@/components/JsonLd";
 import { blogSchema, breadcrumbSchema } from "@/lib/schema";
 
 export const metadata: Metadata = {
-  title: "FMCG Recruitment Insights and Career Advice",
+  title: "FMCG Recruitment Insights and Advice",
   description:
     "Hiring guides, career advice and FMCG market insights from Bell Recruitment, a specialist FMCG executive search and recruitment firm founded in 1999.",
   alternates: { canonical: "/blogs/" },
