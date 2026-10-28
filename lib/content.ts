@@ -128,6 +128,20 @@ export const JULIE_ROLES = [
 // Used on the CV upload page (not yet rewritten in the content document).
 export const BLOG_POSTS = [
   {
+    slug: "fmcg-jobs-northern-ireland",
+    title: "FMCG Jobs in Northern Ireland: Where the Opportunities Are",
+    excerpt: "Where FMCG roles are, from Belfast to the regions, the skills employers want and how to land a head of sales role.",
+    image: "/images/fresh-produce.jpg",
+    alt: "Shelves of fresh fruit and vegetables in a supermarket",
+  },
+  {
+    slug: "fmcg-recruitment-agency-ireland",
+    title: "How to Choose an FMCG Recruitment Agency in Ireland",
+    excerpt: "Seven questions to ask any FMCG recruitment agency before you trust it with your next key hire.",
+    image: "/images/handshake-bg.webp",
+    alt: "Two people shaking hands to agree a deal",
+  },
+  {
     slug: "how-to-attract-top-fmcg-talent",
     title: "How to attract top FMCG talent in a competitive market",
     excerpt: "A few practical steps employers can take to stand out to candidates in the FMCG sector.",

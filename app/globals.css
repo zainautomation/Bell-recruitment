@@ -603,6 +603,7 @@ h1, h2, h3, h4 {
 .article-figure img { width: 100%; height: auto; aspect-ratio: 16 / 10; object-fit: cover; display: block; }
 .article p { font-size: 18px; line-height: 1.8; margin-bottom: 18px; }
 .article h2 { font-size: clamp(1.7rem, 3vw, 2.2rem); line-height: 1.2; margin: 44px 0 14px; max-width: none; }
+.article h3 { font-size: 1.25rem; line-height: 1.3; margin: 26px 0 8px; }
 .article ul, .article ol { margin: 0 0 20px 1.3em; }
 .article ul { list-style: disc; }
 .article ol { list-style: decimal; }

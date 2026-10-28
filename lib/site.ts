@@ -11,6 +11,7 @@ export function absoluteUrl(path: string) {
 // page's text changes; a date that moves on every deploy teaches Google to ignore it.
 const SITE_UPDATED = "2026-10-22";
 const ARTICLES_PUBLISHED = "2026-10-20";
+const NEW_ARTICLES_PUBLISHED = "2026-10-28";
 
 export const SITE_PAGES: {
   path: string;
@@ -18,13 +19,15 @@ export const SITE_PAGES: {
   changeFrequency: "weekly" | "monthly" | "yearly";
   lastModified: string;
 }[] = [
-  { path: "/", priority: 1, changeFrequency: "weekly", lastModified: SITE_UPDATED },
+  { path: "/", priority: 1, changeFrequency: "weekly", lastModified: NEW_ARTICLES_PUBLISHED },
   { path: "/services/", priority: 0.9, changeFrequency: "monthly", lastModified: SITE_UPDATED },
   { path: "/about-us/", priority: 0.8, changeFrequency: "monthly", lastModified: SITE_UPDATED },
   { path: "/employers/how-we-hire/", priority: 0.8, changeFrequency: "monthly", lastModified: SITE_UPDATED },
   { path: "/faqs/", priority: 0.7, changeFrequency: "monthly", lastModified: SITE_UPDATED },
   { path: "/locations/", priority: 0.6, changeFrequency: "monthly", lastModified: SITE_UPDATED },
-  { path: "/blogs/", priority: 0.6, changeFrequency: "weekly", lastModified: SITE_UPDATED },
+  { path: "/blogs/", priority: 0.6, changeFrequency: "weekly", lastModified: NEW_ARTICLES_PUBLISHED },
+  { path: "/blogs/fmcg-jobs-northern-ireland/", priority: 0.7, changeFrequency: "monthly", lastModified: NEW_ARTICLES_PUBLISHED },
+  { path: "/blogs/fmcg-recruitment-agency-ireland/", priority: 0.7, changeFrequency: "monthly", lastModified: NEW_ARTICLES_PUBLISHED },
   { path: "/blogs/how-to-attract-top-fmcg-talent/", priority: 0.7, changeFrequency: "monthly", lastModified: ARTICLES_PUBLISHED },
   { path: "/blogs/preparing-your-cv-for-a-commercial-role/", priority: 0.7, changeFrequency: "monthly", lastModified: ARTICLES_PUBLISHED },
   { path: "/blogs/executive-search-vs-recruitment/", priority: 0.7, changeFrequency: "monthly", lastModified: ARTICLES_PUBLISHED },

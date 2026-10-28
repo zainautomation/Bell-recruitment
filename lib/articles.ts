@@ -1,8 +1,11 @@
-// Full text of the three blog articles. The cards on the Home and Blogs pages (BLOG_POSTS in
+// Full text of the blog articles. The cards on the Home and Blogs pages (BLOG_POSTS in
 // lib/content.ts) link to /blogs/<slug>/ and the article page is built from the data below.
 //
-// Links inside paragraphs are written as [anchor text](/path/). Every statement about Bell Recruitment
-// comes from the rest of this site; the rest is ordinary hiring and CV advice with no invented figures.
+// Inside paragraphs and list items, links are written as [anchor text](/path/) and bold as **text**.
+// Every statement about Bell Recruitment comes from the rest of this site; the rest is ordinary hiring
+// and CV advice with no invented figures.
+
+import { URLS } from "@/lib/content";
 
 export type Block =
   | { type: "p"; text: string }
@@ -17,10 +20,264 @@ export type Article = {
   takeaways: string[];
   intro: string[];
   sections: { heading: string; blocks: Block[] }[];
-  cta: { title: string; text: string };
+  faqs?: { q: string; a: string }[]; // shown as "Frequently asked questions" and marked up as FAQPage
+  cta: { title: string; text: string; buttons?: { label: string; href: string; variant: "light" | "outline" }[] };
 };
 
+const HIRE_BUTTONS: NonNullable<Article["cta"]["buttons"]> = [
+  { label: "Hire FMCG talent", href: URLS.hire, variant: "light" },
+  { label: "Contact us", href: URLS.contact, variant: "outline" },
+];
+const CANDIDATE_BUTTONS: NonNullable<Article["cta"]["buttons"]> = [
+  { label: "Upload your CV", href: URLS.cvUpload, variant: "light" },
+  { label: "Contact Julie", href: URLS.contact, variant: "outline" },
+];
+
 export const ARTICLES: Record<string, Article> = {
+  "fmcg-jobs-northern-ireland": {
+    seoTitle: "FMCG Jobs in Northern Ireland and Belfast",
+    description:
+      "Looking for FMCG jobs in Northern Ireland? Where the roles are, from Belfast to the regions, the skills employers want and how to land a head of sales role.",
+    published: "2026-10-28",
+    takeaways: [
+      "Belfast and the surrounding area hold the most FMCG head office, sales and marketing roles, while production sites are spread across the province.",
+      "Employers keep asking for commercial results you can prove, retail and foodservice knowledge, relationship skills and data confidence.",
+      "Most head of sales roles are never advertised. They are filled through networks and executive search.",
+      "It pays to be known to a specialist FMCG recruiter before you start looking.",
+    ],
+    intro: [
+      "Northern Ireland punches well above its weight in food and drink. From bakeries and dairies to sauce makers, distilleries and meat processors, the region is home to manufacturers that supply supermarkets and foodservice customers across the UK, Ireland and beyond. That makes FMCG one of the most rewarding sectors to build a career in here.",
+      "At Bell Recruitment, we've been placing people into FMCG roles in Northern Ireland since 1999. Here's where the jobs are, what employers are looking for, and how to position yourself for the next step.",
+    ],
+    sections: [
+      {
+        heading: "What counts as an FMCG job?",
+        blocks: [
+          {
+            type: "p",
+            text: "FMCG stands for fast-moving consumer goods: products people buy often and use quickly, such as food, drink, toiletries and household goods. FMCG jobs cover every stage of getting those products onto shelves, including:",
+          },
+          {
+            type: "ul",
+            items: [
+              "**Sales:** field sales, telesales, sales executive and sales manager roles",
+              "**Account management:** key account managers looking after retailers, wholesalers or foodservice customers",
+              "**Marketing:** brand, trade and shopper marketing",
+              "**Operations:** production, technical, quality, NPD and site management",
+              "**Supply chain:** procurement, planning, logistics and customer service",
+              "**Leadership:** heads of sales, commercial directors, general managers and managing directors",
+            ],
+          },
+        ],
+      },
+      {
+        heading: "Where are FMCG jobs in Northern Ireland?",
+        blocks: [
+          {
+            type: "p",
+            text: "**Belfast and the surrounding area** has the highest concentration of FMCG head office, sales and marketing roles. Many manufacturers and distributors base their commercial teams in or around the city, even when production happens elsewhere.",
+          },
+          {
+            type: "p",
+            text: "**Beyond Belfast,** much of Northern Ireland's food manufacturing sits in towns and rural areas across the province, with sites in Co Down, Co Armagh, Co Tyrone, Co Fermanagh and Co Antrim. Operations, technical and site leadership roles are often based at these sites, and some businesses run sites on both sides of the border.",
+          },
+          {
+            type: "p",
+            text: "**Field-based roles** cover a territory rather than an office. If you're in sales or account management, you may find your patch covers all of Northern Ireland, or Northern Ireland and the Republic together.",
+          },
+        ],
+      },
+      {
+        heading: "Which FMCG skills are in demand?",
+        blocks: [
+          { type: "p", text: "Across the roles we recruit, employers keep asking for the same things:" },
+          {
+            type: "ol",
+            items: [
+              "**Commercial results you can prove.** Revenue growth, new listings, margin improvement and accounts won.",
+              "**Retail and foodservice knowledge.** Understanding how the multiples, symbols, wholesalers and foodservice distributors buy.",
+              "**Relationship skills.** FMCG in Northern Ireland is a small world. Employers value people who are trusted by buyers.",
+              "**Data confidence.** Using EPOS, category and BI data to plan and win arguments with buyers.",
+              "**Food industry standards.** For operations roles, knowledge of BRCGS, retailer codes of practice and food safety.",
+            ],
+          },
+        ],
+      },
+      {
+        heading: "Head of sales roles in FMCG in Northern Ireland",
+        blocks: [
+          {
+            type: "p",
+            text: "The head of sales is one of the most important hires an FMCG business makes, and one of the hardest to fill. Many local manufacturers are growing into GB and the Republic, so they need sales leaders who can win national listings as well as manage local accounts.",
+          },
+          { type: "p", text: "To be considered for a head of sales FMCG role in Northern Ireland, you'll usually need:" },
+          {
+            type: "ul",
+            items: [
+              "several years managing major retail or foodservice accounts",
+              "experience leading and developing a sales team",
+              "ownership of a sales budget, and ideally a P&L",
+              "a record of new business wins, not just account maintenance",
+              "the ability to work with production, finance and marketing on pricing, promotions and forecasting",
+            ],
+          },
+          {
+            type: "p",
+            text: "Most head of sales roles are never advertised. They're filled through networks and [executive search](/services/). That's why it pays to be known to a specialist recruiter before you start looking.",
+          },
+        ],
+      },
+      {
+        heading: "How to find FMCG jobs in Northern Ireland",
+        blocks: [
+          {
+            type: "ul",
+            items: [
+              "**Talk to a specialist FMCG recruiter.** Many of the best roles are handled confidentially. A recruiter who knows the sector can tell you about them and represent you properly.",
+              "**Get your CV FMCG-ready.** Lead with numbers: sales growth, listings won, accounts managed. Our [FMCG CV tips](/blogs/preparing-your-cv-for-a-commercial-role/) show you how.",
+              "**Know your market value.** Ask a specialist recruiter what comparable roles are paying before you negotiate.",
+              "**Build your network.** Industry events, trade shows and LinkedIn all help, because local buyers and suppliers talk to each other.",
+            ],
+          },
+        ],
+      },
+    ],
+    faqs: [
+      {
+        q: "Are there many FMCG jobs in Belfast?",
+        a: "Yes. Belfast and its surrounding area hold many of Northern Ireland's FMCG head office, sales and marketing roles, while production roles are spread across the province.",
+      },
+      {
+        q: "What qualifications do I need for an FMCG job in Northern Ireland?",
+        a: "Most commercial roles value experience over qualifications. A degree in business, marketing or food science helps early in your career, and professional qualifications such as CIM or CIPS are useful for marketing and procurement roles.",
+      },
+      {
+        q: "Do FMCG jobs in Northern Ireland cover the Republic of Ireland too?",
+        a: "Often. Many Northern Ireland manufacturers sell across the island of Ireland, so sales and account management roles frequently cover both markets.",
+      },
+    ],
+    cta: {
+      title: "Looking for your next FMCG role?",
+      text: "Bell Recruitment specialises in FMCG jobs across Northern Ireland and Ireland, from sales executives to managing directors. Upload your CV or contact Julie Bell for a confidential conversation.",
+      buttons: CANDIDATE_BUTTONS,
+    },
+  },
+
+  "fmcg-recruitment-agency-ireland": {
+    seoTitle: "How to Choose an FMCG Recruitment Agency in Ireland",
+    description:
+      "Hiring in food, drink or consumer goods? Seven questions to ask any FMCG recruitment agency in Ireland before you trust it with your next key hire.",
+    published: "2026-10-28",
+    takeaways: [
+      "Choose an agency that specialises in FMCG, and ask what share of its work is in food, drink and consumer goods.",
+      "Check that it regularly fills roles at your level and can reach candidates who are not on the market.",
+      "If you hire north and south of the border, make sure it has contacts and candidates in both markets.",
+      "Ask how it assesses candidates, to see examples of similar results, and to give its terms in writing.",
+    ],
+    intro: [
+      "The right FMCG hire can win you new listings, grow your margins and strengthen your team for years. The wrong one can cost you customers. So choosing a recruitment agency is a decision worth taking care over.",
+      "There are plenty of generalist agencies in Ireland, but FMCG has its own language, customers and pressures. Here are seven questions to ask any FMCG recruitment agency before you brief it.",
+    ],
+    sections: [
+      {
+        heading: "1. Do you specialise in FMCG?",
+        blocks: [
+          {
+            type: "p",
+            text: "A specialist agency understands the difference between a key account manager for a multiple and one for a wholesaler, knows what a good foodservice track record looks like, and can tell when a candidate's numbers don't add up. Ask what proportion of its work is in food, drink and consumer goods, and which roles it fills most often.",
+          },
+        ],
+      },
+      {
+        heading: "2. Which roles and seniority levels do you recruit?",
+        blocks: [
+          {
+            type: "p",
+            text: "Some agencies focus on volume roles, others on senior appointments. Check the agency regularly fills roles like yours, whether that's a field sales executive, a national account manager or a managing director.",
+          },
+        ],
+      },
+      {
+        heading: "3. How will you find candidates?",
+        blocks: [
+          {
+            type: "p",
+            text: "The best FMCG candidates are often in work and not looking. An agency that relies only on job adverts will mostly reach active job seekers. Ask how it finds people who aren't on the market, through its network, direct approaches or [executive search](/services/).",
+          },
+        ],
+      },
+      {
+        heading: "4. Do you cover the whole island of Ireland?",
+        blocks: [
+          {
+            type: "p",
+            text: "Many FMCG businesses sell north and south of the border, and many roles cover both. If you're hiring in Dublin, Belfast or for an all-island role, check the agency has contacts and candidates in both markets.",
+          },
+        ],
+      },
+      {
+        heading: "5. How will you assess candidates?",
+        blocks: [
+          {
+            type: "p",
+            text: "You want a shortlist, not a pile of CVs. Ask how the agency screens candidates, whether it interviews them in person, and how it checks claims about sales results and customer relationships.",
+          },
+        ],
+      },
+      {
+        heading: "6. Can you show me results?",
+        blocks: [
+          {
+            type: "p",
+            text: "Ask for examples of similar roles the agency has filled, client testimonials or case studies. A good agency will be happy to share them. You can read [how we recruited two senior leaders for Crust & Crumb and a managing director for Prep House](/employers/how-we-hire/).",
+          },
+        ],
+      },
+      {
+        heading: "7. What are your terms?",
+        blocks: [
+          {
+            type: "p",
+            text: "Check the fee structure, when fees are payable, and what happens if a placement doesn't work out. Ask whether the agency offers a rebate or replacement period, and how long it lasts.",
+          },
+        ],
+      },
+      {
+        heading: "Warning signs to watch for",
+        blocks: [
+          {
+            type: "ul",
+            items: [
+              "CVs sent before the agency has properly understood your brief",
+              "candidates who weren't told your company name or don't know the role",
+              "pressure to decide quickly without a clear reason",
+              "little knowledge of your customers or competitors",
+            ],
+          },
+        ],
+      },
+    ],
+    faqs: [
+      {
+        q: "What does an FMCG recruitment agency do?",
+        a: "An FMCG recruitment agency finds, screens and presents candidates for roles in food, drink and consumer goods businesses, from sales and marketing to operations and leadership.",
+      },
+      {
+        q: "Is there an FMCG recruiter that covers Dublin and Belfast?",
+        a: "Yes. Bell Recruitment is based in Belfast and recruits FMCG roles across the island of Ireland, including Dublin and the rest of the Republic.",
+      },
+      {
+        q: "How much does an FMCG recruitment agency cost?",
+        a: "Most agencies charge a fee based on a percentage of the successful candidate's first-year salary. Senior executive search is often charged on a retained basis. Ask for terms in writing before you begin.",
+      },
+    ],
+    cta: {
+      title: "Talk to Bell Recruitment",
+      text: "Bell Recruitment has been recruiting since 1999 and specialises in FMCG, placing people into food and drink businesses across Northern Ireland and Ireland. Contact Julie Bell to talk about your next hire.",
+      buttons: HIRE_BUTTONS,
+    },
+  },
+
   "how-to-attract-top-fmcg-talent": {
     seoTitle: "Attract Top FMCG Talent: 7 Steps",
     description:
@@ -363,6 +620,7 @@ export function readingMinutes(a: Article) {
         b.type === "p" ? [b.text] : b.type === "compare" ? b.rows.flat() : b.items,
       ),
     ),
+    ...(a.faqs ?? []).flatMap((f) => [f.q, f.a]),
   ].join(" ");
   return Math.max(1, Math.round(text.split(/\s+/).length / 200));
 }

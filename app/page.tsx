@@ -13,7 +13,7 @@ import ServiceCards from "@/components/ServiceCards";
 import ServiceDetail from "@/components/ServiceDetails";
 import TestimonialGrid from "@/components/TestimonialGrid";
 import Tilt from "@/components/Tilt";
-import { JULIE_ROLES, OUR_SERVICES, ROLE_AREAS, SERVICE_DETAILS, URLS } from "@/lib/content";
+import { BLOG_POSTS, JULIE_ROLES, OUR_SERVICES, ROLE_AREAS, SERVICE_DETAILS, URLS } from "@/lib/content";
 import JsonLd from "@/components/JsonLd";
 import { homeServicesSchema } from "@/lib/schema";
 
@@ -211,7 +211,7 @@ export default function HomePage() {
             <div className="section-label">Blogs</div>
             <h2>Latest from Bell Recruitment</h2>
           </div>
-          <BlogCards />
+          <BlogCards posts={BLOG_POSTS.slice(0, 3)} />
           <ButtonRow center buttons={[{ label: "View all blogs", href: URLS.blogs }]} />
         </div>
       </section>

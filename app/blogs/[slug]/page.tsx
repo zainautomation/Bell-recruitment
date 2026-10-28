@@ -9,7 +9,7 @@ import JsonLd from "@/components/JsonLd";
 import PageHero from "@/components/PageHero";
 import { ARTICLES, readingMinutes } from "@/lib/articles";
 import { BLOG_POSTS, URLS } from "@/lib/content";
-import { articleSchema, breadcrumbSchema } from "@/lib/schema";
+import { articleSchema, breadcrumbSchema, faqSchema } from "@/lib/schema";
 
 type Props = { params: Promise<{ slug: string }> };
 
@@ -46,17 +46,18 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
   };
 }
 
-// Turns [anchor text](/path/) in the article text into internal links.
+// Turns [anchor text](/path/) in the article text into internal links and **text** into bold.
 function inline(text: string): ReactNode[] {
-  return text.split(/(\[[^\]]+\]\([^)]+\))/g).map((part, i) => {
-    const m = part.match(/^\[([^\]]+)\]\(([^)]+)\)$/);
-    return m ? (
-      <Link key={i} href={m[2]}>
-        {m[1]}
-      </Link>
-    ) : (
-      part
-    );
+  return text.split(/(\[[^\]]+\]\([^)]+\)|\*\*[^*]+\*\*)/g).map((part, i) => {
+    const link = part.match(/^\[([^\]]+)\]\(([^)]+)\)$/);
+    if (link)
+      return (
+        <Link key={i} href={link[2]}>
+          {link[1]}
+        </Link>
+      );
+    const bold = part.match(/^\*\*([^*]+)\*\*$/);
+    return bold ? <strong key={i}>{bold[1]}</strong> : part;
   });
 }
 
@@ -69,7 +70,7 @@ export default async function ArticlePage({ params }: Props) {
   const found = find(slug);
   if (!found) notFound();
   const { post, article } = found;
-  const others = BLOG_POSTS.filter((p) => p.slug !== slug);
+  const others = BLOG_POSTS.filter((p) => p.slug !== slug).slice(0, 3);
 
   return (
     <>
@@ -80,6 +81,7 @@ export default async function ArticlePage({ params }: Props) {
         ])}
       />
       <JsonLd data={articleSchema(post, article)} />
+      {article.faqs && <JsonLd data={faqSchema(article.faqs)} />}
 
       <PageHero eyebrow="Blog" title={post.title}>
         {post.excerpt}
@@ -156,14 +158,28 @@ export default async function ArticlePage({ params }: Props) {
             </div>
           ))}
 
+          {article.faqs && (
+            <div>
+              <h2>Frequently asked questions</h2>
+              {article.faqs.map((f) => (
+                <div key={f.q}>
+                  <h3>{f.q}</h3>
+                  <p>{f.a}</p>
+                </div>
+              ))}
+            </div>
+          )}
+
           <div className="article-cta">
             <h2>{article.cta.title}</h2>
             <p>{article.cta.text}</p>
             <ButtonRow
-              buttons={[
-                { label: "Hire FMCG talent", href: URLS.hire, variant: "light" },
-                { label: "Upload your CV", href: URLS.cvUpload, variant: "outline" },
-              ]}
+              buttons={
+                article.cta.buttons ?? [
+                  { label: "Hire FMCG talent", href: URLS.hire, variant: "light" },
+                  { label: "Upload your CV", href: URLS.cvUpload, variant: "outline" },
+                ]
+              }
             />
           </div>
         </div>
