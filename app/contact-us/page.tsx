@@ -7,7 +7,7 @@ import { breadcrumbSchema } from "@/lib/schema";
 import Icon from "@/components/Icon";
 
 export const metadata: Metadata = {
-  title: "Contact Us",
+  title: { absolute: "Contact FMCG Recruiters in Belfast | Bell Recruitment" },
   description: `Contact Bell Recruitment in Belfast to discuss an FMCG hire or your next role. Call ${CONTACT.phone} or email ${CONTACT.email}.`,
   alternates: { canonical: "/contact-us/" },
 };
@@ -16,7 +16,7 @@ export default function ContactPage() {
   return (
     <>
       <JsonLd data={breadcrumbSchema([{ name: "Contact us", path: "/contact-us/" }])} />
-      <PageHero title="Get in touch" image="/images/contact-banner.jpg" imagePosition="50% 30%">
+      <PageHero eyebrow="Get in touch" title="Contact our FMCG recruitment team in Belfast" image="/images/contact-banner.jpg" imagePosition="50% 30%">
         Whether you&rsquo;re hiring or looking for your next role, we&rsquo;d love to hear from you.
       </PageHero>
 

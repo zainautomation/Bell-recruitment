@@ -175,7 +175,7 @@ export function articleSchema(post: (typeof BLOG_POSTS)[number], article: Articl
     datePublished: article.published,
     dateModified: article.published,
     inLanguage: "en-GB",
-    author: { "@id": ORG_ID },
+    author: { "@id": JULIE_ID },
     publisher: { "@id": ORG_ID },
     mainEntityOfPage: { "@type": "WebPage", "@id": url },
     url,
@@ -196,7 +196,7 @@ export function blogSchema() {
       description: p.excerpt,
       image: absoluteUrl(p.image),
       url: absoluteUrl(`/blogs/${p.slug}/`),
-      author: { "@id": ORG_ID },
+      author: { "@id": JULIE_ID },
       publisher: { "@id": ORG_ID },
     })),
   };

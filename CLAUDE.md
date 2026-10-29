@@ -29,6 +29,8 @@ Marketing site for Bell Recruitment (FMCG recruitment, Belfast): Next.js 16 App 
 
 - **Blog articles**: the cards (`BLOG_POSTS` in `lib/content.ts`) link to `/blogs/<slug>/`, built by `app/blogs/[slug]/page.tsx` from the text in [lib/articles.ts](lib/articles.ts) (SEO title, description, takeaways, sections, optional `faqs` which also emit FAQPage schema, optional CTA buttons; `[text](/path/)` makes a link and `**text**` bold). Blog cards are listed newest first and the home page shows the first three. To add an article, add it to both, then to `SITE_PAGES` in `lib/site.ts` and `public/llms.txt`.
 
+- **Blog author** is Julie Bell: the byline, the author box at the end of each article and the BlogPosting schema (`author` = the Person node, `JULIE_ID` in `lib/schema.ts`) all use her.
+- **Locations** page is written per region (Northern Ireland, Ireland, UK), with the `LOCATIONS` places listed under each region, not one near-identical card per city.
 - **Icons** are inline SVGs from [components/Icon.tsx](components/Icon.tsx) (paths in `components/icon-paths.ts`, Font Awesome Free, CC BY 4.0); there is no Font Awesome stylesheet. To add one, copy its SVG path into `icon-paths.ts` and use `<Icon name="..." />`. The tick and certificate list bullets in `globals.css` are CSS masks built from the same paths.
 - **Sitemap dates**: each entry in `SITE_PAGES` has a hand-set `lastModified` (YYYY-MM-DD); update it when that page's text changes. Page titles should stay under about 60 characters including " | Bell Recruitment".
 

@@ -90,7 +90,7 @@ export default async function ArticlePage({ params }: Props) {
       <section className="section">
         <div className="container-narrow article">
           <p className="article-meta">
-            By Bell Recruitment &middot; Published <time dateTime={article.published}>{formatDate(article.published)}</time>{" "}
+            By <Link href={URLS.aboutUs}>Julie Bell</Link> &middot; Published <time dateTime={article.published}>{formatDate(article.published)}</time>{" "}
             &middot; {readingMinutes(article)} min read
           </p>
 
@@ -169,6 +169,18 @@ export default async function ArticlePage({ params }: Props) {
               ))}
             </div>
           )}
+
+          <aside className="author-box">
+            <Image src="/images/julie-bell.jpg" alt="Julie Bell, Founder and CEO of Bell Recruitment" width={168} height={168} />
+            <div>
+              <p className="author-label">Written by</p>
+              <p className="author-name">Julie Bell</p>
+              <p>
+                Founder and CEO of Bell Recruitment. Julie founded the business in 1999, after ten years in FMCG with
+                Pepsi, 7UP, Ballygowan and Budweiser. <Link href={URLS.aboutUs}>More about Julie</Link>
+              </p>
+            </div>
+          </aside>
 
           <div className="article-cta">
             <h2>{article.cta.title}</h2>

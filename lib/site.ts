@@ -12,6 +12,7 @@ export function absoluteUrl(path: string) {
 const SITE_UPDATED = "2026-10-22";
 const ARTICLES_PUBLISHED = "2026-10-20";
 const NEW_ARTICLES_PUBLISHED = "2026-10-28";
+const AUTHOR_ADDED = "2026-10-29";
 
 export const SITE_PAGES: {
   path: string;
@@ -24,14 +25,14 @@ export const SITE_PAGES: {
   { path: "/about-us/", priority: 0.8, changeFrequency: "monthly", lastModified: SITE_UPDATED },
   { path: "/employers/how-we-hire/", priority: 0.8, changeFrequency: "monthly", lastModified: SITE_UPDATED },
   { path: "/faqs/", priority: 0.7, changeFrequency: "monthly", lastModified: SITE_UPDATED },
-  { path: "/locations/", priority: 0.6, changeFrequency: "monthly", lastModified: SITE_UPDATED },
-  { path: "/blogs/", priority: 0.6, changeFrequency: "weekly", lastModified: NEW_ARTICLES_PUBLISHED },
-  { path: "/blogs/fmcg-jobs-northern-ireland/", priority: 0.7, changeFrequency: "monthly", lastModified: NEW_ARTICLES_PUBLISHED },
-  { path: "/blogs/fmcg-recruitment-agency-ireland/", priority: 0.7, changeFrequency: "monthly", lastModified: NEW_ARTICLES_PUBLISHED },
-  { path: "/blogs/how-to-attract-top-fmcg-talent/", priority: 0.7, changeFrequency: "monthly", lastModified: ARTICLES_PUBLISHED },
-  { path: "/blogs/preparing-your-cv-for-a-commercial-role/", priority: 0.7, changeFrequency: "monthly", lastModified: ARTICLES_PUBLISHED },
-  { path: "/blogs/executive-search-vs-recruitment/", priority: 0.7, changeFrequency: "monthly", lastModified: ARTICLES_PUBLISHED },
+  { path: "/locations/", priority: 0.6, changeFrequency: "monthly", lastModified: AUTHOR_ADDED },
+  { path: "/blogs/", priority: 0.6, changeFrequency: "weekly", lastModified: AUTHOR_ADDED },
+  { path: "/blogs/fmcg-jobs-northern-ireland/", priority: 0.7, changeFrequency: "monthly", lastModified: AUTHOR_ADDED },
+  { path: "/blogs/fmcg-recruitment-agency-ireland/", priority: 0.7, changeFrequency: "monthly", lastModified: AUTHOR_ADDED },
+  { path: "/blogs/how-to-attract-top-fmcg-talent/", priority: 0.7, changeFrequency: "monthly", lastModified: AUTHOR_ADDED },
+  { path: "/blogs/preparing-your-cv-for-a-commercial-role/", priority: 0.7, changeFrequency: "monthly", lastModified: AUTHOR_ADDED },
+  { path: "/blogs/executive-search-vs-recruitment/", priority: 0.7, changeFrequency: "monthly", lastModified: AUTHOR_ADDED },
   { path: "/cv-upload/", priority: 0.6, changeFrequency: "yearly", lastModified: SITE_UPDATED },
-  { path: "/contact-us/", priority: 0.6, changeFrequency: "yearly", lastModified: SITE_UPDATED },
+  { path: "/contact-us/", priority: 0.6, changeFrequency: "yearly", lastModified: AUTHOR_ADDED },
   { path: "/privacy-policy/", priority: 0.2, changeFrequency: "yearly", lastModified: SITE_UPDATED },
 ];

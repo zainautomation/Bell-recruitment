@@ -23,6 +23,28 @@ const nextConfig: NextConfig = {
   },
   async redirects() {
     return [
+      // bell-recruitment.net (with a hyphen) points at this same site. Send it to the main domain so the
+      // site is only ever served from one address.
+      {
+        source: "/",
+        has: [{ type: "host", value: "(www\\.)?bell-recruitment\\.net" }],
+        destination: "https://www.bellrecruitment.net/",
+        permanent: true,
+      },
+      {
+        // Pages (no file extension) keep the trailing slash the site uses.
+        source: "/:path((?!.*\\.).+)",
+        has: [{ type: "host", value: "(www\\.)?bell-recruitment\\.net" }],
+        destination: "https://www.bellrecruitment.net/:path/",
+        permanent: true,
+      },
+      {
+        // Files such as /sitemap.xml and /robots.txt keep their exact path.
+        source: "/:path(.*\\..+)",
+        has: [{ type: "host", value: "(www\\.)?bell-recruitment\\.net" }],
+        destination: "https://www.bellrecruitment.net/:path",
+        permanent: true,
+      },
       // The Services page moved from /employer/ to /services/ (content document URL).
       { source: "/employer/", destination: "/services/", permanent: true },
       // The Candidates and Testimonials pages were removed; send old links to the home page.
